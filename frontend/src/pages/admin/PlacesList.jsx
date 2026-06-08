@@ -124,8 +124,8 @@ export default function PlacesList() {
           {Array.from({length:5}).map((_,i)=><div key={i} className="h-14 bg-white/5 rounded-lg animate-pulse"/>)}
         </div>
       ) : (
-        <div className="bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-          <table className="w-full text-sm">
+        <div className="bg-white/5 border border-white/10 rounded-lg overflow-x-auto">
+          <table className="w-full min-w-[800px] text-sm">
             <thead>
               <tr className="border-b border-white/10 text-cream/40 text-xs uppercase tracking-widest">
                 <th className="text-left px-4 py-3 font-normal">Image</th>

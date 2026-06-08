@@ -10,6 +10,8 @@ const EMPTY = {
   timings: '', entry_fee: '', map_link: '', nearby: '',
   status: 'draft',
   images: [],
+  trivia: '',
+  travel_tip: '',
 };
 
 function Field({ label, children }) {
@@ -45,7 +47,9 @@ export default function PlaceForm() {
             setForm({
               ...full,
               nearby: (full.nearby || []).join(', '),
-              images: full.images || []
+              images: full.images || [],
+              trivia: full.trivia || '',
+              travel_tip: full.travel_tip || '',
             });
             setLoading(false);
           }).catch(() => setLoading(false));
@@ -167,6 +171,24 @@ export default function PlaceForm() {
 
         <Field label="Nearby attractions (comma-separated)">
           <input className={inp} value={form.nearby} onChange={e => set('nearby', e.target.value)} placeholder="Agra Fort, Mehtab Bagh" />
+        </Field>
+
+        <Field label="Editorial Trivia (Fascinating facts)">
+          <textarea
+            className={`${inp} min-h-[80px] resize-y`}
+            value={form.trivia || ''}
+            onChange={e => set('trivia', e.target.value)}
+            placeholder="The Taj Mahal changes color depending on the time of day, appearing pearly pink in the morning and golden in the moonlight."
+          />
+        </Field>
+
+        <Field label="Travel Tip (Practical visiting advice)">
+          <textarea
+            className={`${inp} min-h-[80px] resize-y`}
+            value={form.travel_tip || ''}
+            onChange={e => set('travel_tip', e.target.value)}
+            placeholder="Arrive by 5:30 AM to catch the sunrise and beat the long security lines at the East Gate."
+          />
         </Field>
 
         <Field label="Gallery Images (Additional Slideshow Images)">

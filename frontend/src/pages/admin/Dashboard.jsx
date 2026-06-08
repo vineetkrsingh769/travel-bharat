@@ -27,7 +27,7 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    Promise.all([placesService.getAll(), statesService.getAll()])
+    Promise.all([placesService.getAllAdmin(), statesService.getAllAdmin()])
       .then(([p, s]) => { setPlaces(p); setStates(s); })
       .finally(() => setLoading(false));
   }, []);
