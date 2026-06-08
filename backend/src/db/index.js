@@ -17,11 +17,10 @@ if (isPlaceholder) {
   useJsonDb = true;
 } else {
   try {
+    const isLocal = dbUrl.includes('localhost') || dbUrl.includes('127.0.0.1');
     pool = new Pool({
       connectionString: dbUrl,
-      ssl: process.env.NODE_ENV === 'production'
-        ? { rejectUnauthorized: false }
-        : false,
+      ssl: isLocal ? false : { rejectUnauthorized: false },
       connectionTimeoutMillis: 3000,
     });
 
