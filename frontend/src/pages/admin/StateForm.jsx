@@ -4,7 +4,7 @@ import { statesService } from '../../services/states';
 
 const REGIONS = ['North', 'South', 'East', 'West', 'Central', 'Northeast'];
 const EMPTY = { slug: '', name: '', region: '', capital: '', blurb: '', cover_url: '', highlights: '', best_time: '', status: 'draft' };
-const inp = 'w-full bg-white dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 text-ink dark:text-cream placeholder-ink/20 dark:placeholder-cream/20 px-3.5 py-2.5 text-sm rounded-lg focus:outline-none focus:border-saffron focus:ring-2 focus:ring-saffron/15 shadow-sm dark:shadow-none transition-all duration-150';
+const inp = 'w-full bg-white dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 text-ink dark:text-cream placeholder-ink/20 dark:placeholder-cream/20 px-3.5 py-2.5 text-sm rounded-xl focus:outline-none focus:border-saffron focus:ring-2 focus:ring-saffron/15 shadow-sm dark:shadow-none hover:border-[#C4B79F] dark:hover:border-white/20 transition-all duration-150';
 
 function Field({ label, children }) {
   return <div><label className="block text-xs uppercase tracking-widest font-semibold text-ink/50 dark:text-cream/45 mb-1.5">{label}</label>{children}</div>;
@@ -62,7 +62,7 @@ export default function StateForm() {
     }
   }
 
-  if (loading) return <div className="animate-pulse h-96 bg-[#FAF5EC] dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 rounded-lg" />;
+  if (loading) return <div className="animate-pulse h-96 bg-[#FAF5EC] dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 rounded-xl" />;
 
   return (
     <div className="max-w-3xl animate-fadeIn">
@@ -107,8 +107,8 @@ export default function StateForm() {
           </Field>
 
           {form.cover_url && (
-            <div className="flex items-center gap-3 p-3 bg-[#FAF5EC]/50 dark:bg-white/2 border border-[#DDD0B8]/40 dark:border-white/5 rounded-lg">
-              <img src={form.cover_url} alt="preview" className="h-16 w-24 object-cover rounded-md shadow-sm" onError={e => e.target.style.display='none'} />
+            <div className="flex items-center gap-3 p-3 bg-[#FAF5EC]/50 dark:bg-white/2 border border-[#DDD0B8]/40 dark:border-white/5 rounded-xl">
+              <img src={form.cover_url} alt="preview" className="h-16 w-24 object-cover rounded-xl shadow-sm" onError={e => e.target.style.display='none'} />
               <span className="text-xs text-ink/50 dark:text-cream/45">Cover preview</span>
             </div>
           )}
@@ -130,10 +130,10 @@ export default function StateForm() {
         </FormSection>
 
         <div className="flex gap-3 pt-5 border-t border-[#DDD0B8]/60 dark:border-white/10">
-          <button type="submit" disabled={saving} className="bg-saffron hover:bg-saffron/90 disabled:opacity-50 text-white dark:text-ink font-semibold px-6 py-2.5 rounded-lg text-sm transition-colors shadow-sm">
+          <button type="submit" disabled={saving} className="bg-saffron hover:bg-saffron/90 hover:scale-[1.01] active:scale-[0.98] transition-all duration-100 disabled:opacity-50 text-white dark:text-ink font-semibold px-6 py-2.5 rounded-xl text-sm shadow-sm">
             {saving ? 'Saving…' : isEdit ? 'Update state' : 'Create state'}
           </button>
-          <button type="button" onClick={() => navigate('/admin/states')} className="bg-[#FAF5EC] dark:bg-white/5 hover:bg-[#EDE5D4]/60 dark:hover:bg-white/10 border border-[#DDD0B8] dark:border-white/10 text-ink/70 dark:text-cream/75 px-6 py-2.5 rounded-lg text-sm transition-colors font-semibold">
+          <button type="button" onClick={() => navigate('/admin/states')} className="bg-[#FAF5EC] dark:bg-white/5 hover:bg-[#EDE5D4]/60 dark:hover:bg-white/10 border border-[#DDD0B8] dark:border-white/10 text-ink/70 dark:text-cream/75 px-6 py-2.5 rounded-xl text-sm font-semibold hover:scale-[1.01] active:scale-[0.98] transition-all duration-100">
             Cancel
           </button>
         </div>

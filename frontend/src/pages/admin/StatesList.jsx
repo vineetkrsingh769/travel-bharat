@@ -68,14 +68,14 @@ export default function StatesList() {
 
   return (
     <div>
-      {toast && <div className="fixed top-4 right-4 z-50 bg-emerald-800 text-emerald-50 text-sm px-4 py-3 rounded-lg shadow-lg border border-emerald-600">{toast}</div>}
+      {toast && <div className="fixed top-4 right-4 z-50 bg-emerald-800 text-emerald-50 text-sm px-4 py-3 rounded-xl shadow-lg border border-emerald-600">{toast}</div>}
 
       <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
         <div>
           <h1 className="font-serif text-3xl text-ink dark:text-cream">States</h1>
           <p className="text-sm text-ink/40 dark:text-cream/40 mt-1">{states.length} states &amp; UTs</p>
         </div>
-        <Link to="/admin/states/new" className="bg-saffron hover:bg-saffron/90 text-white dark:text-ink text-sm font-semibold px-4 py-2 rounded-md transition-colors shadow-sm">
+        <Link to="/admin/states/new" className="bg-saffron hover:bg-saffron/90 hover:scale-[1.02] active:scale-[0.98] text-white dark:text-ink text-sm font-semibold px-4 py-2.5 rounded-xl transition-all shadow-sm">
           + Add state
         </Link>
       </div>
@@ -92,16 +92,16 @@ export default function StatesList() {
             value={search}
             onChange={e => setSearch(e.target.value)}
             placeholder="Search states, capitals…"
-            className="w-full bg-white dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 text-ink dark:text-cream placeholder-ink/30 dark:placeholder-cream/30 pl-10 pr-4 py-2.5 text-sm rounded-lg focus:outline-none focus:border-saffron focus:ring-1 focus:ring-saffron/20 shadow-sm dark:shadow-none transition-all duration-200"
+            className="w-full bg-white dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 text-ink dark:text-cream placeholder-ink/30 dark:placeholder-cream/30 pl-10 pr-4 py-2.5 text-sm rounded-xl focus:outline-none focus:border-saffron focus:ring-1 focus:ring-saffron/20 shadow-sm dark:shadow-none hover:border-[#C4B79F] dark:hover:border-white/20 transition-all duration-200"
           />
         </div>
 
-        <div className="flex bg-[#FAF5EC] dark:bg-white/5 p-1 rounded-lg border border-[#DDD0B8] dark:border-white/10 self-start md:self-auto shadow-inner">
+        <div className="flex bg-[#FAF5EC] dark:bg-white/5 p-1 rounded-xl border border-[#DDD0B8] dark:border-white/10 self-start md:self-auto shadow-inner">
           {['all', 'draft', 'pending', 'published'].map(status => (
             <button
               key={status}
               onClick={() => setStatusFilter(status)}
-              className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-colors capitalize ${
+              className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all capitalize hover:scale-[1.01] active:scale-[0.98] ${
                 statusFilter === status
                   ? 'bg-saffron text-white dark:text-ink shadow-sm'
                   : 'text-ink/60 dark:text-cream/60 hover:text-ink dark:hover:text-cream hover:bg-[#EDE5D4]/40 dark:hover:bg-white/5'
@@ -114,9 +114,9 @@ export default function StatesList() {
       </div>
 
       {loading ? (
-        <div className="space-y-2">{Array.from({length:5}).map((_,i)=><div key={i} className="h-14 bg-white dark:bg-white/5 border border-[#DDD0B8]/40 dark:border-white/10 rounded-lg animate-pulse"/>)}</div>
+        <div className="space-y-2">{Array.from({length:5}).map((_,i)=><div key={i} className="h-14 bg-white dark:bg-white/5 border border-[#DDD0B8]/40 dark:border-white/10 rounded-xl animate-pulse"/>)}</div>
       ) : (
-        <div className="bg-white dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 rounded-lg overflow-x-auto shadow-sm">
+        <div className="bg-white dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 rounded-xl overflow-x-auto shadow-sm">
           <table className="w-full min-w-[700px] text-sm">
             <thead>
               <tr className="border-b border-[#DDD0B8] dark:border-white/10 bg-[#FAF5EC]/50 dark:bg-white/3 text-ink/70 dark:text-cream/45 text-xs uppercase tracking-widest font-semibold">
@@ -132,15 +132,15 @@ export default function StatesList() {
               {filtered.map(s => (
                 <tr key={s.id} className="hover:bg-[#FAF5EC]/20 dark:hover:bg-white/3 transition-colors">
                   <td className="px-4 py-3">
-                    <img src={s.cover_url} alt={s.name} className="h-10 w-14 object-cover rounded shadow-sm" />
+                    <img src={s.cover_url} alt={s.name} className="h-10 w-14 object-cover rounded-lg border border-[#DDD0B8]/50 dark:border-white/5 shadow-sm" />
                   </td>
                   <td className="px-4 py-3 text-ink dark:text-cream font-semibold">{s.name}</td>
                   <td className="px-4 py-3 text-ink/60 dark:text-cream/60 hidden md:table-cell">{s.capital}</td>
                   <td className="px-4 py-3 hidden lg:table-cell">
-                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${REGION_COLOR[s.region] || ''}`}>{s.region}</span>
+                    <span className={`px-2.5 py-0.5 rounded-lg text-xs font-semibold ${REGION_COLOR[s.region] || ''}`}>{s.region}</span>
                   </td>
                   <td className="px-4 py-3">
-                    <span className={`px-2 py-0.5 rounded text-[10px] font-bold tracking-wider border ${STATUS_BADGE[s.status] || STATUS_BADGE.draft}`}>
+                    <span className={`px-2 py-0.5 rounded-lg text-[10px] font-bold tracking-wider border ${STATUS_BADGE[s.status] || STATUS_BADGE.draft}`}>
                       {(s.status || 'draft').toUpperCase()}
                     </span>
                   </td>
@@ -149,7 +149,7 @@ export default function StatesList() {
                       {s.status !== 'published' && (
                         <button
                           onClick={() => handleStatusChange(s.id, 'published')}
-                          className="text-xs text-emerald-600 dark:text-emerald-450 hover:text-emerald-500 font-semibold"
+                          className="text-xs text-emerald-600 dark:text-emerald-450 hover:text-emerald-500 font-semibold transition-all duration-100 hover:scale-[1.05] active:scale-[0.95]"
                         >
                           Publish
                         </button>
@@ -157,7 +157,7 @@ export default function StatesList() {
                       {s.status === 'published' && (
                         <button
                           onClick={() => handleStatusChange(s.id, 'draft')}
-                          className="text-xs text-ink/50 dark:text-cream/60 hover:text-ink dark:hover:text-cream font-medium"
+                          className="text-xs text-ink/50 dark:text-cream/60 hover:text-ink dark:hover:text-cream font-medium transition-all duration-100 hover:scale-[1.05] active:scale-[0.95]"
                         >
                           Unpublish
                         </button>
@@ -165,13 +165,13 @@ export default function StatesList() {
                       {s.status === 'draft' && (
                         <button
                           onClick={() => handleStatusChange(s.id, 'pending')}
-                          className="text-xs text-orange-600 dark:text-orange-400 hover:text-orange-500 font-semibold"
+                          className="text-xs text-orange-600 dark:text-orange-400 hover:text-orange-500 font-semibold transition-all duration-100 hover:scale-[1.05] active:scale-[0.95]"
                         >
                           Submit
                         </button>
                       )}
-                      <Link to={`/admin/states/${s.id}`} className="text-xs text-saffron hover:text-saffron/80 font-semibold">Edit</Link>
-                      <button onClick={() => handleDelete(s.id, s.name)} disabled={deleting === s.id} className="text-xs text-red-600 dark:text-red-400 hover:text-red-500 disabled:opacity-50 font-semibold">Delete</button>
+                      <Link to={`/admin/states/${s.id}`} className="text-xs text-saffron hover:text-saffron/80 font-semibold transition-all duration-100 hover:scale-[1.05] active:scale-[0.95]">Edit</Link>
+                      <button onClick={() => handleDelete(s.id, s.name)} disabled={deleting === s.id} className="text-xs text-red-600 dark:text-red-400 hover:text-red-500 disabled:opacity-50 font-semibold transition-all duration-100 hover:scale-[1.05] active:scale-[0.95]">Delete</button>
                     </div>
                   </td>
                 </tr>
