@@ -75,19 +75,19 @@ export default function PlacesList() {
   return (
     <div>
       {toast && (
-        <div className="fixed top-4 right-4 z-50 bg-green-800 text-green-100 text-sm px-4 py-3 rounded-lg shadow-lg">
+        <div className="fixed top-4 right-4 z-50 bg-emerald-800 text-emerald-50 text-sm px-4 py-3 rounded-lg shadow-lg border border-emerald-600">
           {toast}
         </div>
       )}
 
       <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
         <div>
-          <h1 className="font-serif text-3xl text-cream">Places</h1>
-          <p className="text-sm text-cream/40 mt-1">{places.length} destinations</p>
+          <h1 className="font-serif text-3xl text-ink dark:text-cream">Places</h1>
+          <p className="text-sm text-ink/40 dark:text-cream/40 mt-1">{places.length} destinations</p>
         </div>
         <Link
           to="/admin/places/new"
-          className="bg-saffron hover:bg-saffron/90 text-ink text-sm font-medium px-4 py-2 rounded-md transition-colors"
+          className="bg-saffron hover:bg-saffron/90 text-white dark:text-ink text-sm font-semibold px-4 py-2 rounded-md transition-colors shadow-sm"
         >
           + Add place
         </Link>
@@ -99,18 +99,18 @@ export default function PlacesList() {
           value={search}
           onChange={e => setSearch(e.target.value)}
           placeholder="Search places, states, categories…"
-          className="w-full max-w-sm bg-white/5 border border-white/10 text-cream placeholder-cream/30 px-4 py-2.5 text-sm rounded-md focus:outline-none focus:border-saffron"
+          className="w-full max-w-sm bg-white dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 text-ink dark:text-cream placeholder-ink/30 dark:placeholder-cream/30 px-4 py-2.5 text-sm rounded-md focus:outline-none focus:border-saffron shadow-sm dark:shadow-none"
         />
 
-        <div className="flex bg-white/5 p-1 rounded-lg border border-white/10 self-start md:self-auto">
+        <div className="flex bg-[#FAF5EC] dark:bg-white/5 p-1 rounded-lg border border-[#DDD0B8] dark:border-white/10 self-start md:self-auto shadow-inner">
           {['all', 'draft', 'pending', 'published'].map(status => (
             <button
               key={status}
               onClick={() => setStatusFilter(status)}
-              className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors capitalize ${
+              className={`px-3 py-1.5 text-xs font-semibold rounded-md transition-colors capitalize ${
                 statusFilter === status
-                  ? 'bg-saffron text-ink'
-                  : 'text-cream/60 hover:text-cream hover:bg-white/5'
+                  ? 'bg-saffron text-white dark:text-ink shadow-sm'
+                  : 'text-ink/60 dark:text-cream/60 hover:text-ink dark:hover:text-cream hover:bg-[#EDE5D4]/40 dark:hover:bg-white/5'
               }`}
             >
               {status}
@@ -121,39 +121,39 @@ export default function PlacesList() {
 
       {loading ? (
         <div className="space-y-2">
-          {Array.from({length:5}).map((_,i)=><div key={i} className="h-14 bg-white/5 rounded-lg animate-pulse"/>)}
+          {Array.from({length:5}).map((_,i)=><div key={i} className="h-14 bg-white dark:bg-white/5 border border-[#DDD0B8]/40 dark:border-white/10 rounded-lg animate-pulse"/>)}
         </div>
       ) : (
-        <div className="bg-white/5 border border-white/10 rounded-lg overflow-x-auto">
+        <div className="bg-white dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 rounded-lg overflow-x-auto shadow-sm">
           <table className="w-full min-w-[800px] text-sm">
             <thead>
-              <tr className="border-b border-white/10 text-cream/40 text-xs uppercase tracking-widest">
-                <th className="text-left px-4 py-3 font-normal">Image</th>
-                <th className="text-left px-4 py-3 font-normal">Name</th>
-                <th className="text-left px-4 py-3 font-normal hidden md:table-cell">State</th>
-                <th className="text-left px-4 py-3 font-normal hidden lg:table-cell">Category</th>
-                <th className="text-left px-4 py-3 font-normal">Status</th>
-                <th className="text-right px-4 py-3 font-normal">Actions</th>
+              <tr className="border-b border-[#DDD0B8] dark:border-white/10 bg-[#FAF5EC]/50 dark:bg-white/3 text-ink/70 dark:text-cream/45 text-xs uppercase tracking-widest font-semibold">
+                <th className="text-left px-4 py-3 font-semibold">Image</th>
+                <th className="text-left px-4 py-3 font-semibold">Name</th>
+                <th className="text-left px-4 py-3 font-semibold hidden md:table-cell">State</th>
+                <th className="text-left px-4 py-3 font-semibold hidden lg:table-cell">Category</th>
+                <th className="text-left px-4 py-3 font-semibold">Status</th>
+                <th className="text-right px-4 py-3 font-semibold">Actions</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/5">
+            <tbody className="divide-y divide-[#DDD0B8]/50 dark:divide-white/5">
               {filtered.map(p => (
-                <tr key={p.id} className="hover:bg-white/3 transition-colors">
+                <tr key={p.id} className="hover:bg-[#FAF5EC]/20 dark:hover:bg-white/3 transition-colors">
                   <td className="px-4 py-3">
-                    <img src={p.image_url} alt={p.name} className="h-10 w-14 object-cover rounded" />
+                    <img src={p.image_url} alt={p.name} className="h-10 w-14 object-cover rounded shadow-sm" />
                   </td>
                   <td className="px-4 py-3">
-                    <div className="text-cream font-medium">{p.name}</div>
-                    <div className="text-cream/40 text-xs">{p.city}</div>
+                    <div className="text-ink dark:text-cream font-semibold">{p.name}</div>
+                    <div className="text-ink/40 dark:text-cream/40 text-xs mt-0.5">{p.city}</div>
                   </td>
-                  <td className="px-4 py-3 text-cream/60 hidden md:table-cell">{p.state_name}</td>
+                  <td className="px-4 py-3 text-ink/60 dark:text-cream/60 hidden md:table-cell">{p.state_name}</td>
                   <td className="px-4 py-3 hidden lg:table-cell">
-                    <span className={`px-2 py-0.5 rounded-full text-xs ${CATEGORY_BADGE[p.category] || ''}`}>
+                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${CATEGORY_BADGE[p.category] || ''}`}>
                       {p.category}
                     </span>
                   </td>
                   <td className="px-4 py-3">
-                    <span className={`px-2 py-0.5 rounded text-xs font-semibold ${STATUS_BADGE[p.status] || STATUS_BADGE.draft}`}>
+                    <span className={`px-2 py-0.5 rounded text-[10px] font-bold tracking-wider border ${STATUS_BADGE[p.status] || STATUS_BADGE.draft}`}>
                       {(p.status || 'draft').toUpperCase()}
                     </span>
                   </td>
@@ -162,7 +162,7 @@ export default function PlacesList() {
                       {p.status !== 'published' && (
                         <button
                           onClick={() => handleStatusChange(p.id, 'published')}
-                          className="text-xs text-emerald-400 hover:text-emerald-350 font-medium"
+                          className="text-xs text-emerald-600 dark:text-emerald-450 hover:text-emerald-500 font-semibold"
                         >
                           Publish
                         </button>
@@ -170,7 +170,7 @@ export default function PlacesList() {
                       {p.status === 'published' && (
                         <button
                           onClick={() => handleStatusChange(p.id, 'draft')}
-                          className="text-xs text-cream/60 hover:text-cream font-medium"
+                          className="text-xs text-ink/50 dark:text-cream/60 hover:text-ink dark:hover:text-cream font-medium"
                         >
                           Unpublish
                         </button>
@@ -178,16 +178,16 @@ export default function PlacesList() {
                       {p.status === 'draft' && (
                         <button
                           onClick={() => handleStatusChange(p.id, 'pending')}
-                          className="text-xs text-orange-400 hover:text-orange-355 font-medium"
+                          className="text-xs text-orange-600 dark:text-orange-400 hover:text-orange-500 font-semibold"
                         >
                           Submit
                         </button>
                       )}
-                      <Link to={`/admin/places/${p.id}`} className="text-xs text-saffron hover:text-saffron/80 font-medium">Edit</Link>
+                      <Link to={`/admin/places/${p.id}`} className="text-xs text-saffron hover:text-saffron/80 font-semibold">Edit</Link>
                       <button
                         onClick={() => handleDelete(p.id, p.name)}
                         disabled={deleting === p.id}
-                        className="text-xs text-red-400 hover:text-red-300 disabled:opacity-50 font-medium"
+                        className="text-xs text-red-600 dark:text-red-400 hover:text-red-500 disabled:opacity-50 font-semibold"
                       >
                         Delete
                       </button>
@@ -196,7 +196,7 @@ export default function PlacesList() {
                 </tr>
               ))}
               {filtered.length === 0 && (
-                <tr><td colSpan={6} className="px-4 py-8 text-center text-cream/30">No places found.</td></tr>
+                <tr><td colSpan={6} className="px-4 py-8 text-center text-ink/30 dark:text-cream/30">No places found.</td></tr>
               )}
             </tbody>
           </table>

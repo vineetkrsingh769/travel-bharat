@@ -17,13 +17,13 @@ const EMPTY = {
 function Field({ label, children }) {
   return (
     <div>
-      <label className="block text-xs uppercase tracking-widest text-cream/40 mb-1.5">{label}</label>
+      <label className="block text-xs uppercase tracking-widest font-semibold text-ink/50 dark:text-cream/45 mb-1.5">{label}</label>
       {children}
     </div>
   );
 }
 
-const inp = 'w-full bg-white/5 border border-white/10 text-cream placeholder-cream/20 px-3 py-2.5 text-sm rounded-md focus:outline-none focus:border-saffron';
+const inp = 'w-full bg-white dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 text-ink dark:text-cream placeholder-ink/20 dark:placeholder-cream/20 px-3 py-2.5 text-sm rounded-md focus:outline-none focus:border-saffron shadow-sm dark:shadow-none transition-all duration-150';
 
 export default function PlaceForm() {
   const { id }   = useParams();
@@ -87,17 +87,17 @@ export default function PlaceForm() {
     }
   }
 
-  if (loading) return <div className="animate-pulse h-96 bg-white/5 rounded-lg" />;
+  if (loading) return <div className="animate-pulse h-96 bg-[#FAF5EC] dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 rounded-lg" />;
 
   return (
     <div className="max-w-3xl">
       <div className="mb-6">
-        <h1 className="font-serif text-3xl text-cream">{isEdit ? 'Edit place' : 'Add new place'}</h1>
+        <h1 className="font-serif text-3xl text-ink dark:text-cream">{isEdit ? 'Edit place' : 'Add new place'}</h1>
       </div>
 
-      {error && <div className="mb-4 bg-red-900/30 border border-red-500/40 text-red-300 text-sm px-4 py-3 rounded-md">{error}</div>}
+      {error && <div className="mb-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-500/30 text-red-650 dark:text-red-350 text-sm px-4 py-3 rounded-md">{error}</div>}
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className="bg-white dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 rounded-lg p-6 sm:p-8 shadow-sm space-y-5">
         <div className="grid sm:grid-cols-2 gap-5">
           <Field label="Name *">
             <input className={inp} value={form.name} onChange={e => set('name', e.target.value)} required placeholder="Taj Mahal" />
@@ -110,8 +110,8 @@ export default function PlaceForm() {
         <div className="grid sm:grid-cols-2 gap-5">
           <Field label="State *">
             <select className={inp} value={form.state_id} onChange={e => set('state_id', e.target.value)} required>
-              <option value="">Select a state…</option>
-              {states.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
+              <option value="" className="text-ink/50 dark:text-cream/50 bg-white dark:bg-[#0B0C0E]">Select a state…</option>
+              {states.map(s => <option key={s.id} value={s.id} className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">{s.name}</option>)}
             </select>
           </Field>
           <Field label="City *">
@@ -122,15 +122,15 @@ export default function PlaceForm() {
         <div className="grid sm:grid-cols-3 gap-5">
           <Field label="Category *">
             <select className={inp} value={form.category} onChange={e => set('category', e.target.value)} required>
-              <option value="">Select category…</option>
-              {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
+              <option value="" className="text-ink/50 dark:text-cream/50 bg-white dark:bg-[#0B0C0E]">Select category…</option>
+              {CATEGORIES.map(c => <option key={c} value={c} className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">{c}</option>)}
             </select>
           </Field>
           <Field label="Status *">
             <select className={inp} value={form.status} onChange={e => set('status', e.target.value)} required>
-              <option value="draft">Draft</option>
-              <option value="pending">Pending Review</option>
-              <option value="published">Published</option>
+              <option value="draft" className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">Draft</option>
+              <option value="pending" className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">Pending Review</option>
+              <option value="published" className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">Published</option>
             </select>
           </Field>
           <Field label="Image URL">
@@ -139,9 +139,9 @@ export default function PlaceForm() {
         </div>
 
         {form.image_url && (
-          <div className="flex items-center gap-3 p-3 bg-white/5 rounded-md">
-            <img src={form.image_url} alt="preview" className="h-16 w-24 object-cover rounded" onError={e => e.target.style.display='none'} />
-            <span className="text-xs text-cream/40">Image preview</span>
+          <div className="flex items-center gap-3 p-3 bg-[#FAF5EC] dark:bg-white/5 border border-[#DDD0B8]/40 dark:border-white/10 rounded-md">
+            <img src={form.image_url} alt="preview" className="h-16 w-24 object-cover rounded shadow-sm" onError={e => e.target.style.display='none'} />
+            <span className="text-xs text-ink/50 dark:text-cream/40">Image preview</span>
           </div>
         )}
 
@@ -212,7 +212,7 @@ export default function PlaceForm() {
                     copy.splice(idx, 1);
                     set('images', copy);
                   }}
-                  className="bg-red-900/30 hover:bg-red-900/50 border border-red-500/30 text-red-300 px-3 py-2.5 rounded-md text-xs transition-colors"
+                  className="bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/40 border border-red-200 dark:border-red-500/30 text-red-650 dark:text-red-350 px-3 py-2.5 rounded-md text-xs font-semibold transition-colors"
                 >
                   Remove
                 </button>
@@ -223,16 +223,16 @@ export default function PlaceForm() {
               onClick={() => {
                 set('images', [...(form.images || []), '']);
               }}
-              className="bg-white/5 hover:bg-white/10 text-cream/70 border border-white/10 px-4 py-2 rounded-md text-xs transition-colors"
+              className="bg-[#FAF5EC] dark:bg-white/5 hover:bg-[#EDE5D4]/60 dark:hover:bg-white/10 text-ink/75 dark:text-cream/75 border border-[#DDD0B8] dark:border-white/10 px-4 py-2 rounded-md text-xs font-semibold transition-colors animate-fade-in"
             >
               + Add Gallery Image
             </button>
           </div>
 
           {(form.images || []).filter(Boolean).length > 0 && (
-            <div className="grid grid-cols-4 gap-2 p-3 bg-white/5 rounded-md mt-3">
+            <div className="grid grid-cols-4 gap-2 p-3 bg-[#FAF5EC] dark:bg-white/5 border border-[#DDD0B8]/40 dark:border-white/10 rounded-md mt-3">
               {form.images.filter(Boolean).map((img, idx) => (
-                <div key={idx} className="relative aspect-[16/10] bg-black/20 rounded overflow-hidden">
+                <div key={idx} className="relative aspect-[16/10] bg-black/20 rounded overflow-hidden shadow-sm">
                   <img
                     src={img}
                     alt="gallery preview"
@@ -245,11 +245,11 @@ export default function PlaceForm() {
           )}
         </Field>
 
-        <div className="flex gap-3 pt-4 border-t border-white/10">
-          <button type="submit" disabled={saving} className="bg-saffron hover:bg-saffron/90 disabled:opacity-50 text-ink font-semibold px-6 py-2.5 rounded-md text-sm transition-colors">
+        <div className="flex gap-3 pt-4 border-t border-[#DDD0B8] dark:border-white/10">
+          <button type="submit" disabled={saving} className="bg-saffron hover:bg-saffron/90 disabled:opacity-50 text-white dark:text-ink font-semibold px-6 py-2.5 rounded-md text-sm transition-colors shadow-sm">
             {saving ? 'Saving…' : isEdit ? 'Update place' : 'Create place'}
           </button>
-          <button type="button" onClick={() => navigate('/admin/places')} className="bg-white/5 hover:bg-white/10 text-cream/60 px-6 py-2.5 rounded-md text-sm transition-colors">
+          <button type="button" onClick={() => navigate('/admin/places')} className="bg-[#FAF5EC] dark:bg-white/5 hover:bg-[#EDE5D4]/60 dark:hover:bg-white/10 border border-[#DDD0B8] dark:border-white/10 text-ink/70 dark:text-cream/75 px-6 py-2.5 rounded-md text-sm transition-colors font-semibold">
             Cancel
           </button>
         </div>
