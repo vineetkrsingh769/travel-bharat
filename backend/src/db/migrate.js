@@ -11,9 +11,10 @@ async function runMigration() {
   }
 
   console.log('⏳ Connecting to PostgreSQL database...');
+  const isLocal = dbUrl.includes('localhost') || dbUrl.includes('127.0.0.1');
   const pool = new Pool({
     connectionString: dbUrl,
-    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
+    ssl: isLocal ? false : { rejectUnauthorized: false }
   });
 
   try {

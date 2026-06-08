@@ -9,9 +9,12 @@ const { Pool } = require('pg');
 const bcrypt = require('bcryptjs');
 const { states, places } = require('./seedData');
 
+const dbUrl = process.env.DATABASE_URL || '';
+const isLocal = dbUrl.includes('localhost') || dbUrl.includes('127.0.0.1');
+
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+  connectionString: dbUrl,
+  ssl: isLocal ? false : { rejectUnauthorized: false },
 });
 
 async function seed() {
