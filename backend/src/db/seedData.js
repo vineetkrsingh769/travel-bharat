@@ -197,6 +197,40 @@ const states = [
       { name: 'Mussoorie', note: 'Kempty Falls, Lal Tibba, colonial walks', map_link: 'https://maps.google.com/?q=Mussoorie' },
     ],
   },
+  {
+    slug: 'gujarat', name: 'Gujarat', region: 'West', capital: 'Gandhinagar',
+    blurb: 'A western state stretching from the saline flats of the Rann of Kutch to the ancient stone temples of Somnath, known for its textile weaving and archaeological sites.',
+    cover_url: '/assets/place-rann.jpg',
+    highlights: [
+      'Walking across the white salt marshes of the Great Rann of Kutch at twilight',
+      'Exploring the stepped brick reservoirs and drainage channels of ancient Lothal',
+      'Visiting the sun temple of Modhera with its geometric pool steps',
+      'Observing Asiatic lions in the dry teak forests of Gir National Park',
+    ],
+    best_time: 'November to February (mild winter temperatures)',
+    popular_cities: [
+      { name: 'Ahmedabad', note: 'Sabarmati Ashram, Adalaj stepwell, heritage city', map_link: 'https://maps.google.com/?q=Ahmedabad' },
+      { name: 'Bhuj',      note: 'Base for Rann of Kutch, Aina Mahal palace', map_link: 'https://maps.google.com/?q=Bhuj' },
+      { name: 'Somnath',   note: 'Somnath temple on the Arabian Sea shore',    map_link: 'https://maps.google.com/?q=Somnath' },
+    ],
+  },
+  {
+    slug: 'sikkim', name: 'Sikkim', region: 'Northeast', capital: 'Gangtok',
+    blurb: 'A mountainous Himalayan state bordering Tibet, containing glacial lakes, alpine rhododendron valleys, and Buddhist monasteries.',
+    cover_url: '/assets/place-tsomgo.jpg',
+    highlights: [
+      'Observing the dawn reflection on Tsomgo Lake\'s high-altitude waters',
+      'Hearing the deep hum of prayer horns at Rumtek Monastery',
+      'Driving through the high snowy pass of Nathu La',
+      'Walking past the waterfalls and alpine forests of Yumthang Valley',
+    ],
+    best_time: 'March to June (rhododendron blooms) and October to December (clear skies)',
+    popular_cities: [
+      { name: 'Gangtok', note: 'MG Marg, viewpoints, cable car rides', map_link: 'https://maps.google.com/?q=Gangtok' },
+      { name: 'Pelling', note: 'Pemayangtse Monastery, views of Kanchenjunga', map_link: 'https://maps.google.com/?q=Pelling' },
+      { name: 'Lachung', note: 'Base for Yumthang Valley, hot springs', map_link: 'https://maps.google.com/?q=Lachung' },
+    ],
+  },
 ];
 
 const places = [
@@ -408,6 +442,50 @@ const places = [
     nearby: ['Solang Valley', 'Hadimba Temple', 'Rohtang Pass'],
     trivia: 'Old Manali is home to the wood-and-stone Hadimba Temple, built in 1553 around a natural cave where the goddess is said to have meditated.',
     travel_tip: 'Rent a mountain bike to explore the quiet pine paths of Old Manali, or drive through the Atal Tunnel to visit the stark valley of Lahaul.'
+  },
+  {
+    slug: 'rann-of-kutch', name: 'Rann of Kutch', state_slug: 'gujarat', state_name: 'Gujarat',
+    city: 'Bhuj', category: 'Nature', image_url: '/assets/place-rann.jpg',
+    tagline: 'An endless expanse of pure white salt marsh reflecting the seasonal sky in the far west of India.',
+    description: 'The Great Rann of Kutch is one of the largest salt deserts in the world, spanning over 7,500 square kilometers. For most of the year, it remains submerged under shallow sea water, but as the water evaporates in the winter, it leaves behind a thick, crystalline crust of white salt. During full moon nights, the desert takes on a surreal, glowing blue appearance. It is also home to unique wildlife, including the Indian wild ass, and hosts the vibrant Rann Utsav cultural festival.',
+    best_time: 'November to February', timings: 'Sunrise to 10:00 PM',
+    entry_fee: '₹100 (permit required)', map_link: 'https://maps.google.com/?q=Great+Rann+of+Kutch',
+    nearby: ['Kalo Dungar', 'Bhuj old town', 'Hodka village'],
+    trivia: 'The Rann of Kutch is a seasonal wetland that transforms from a salty mudflat during the monsoon into a blindingly white salt desert during the dry winter months.',
+    travel_tip: 'Visit the salt flats at sunset (around 5:30 PM). The horizon disappears completely as the pink and orange sky mirrors directly off the crystalline white floor.'
+  },
+  {
+    slug: 'sun-temple-modhera', name: 'Sun Temple of Modhera', state_slug: 'gujarat', state_name: 'Gujarat',
+    city: 'Modhera', category: 'Heritage', image_url: '/assets/place-modhera.jpg',
+    tagline: 'An 11th-century sandstone temple dedicated to the solar deity, facing a geometric stepped reservoir.',
+    description: 'Built in 1026 CE under the Solanki dynasty, the Sun Temple at Modhera is a masterpiece of early medieval temple design. The complex consists of three main elements: the Surya Kund (a grand stepped water tank decorated with miniature shrines), the Sabha Mandapa (an assembly hall supported by 52 elaborately carved pillars representing the weeks of the year), and the Guda Mandapa (the sanctum sanctorum). The temple is aligned so that the first rays of the sun during the equinox fall directly on the place where the golden idol of Surya once stood.',
+    best_time: 'October to March', timings: '7:00 AM – 6:00 PM',
+    entry_fee: '₹25 (Indian) · ₹300 (Foreign)', map_link: 'https://maps.google.com/?q=Sun+Temple+Modhera',
+    nearby: ['Patan Stepwell', 'Adalaj Stepwell', 'Ahmedabad'],
+    trivia: 'No worship is performed in this temple today. It is maintained strictly as an archaeological monument under national protection.',
+    travel_tip: 'Attend the light and sound show in the evening, which details the history and architectural symbolism of the carvings, or visit during the winter dance festival.'
+  },
+  {
+    slug: 'tsomgo-lake', name: 'Tsomgo Lake', state_slug: 'sikkim', state_name: 'Sikkim',
+    city: 'Gangtok', category: 'Nature', image_url: '/assets/place-tsomgo.jpg',
+    tagline: 'A sacred, high-altitude glacial lake reflecting the shifting colors of the Himalayan sky.',
+    description: 'Located at an elevation of 12,310 feet, Tsomgo Lake (also known as Changu Lake) is a scenic water body fed by melting glaciers. The lake is revered by the local Bhutia and Sikkimese people, who associate its changing shades with spiritual omens. During the winter, the lake surface freezes completely, while the spring brings a burst of alpine flowers along the rocky banks.',
+    best_time: 'March to May · October to December', timings: '8:00 AM – 3:00 PM',
+    entry_fee: '₹200 (permit fee)', map_link: 'https://maps.google.com/?q=Tsomgo+Lake',
+    nearby: ['Baba Mandir', 'Nathu La Pass'],
+    trivia: 'Tsomgo literally translates to "Source of Water" in the Bhutia language, and historically, Tibetan spiritual healers read the colors of the lake to forecast the coming season.',
+    travel_tip: 'Tsomgo Lake requires a protected area permit (PAP) which must be arranged through registered travel agents in Gangtok at least 24 hours in advance.'
+  },
+  {
+    slug: 'rumtek-monastery', name: 'Rumtek Monastery', state_slug: 'sikkim', state_name: 'Sikkim',
+    city: 'Gangtok', category: 'Religious', image_url: '/assets/place-rumtek.jpg',
+    tagline: 'The largest Buddhist monastery in Sikkim, representing the visual heritage of Tibetan Kagyu architecture.',
+    description: 'Serving as the seat of the Kagyu sect outside Tibet, Rumtek Monastery is a grand multi-story sanctuary modeled after the original Tsurphu Monastery in Lhasa. The main shrine hall is adorned with murals, hand-painted thangkas, and a golden stupa containing the relics of the 16th Gyalwa Karmapa. It stands as a vital center of Buddhist studies and monastic discipline in the eastern Himalayas.',
+    best_time: 'March to June · September to November', timings: '6:00 AM – 6:00 PM',
+    entry_fee: '₹10', map_link: 'https://maps.google.com/?q=Rumtek+Monastery',
+    nearby: ['Nehru Botanical Garden', 'Shanti Viewpoint'],
+    trivia: 'Rumtek is surrounded by three hills representing the three main protectors of Tibet—Avalokiteshvara, Manjushri, and Vajrapani.',
+    travel_tip: 'Carry a valid ID card as there is a brief security screening at the outer entrance gates. Photography is restricted inside the primary prayer hall.'
   },
 ];
 
