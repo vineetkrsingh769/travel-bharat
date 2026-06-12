@@ -27,7 +27,7 @@ function PublicLayout() {
   return (
     <div className="min-h-screen flex flex-col bg-cream">
       <SiteHeader />
-      <main className="flex-1">
+      <main className="flex-1 pt-24 md:pt-28">
         <Routes>
           <Route path="/"              element={<Home />} />
           <Route path="/states"        element={<States />} />

@@ -31,6 +31,8 @@ async function runMigration() {
       ALTER TABLE places ADD COLUMN IF NOT EXISTS status VARCHAR(20) DEFAULT 'draft' CHECK (status IN ('draft','pending','published'));
       ALTER TABLE places ADD COLUMN IF NOT EXISTS trivia TEXT;
       ALTER TABLE places ADD COLUMN IF NOT EXISTS travel_tip TEXT;
+      ALTER TABLE places ADD COLUMN IF NOT EXISTS featured BOOLEAN DEFAULT false;
+      ALTER TABLE places ADD COLUMN IF NOT EXISTS sort_order INTEGER DEFAULT 0;
     `);
 
     console.log('✅ Schema migration completed successfully! All tables created and migrated.');

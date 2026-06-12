@@ -30,6 +30,9 @@ export default function Login() {
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="text-center mb-10">
+          <div className="mx-auto mb-4 h-16 w-16 rounded-full overflow-hidden shadow-lg">
+            <img src="/assets/logo.png" alt="TravelBharat logo" className="h-full w-full object-cover scale-125" />
+          </div>
           <div className="font-serif text-3xl text-cream">
             Travel<span className="italic text-saffron">Bharat</span>
           </div>

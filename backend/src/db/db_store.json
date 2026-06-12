@@ -1,0 +1,2388 @@
+{
+  "states": [
+    {
+      "id": 1,
+      "slug": "uttar-pradesh",
+      "name": "Uttar Pradesh",
+      "region": "North",
+      "capital": "Lucknow",
+      "blurb": "A sweep of northern plains shaped by the sacred basins of the Ganges and Yamuna, home to colossal Mughal stone structures, centuries of Awadhi culinary arts, and the ancient riverside steps of Varanasi.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Observing the precise architectural symmetry of the Taj Mahal at dawn",
+        "Witnessing the evening Ganga Aarti fire ceremony at Varanasi's waterfront",
+        "Exploring the ancient ruins of Ashokan pillars and monasteries in Sarnath",
+        "Sampling Awadhi culinary specialties and walking through the corridors of Lucknow's Imambaras"
+      ],
+      "best_time": "October to March (cool, dry winter months)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.698Z"
+    },
+    {
+      "id": 2,
+      "slug": "rajasthan",
+      "name": "Rajasthan",
+      "region": "West",
+      "capital": "Jaipur",
+      "blurb": "A western desert region defined by yellow and pink sandstone fortresses, palaces built on lakes, and historic trading settlements along the Thar.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Exploring the double-walled stone battlements of Amber and Mehrangarh Forts",
+        "Riding camel trails across the dunes of the Thar Desert in Jaisalmer",
+        "Boating past the historic lake palaces of Udaipur's Lake Pichola",
+        "Walking through the Havelis and frescoed courtyards of the Shekhawati region"
+      ],
+      "best_time": "October to March (avoid the hot desert summer)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 3,
+      "slug": "kerala",
+      "name": "Kerala",
+      "region": "South",
+      "capital": "Thiruvananthapuram",
+      "blurb": "A coastal strip in the south flanked by the Western Ghats, featuring palm-lined canals, spice gardens, and kathakali performance traditions.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Cruising the waterways of Alappuzha on a traditional thatched house boat",
+        "Trekking through the misty spice gardens and tea estates of Munnar",
+        "Watching Kathakali dance dramas and Kalaripayattu martial art demonstrations",
+        "Walking past the historic Chinese fishing nets in Fort Kochi's harbor"
+      ],
+      "best_time": "September to March (post-monsoon green landscape)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 4,
+      "slug": "ladakh",
+      "name": "Ladakh",
+      "region": "North",
+      "capital": "Leh",
+      "blurb": "A trans-Himalayan desert region of high-altitude gravel valleys, rocky passes, and stone monasteries situated along blue lakes.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Watching the water colors shift under the sun at Pangong Lake",
+        "Listening to morning chants at Thiksey and Hemis monasteries",
+        "Crossing Khardung La, a high motorable mountain pass",
+        "Exploring the cold dunes and Bactrian camel trails in Nubra Valley"
+      ],
+      "best_time": "May to September (clear roads and pleasant temperatures)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 5,
+      "slug": "tamil-nadu",
+      "name": "Tamil Nadu",
+      "region": "South",
+      "capital": "Chennai",
+      "blurb": "A southern coastal cradle of Dravidian history, marked by soaring temple gateway towers, granite carvings, and bronze-casting workshops.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Climbing the gateway towers of Madurai's Meenakshi Amman Temple",
+        "Tracing ancient Pallava rock carvings by the sea in Mamallapuram",
+        "Riding the Nilgiri Mountain Railway steam toy train up to Ooty",
+        "Visiting the French Quarter and the Matrimandir dome near Pondicherry"
+      ],
+      "best_time": "November to February (dry interior, cool breezes)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 6,
+      "slug": "maharashtra",
+      "name": "Maharashtra",
+      "region": "West",
+      "capital": "Mumbai",
+      "blurb": "A western state spanning Deccan plateaus and coastal ports, containing ancient rock-cut Buddhist caves and stone fortresses.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Walking past the Art Deco facades of Mumbai's Marine Drive",
+        "Viewing the ancient Buddhist mural paintings inside the Ajanta Caves",
+        "Trekking to historical Maratha fortresses like Raigad and Pratapgad",
+        "Exploring the rock-cut monolithic structure of Ellora's Kailash Temple"
+      ],
+      "best_time": "October to February (cool weather, lush green hills)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 7,
+      "slug": "west-bengal",
+      "name": "West Bengal",
+      "region": "East",
+      "capital": "Kolkata",
+      "blurb": "An eastern territory extending from the delta paths of the Sundarbans to Himalayan tea estates, rooted in colonial architecture and literary movements.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Visiting the Victoria Memorial and riding historic hand-pulled trams in Kolkata",
+        "Watching the sunrise over Tiger Hill in the Himalayan town of Darjeeling",
+        "Taking a boat safari through the mangrove channels of the Sundarbans",
+        "Exploring Rabindranath Tagore's Visva-Bharati university in Shantiniketan"
+      ],
+      "best_time": "October to March (post-monsoon cooling, clear skies)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 8,
+      "slug": "himachal-pradesh",
+      "name": "Himachal Pradesh",
+      "region": "North",
+      "capital": "Shimla",
+      "blurb": "A northern mountain state of pine forests, snowy valleys, and towns that host the Tibetan government-in-exile.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Riding the narrow-gauge Kalka-Shimla toy train through the hills",
+        "Visiting Tibetan temples and libraries in McLeod Ganj",
+        "Hiking the high pass trail towards the cold desert of Lahaul and Spiti",
+        "Paragliding over the landing site at Bir-Billing"
+      ],
+      "best_time": "March to June (pleasant summer) or December to February (snow)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 9,
+      "slug": "karnataka",
+      "name": "Karnataka",
+      "region": "South",
+      "capital": "Bengaluru",
+      "blurb": "A southern region of high plateaus and coffee-growing hills, containing the stone ruins of the Vijayanagara Empire.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Walking through the stone carvings and structural ruins of Hampi",
+        "Viewing the Mysore Palace architecture during the evening illumination",
+        "Staying at local coffee plantation homesteads in Coorg",
+        "Viewing the giant monolithic statue of Gomateshwara in Shravanabelagola"
+      ],
+      "best_time": "October to March (mild temperatures across most regions)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 10,
+      "slug": "goa",
+      "name": "Goa",
+      "region": "West",
+      "capital": "Panaji",
+      "blurb": "A small western coastal state featuring historic Portuguese churches, spice plantations, and crescent-shaped sandy bays.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Walking past the pastel-colored villas of Panaji's Latin Quarter",
+        "Visiting 16th-century churches and structural ruins in Old Goa",
+        "Kayaking along the sheltered waters of Palolem Beach in South Goa",
+        "Tasting locally distilled feni at a spice plantation in Ponda"
+      ],
+      "best_time": "November to February (dry winter season)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 11,
+      "slug": "uttarakhand",
+      "name": "Uttarakhand",
+      "region": "North",
+      "capital": "Dehradun",
+      "blurb": "A northern state at the headwaters of the Ganges, featuring deep river valleys, high-altitude meadows, and mountain trekking centers.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Walking the pedestrian suspension bridges over the Ganges in Rishikesh",
+        "Trekking through pine forests and alpine meadows in Haridwar district",
+        "Searching for wildlife in the grasslands of Jim Corbett National Park",
+        "Boating on the volcanic lake of Nainital"
+      ],
+      "best_time": "March to June and September to November (avoid heavy monsoon)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 12,
+      "slug": "gujarat",
+      "name": "Gujarat",
+      "region": "West",
+      "capital": "Gandhinagar",
+      "blurb": "A western state stretching from the saline flats of the Rann of Kutch to the ancient stone temples of Somnath, known for its textile weaving and archaeological sites.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Walking across the white salt marshes of the Great Rann of Kutch at twilight",
+        "Exploring the stepped brick reservoirs and drainage channels of ancient Lothal",
+        "Visiting the sun temple of Modhera with its geometric pool steps",
+        "Observing Asiatic lions in the dry teak forests of Gir National Park"
+      ],
+      "best_time": "November to February (mild winter temperatures)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 13,
+      "slug": "sikkim",
+      "name": "Sikkim",
+      "region": "Northeast",
+      "capital": "Gangtok",
+      "blurb": "A mountainous Himalayan state bordering Tibet, containing glacial lakes, alpine rhododendron valleys, and Buddhist monasteries.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Observing the dawn reflection on Tsomgo Lake's high-altitude waters",
+        "Hearing the deep hum of prayer horns at Rumtek Monastery",
+        "Driving through the high snowy pass of Nathu La",
+        "Walking past the waterfalls and alpine forests of Yumthang Valley"
+      ],
+      "best_time": "March to June (rhododendron blooms) and October to December (clear skies)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 14,
+      "slug": "andhra-pradesh",
+      "name": "Andhra Pradesh",
+      "region": "South",
+      "capital": "Amaravati",
+      "blurb": "A long Coromandel coastline backed by the Eastern Ghats, famous for the hill shrine of Tirupati, Buddhist relic sites, and fiery Andhra cuisine.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Joining pilgrims on the climb to the Venkateswara temple at Tirumala",
+        "Tracing Buddhist history at the Amaravati and Nagarjunakonda excavations",
+        "Boating through the Krishna river gorge at Papikondalu",
+        "Tasting authentic spicy Andhra meals served on banana leaves"
+      ],
+      "best_time": "November to February (cooler coastal weather)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 15,
+      "slug": "arunachal-pradesh",
+      "name": "Arunachal Pradesh",
+      "region": "Northeast",
+      "capital": "Itanagar",
+      "blurb": "India's easternmost frontier of snow passes, monasteries, and river valleys, where the sun rises first over largely untouched Himalayan forest.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Visiting Tawang Monastery, one of the largest Buddhist monasteries in the world",
+        "Crossing the high-altitude Sela Pass and its frozen lake",
+        "Exploring the apple orchards and trout streams of the Ziro Valley",
+        "Meeting the Apatani people and learning about tribal heritage"
+      ],
+      "best_time": "October to April (clear mountain views)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.709Z"
+    },
+    {
+      "id": 16,
+      "slug": "assam",
+      "name": "Assam",
+      "region": "Northeast",
+      "capital": "Dispur",
+      "blurb": "The valley of the mighty Brahmaputra, blanketed by tea estates and home to the one-horned rhinoceros of Kaziranga.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Jeep and elephant safaris among one-horned rhinos in Kaziranga National Park",
+        "Sipping fresh-leaf tea on a working colonial-era estate in Jorhat",
+        "Ferrying to Majuli, one of the world's largest river islands",
+        "Watching the evening rituals at Kamakhya temple in Guwahati"
+      ],
+      "best_time": "November to April (parks open, dry weather)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 17,
+      "slug": "bihar",
+      "name": "Bihar",
+      "region": "East",
+      "capital": "Patna",
+      "blurb": "The cradle of two world religions, where the Buddha attained enlightenment at Bodh Gaya and ancient Nalanda drew scholars from across Asia.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Meditating under the descendant of the original Bodhi tree at the Mahabodhi Temple",
+        "Walking the excavated red-brick ruins of Nalanda university",
+        "Visiting the Ashokan pillar and stupa complex at Vaishali",
+        "Exploring the Sikh heritage of Takht Sri Patna Sahib"
+      ],
+      "best_time": "October to March (mild and dry)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 18,
+      "slug": "chandigarh",
+      "name": "Chandigarh",
+      "region": "North",
+      "capital": "Chandigarh",
+      "blurb": "Le Corbusier's planned city of concrete geometry, open boulevards, and manicured gardens at the foothills of the Shivaliks.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Touring the UNESCO-listed Capitol Complex designed by Le Corbusier",
+        "Wandering the surreal sculpture courtyards of the Rock Garden",
+        "Boating on Sukhna Lake at sunrise",
+        "Strolling among thousands of blooms in the Zakir Hussain Rose Garden"
+      ],
+      "best_time": "October to March (pleasant, garden season)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 19,
+      "slug": "chhattisgarh",
+      "name": "Chhattisgarh",
+      "region": "Central",
+      "capital": "Raipur",
+      "blurb": "A heartland of sal forests, thundering waterfalls, and living tribal traditions, with the horseshoe-shaped Chitrakote falls at its wild centre.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Watching monsoon water thunder over Chitrakote, the \"Niagara of India\"",
+        "Exploring the limestone Kotumsar caves in Kanger Valley National Park",
+        "Visiting weekly haats (tribal markets) in the Bastar region",
+        "Tracing ancient temple art at Bhoramdeo, the \"Khajuraho of Chhattisgarh\""
+      ],
+      "best_time": "October to February (post-monsoon falls, cool air)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 20,
+      "slug": "dadra-nagar-haveli",
+      "name": "Dadra and Nagar Haveli",
+      "region": "West",
+      "capital": "Silvassa",
+      "blurb": "A pocket of Portuguese-influenced quietude between Gujarat and Maharashtra, with riverside gardens, tribal museums, and forested hills.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Cycling through the riverside Vanganga Lake Garden",
+        "Learning Warli and Dhodia traditions at the Silvassa Tribal Museum",
+        "Spotting deer and leopards at the Satmaliya and Vasona safaris",
+        "Picnicking at Dudhni's still backwaters on the Madhuban reservoir"
+      ],
+      "best_time": "November to February (dry, mild days)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 21,
+      "slug": "daman-diu",
+      "name": "Daman and Diu",
+      "region": "West",
+      "capital": "Daman",
+      "blurb": "Twin Portuguese enclaves on the Arabian Sea, trading fort walls and whitewashed churches for tranquil beaches and seafood shacks.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Walking the ramparts of the seaside Moti Daman Fort",
+        "Sunbathing on the quiet sands of Diu's Nagoa Beach",
+        "Exploring the sea-facing St Paul's Church and Diu Fort",
+        "Catching the sunset at Jampore beach over casuarina groves"
+      ],
+      "best_time": "October to May (beach season)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 22,
+      "slug": "delhi",
+      "name": "Delhi",
+      "region": "North",
+      "capital": "New Delhi",
+      "blurb": "Seven historic cities layered into one capital — Mughal tombs, colonial avenues, and chaotic bazaars folded around the seat of modern India.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Climbing through the sandstone arcades of Humayun's Tomb and Qutub Minar",
+        "Eating through the lanes of Chandni Chowk in Old Delhi",
+        "Watching the ceremonial guard at Rashtrapati Bhavan and India Gate",
+        "Browsing crafts and cuisine from every state at Dilli Haat"
+      ],
+      "best_time": "October to March (cool, festival season)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 23,
+      "slug": "haryana",
+      "name": "Haryana",
+      "region": "North",
+      "capital": "Chandigarh",
+      "blurb": "The plains of the Mahabharata, where the battlefield of Kurukshetra and quiet lake retreats sit beside India's fastest-growing urban corridor.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Visiting Brahma Sarovar and the Krishna Museum at Kurukshetra",
+        "Birdwatching at the Sultanpur National Park wetlands",
+        "Weekend boating and zip-lining at Damdama Lake near Gurugram",
+        "Exploring the heritage village crafts mela at Surajkund each February"
+      ],
+      "best_time": "October to March (cool plains weather)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 24,
+      "slug": "jharkhand",
+      "name": "Jharkhand",
+      "region": "East",
+      "capital": "Ranchi",
+      "blurb": "A plateau of waterfalls and sal forests broken by Jain pilgrimage peaks, where rivers tumble off the Chota Nagpur escarpment.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Standing in the spray of Hundru and Dassam waterfalls near Ranchi",
+        "Climbing Parasnath Hill, the holiest Jain pilgrimage site in the east",
+        "Spotting elephants and bison in Betla National Park",
+        "Visiting the Baidyanath Jyotirlinga temple at Deoghar"
+      ],
+      "best_time": "October to February (post-monsoon waterfalls)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 25,
+      "slug": "lakshadweep",
+      "name": "Lakshadweep",
+      "region": "South",
+      "capital": "Kavaratti",
+      "blurb": "A scatter of coral atolls in the Arabian Sea, ringed by turquoise lagoons that hold some of India's clearest dive waters.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Snorkelling the coral gardens of Agatti and Bangaram lagoons",
+        "Kayaking across glass-clear water at Kavaratti",
+        "Diving wrecks and reef walls with certified island schools",
+        "Watching bioluminescent tides on uninhabited sandbanks"
+      ],
+      "best_time": "October to May (calm seas, diving season)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 26,
+      "slug": "madhya-pradesh",
+      "name": "Madhya Pradesh",
+      "region": "Central",
+      "capital": "Bhopal",
+      "blurb": "The heart of India — tiger jungles of Kanha and Bandhavgarh, the erotic temple sculpture of Khajuraho, and Buddhist stupas raised by Ashoka.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Tracking Bengal tigers on dawn safaris in Bandhavgarh and Kanha",
+        "Studying the celebrated temple carvings of Khajuraho",
+        "Circling the great Buddhist stupa of Sanchi",
+        "Drifting between marble cliffs on the Narmada at Bhedaghat"
+      ],
+      "best_time": "October to March (safari and temple season)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 27,
+      "slug": "manipur",
+      "name": "Manipur",
+      "region": "Northeast",
+      "capital": "Imphal",
+      "blurb": "A jewel-green valley around Loktak Lake, where floating islands of vegetation drift past the world's only floating national park.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Canoeing among the floating phumdis of Loktak Lake",
+        "Spotting the endangered sangai deer in Keibul Lamjao National Park",
+        "Shopping at Ima Keithel, the centuries-old all-women market of Imphal",
+        "Watching classical Manipuri Ras Lila dance performances"
+      ],
+      "best_time": "October to March (clear, cool weather)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 28,
+      "slug": "meghalaya",
+      "name": "Meghalaya",
+      "region": "Northeast",
+      "capital": "Shillong",
+      "blurb": "The \"abode of clouds\" — living root bridges grown over generations, plunging waterfalls, and the wettest places on Earth.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Trekking to the double-decker living root bridge at Nongriat",
+        "Standing over the plunge pools of Nohkalikai, India's tallest plunge waterfall",
+        "Boating on the crystal-clear Umngot river at Dawki",
+        "Exploring Mawlynnong, voted the cleanest village in Asia"
+      ],
+      "best_time": "October to April (drier trails); monsoon for full waterfalls",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 29,
+      "slug": "mizoram",
+      "name": "Mizoram",
+      "region": "Northeast",
+      "capital": "Aizawl",
+      "blurb": "Ridge-top towns strung along blue hills, bamboo forests, and a famously warm highland culture in India's far southeast corner.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Watching cloud seas roll below the ridgetop capital of Aizawl",
+        "Hiking the meadows of Phawngpui, the \"Blue Mountain\"",
+        "Visiting Vantawng Falls plunging through bamboo groves",
+        "Experiencing the Chapchar Kut spring festival of Mizo dance"
+      ],
+      "best_time": "October to March (clear hill views)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 30,
+      "slug": "nagaland",
+      "name": "Nagaland",
+      "region": "Northeast",
+      "capital": "Kohima",
+      "blurb": "Tribal highlands of terraced ridges and warrior heritage, famous for the Hornbill Festival that gathers all Naga tribes each December.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Attending the Hornbill Festival at Kisama heritage village",
+        "Trekking the valley of flowers at Dzukou in season",
+        "Paying respects at the WWII Kohima War Cemetery",
+        "Visiting Khonoma, India's first green village"
+      ],
+      "best_time": "October to May (Hornbill Festival in early December)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 31,
+      "slug": "odisha",
+      "name": "Odisha",
+      "region": "East",
+      "capital": "Bhubaneswar",
+      "blurb": "The temple coast of eastern India — the carved sun chariot of Konark, Jagannath's great Rath Yatra, and Asia's largest brackish lagoon.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Reading the stone wheels of the Konark Sun Temple at dawn",
+        "Witnessing rituals at the Jagannath Temple in Puri",
+        "Spotting Irrawaddy dolphins on Chilika Lake",
+        "Touring the ancient Kalinga temples of Bhubaneswar"
+      ],
+      "best_time": "October to February (temple and lagoon season)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 32,
+      "slug": "puducherry",
+      "name": "Puducherry",
+      "region": "South",
+      "capital": "Puducherry",
+      "blurb": "A former French comptoir on the Coromandel coast, where mustard-yellow villas and bougainvillea lanes meet seafront promenades.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Cycling the rue-gridded White Town past French colonial villas",
+        "Meditating at the Matrimandir in Auroville",
+        "Surfing and kayaking off Serenity and Paradise beaches",
+        "Cafe-hopping between Franco-Tamil bakeries on the promenade"
+      ],
+      "best_time": "October to March (cool sea breezes)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 33,
+      "slug": "punjab",
+      "name": "Punjab",
+      "region": "North",
+      "capital": "Chandigarh",
+      "blurb": "The land of five rivers and the Sikh heartland, anchored by the gold-leafed sanctum of the Harmandir Sahib rising from its sacred pool.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Joining the langar community kitchen at the Golden Temple, Amritsar",
+        "Watching the flag-lowering ceremony at the Wagah border",
+        "Standing in silence at Jallianwala Bagh memorial",
+        "Eating through Amritsar's kulcha and lassi institutions"
+      ],
+      "best_time": "October to March (harvest festivals, cool days)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 34,
+      "slug": "telangana",
+      "name": "Telangana",
+      "region": "South",
+      "capital": "Hyderabad",
+      "blurb": "Deccan plateau country crowned by Hyderabad — Golconda's diamond vaults, the Charminar's bazaars, and biryani perfected over four centuries.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Climbing the acoustic ramparts of Golconda Fort at sunset",
+        "Shopping for bangles in the Laad Bazaar under the Charminar",
+        "Touring the opulent Chowmahalla and Falaknuma palaces",
+        "Visiting the thousand-pillar Kakatiya temples at Warangal"
+      ],
+      "best_time": "October to February (dry plateau winter)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 35,
+      "slug": "tripura",
+      "name": "Tripura",
+      "region": "Northeast",
+      "capital": "Agartala",
+      "blurb": "A small kingdom of palaces and rock-cut gods, where the white-domed Ujjayanta Palace presides over bamboo groves and lake temples.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Touring the Indo-Saracenic halls of Ujjayanta Palace",
+        "Boating to Neermahal, the lake palace of Rudrasagar",
+        "Studying the colossal rock reliefs at Unakoti",
+        "Visiting the Tripura Sundari temple, one of the 51 Shakti Peethas"
+      ],
+      "best_time": "October to March (dry season)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 36,
+      "slug": "andaman-nicobar",
+      "name": "Andaman and Nicobar Islands",
+      "region": "East",
+      "capital": "Port Blair",
+      "blurb": "An emerald archipelago in the Bay of Bengal — colonial-era prisons, mangrove creeks, and some of Asia's finest white-sand beaches.",
+      "cover_url": "/assets/hero-india.jpg",
+      "highlights": [
+        "Watching the light-and-sound history show at the Cellular Jail",
+        "Snorkelling the reefs off Havelock's Elephant Beach",
+        "Sunset at Radhanagar Beach, ranked among Asia's best",
+        "Kayaking through bioluminescent mangrove creeks at night"
+      ],
+      "best_time": "October to May (calm seas, diving visibility)",
+      "status": "published",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    }
+  ],
+  "popular_cities": [
+    {
+      "id": 1,
+      "state_id": 1,
+      "name": "Agra",
+      "note": "Taj Mahal, Agra Fort, Fatehpur Sikri",
+      "map_link": "https://maps.google.com/?q=Agra"
+    },
+    {
+      "id": 2,
+      "state_id": 1,
+      "name": "Varanasi",
+      "note": "Ghats, Kashi Vishwanath, Sarnath",
+      "map_link": "https://maps.google.com/?q=Varanasi"
+    },
+    {
+      "id": 3,
+      "state_id": 1,
+      "name": "Lucknow",
+      "note": "Bara Imambara, Chhota Imambara, Hazratganj",
+      "map_link": "https://maps.google.com/?q=Lucknow"
+    },
+    {
+      "id": 4,
+      "state_id": 1,
+      "name": "Ayodhya",
+      "note": "Ram Janmabhoomi and Sarayu river ghats",
+      "map_link": "https://maps.google.com/?q=Ayodhya"
+    },
+    {
+      "id": 5,
+      "state_id": 2,
+      "name": "Jaipur",
+      "note": "Hawa Mahal, City Palace, Amber Fort",
+      "map_link": "https://maps.google.com/?q=Jaipur"
+    },
+    {
+      "id": 6,
+      "state_id": 2,
+      "name": "Udaipur",
+      "note": "Lake Pichola, City Palace, Sajjangarh",
+      "map_link": "https://maps.google.com/?q=Udaipur"
+    },
+    {
+      "id": 7,
+      "state_id": 2,
+      "name": "Jaisalmer",
+      "note": "Golden Fort, Sam sand dunes, Jain temples",
+      "map_link": "https://maps.google.com/?q=Jaisalmer"
+    },
+    {
+      "id": 8,
+      "state_id": 2,
+      "name": "Jodhpur",
+      "note": "Mehrangarh Fort, blue old town, Clock Tower",
+      "map_link": "https://maps.google.com/?q=Jodhpur"
+    },
+    {
+      "id": 9,
+      "state_id": 3,
+      "name": "Kochi",
+      "note": "Fort Kochi, Chinese nets, Mattancherry",
+      "map_link": "https://maps.google.com/?q=Kochi"
+    },
+    {
+      "id": 10,
+      "state_id": 3,
+      "name": "Alappuzha",
+      "note": "Canals, houseboats, Vembanad Lake",
+      "map_link": "https://maps.google.com/?q=Alappuzha"
+    },
+    {
+      "id": 11,
+      "state_id": 3,
+      "name": "Munnar",
+      "note": "Tea gardens, Eravikulam Park, Mattupetty",
+      "map_link": "https://maps.google.com/?q=Munnar"
+    },
+    {
+      "id": 12,
+      "state_id": 3,
+      "name": "Thekkady",
+      "note": "Periyar Wildlife Sanctuary, spice walks",
+      "map_link": "https://maps.google.com/?q=Thekkady"
+    },
+    {
+      "id": 13,
+      "state_id": 4,
+      "name": "Leh",
+      "note": "Leh Palace, Shanti Stupa, main bazaar",
+      "map_link": "https://maps.google.com/?q=Leh"
+    },
+    {
+      "id": 14,
+      "state_id": 4,
+      "name": "Nubra Valley",
+      "note": "Hunder dunes, Diskit Monastery",
+      "map_link": "https://maps.google.com/?q=Nubra+Valley"
+    },
+    {
+      "id": 15,
+      "state_id": 4,
+      "name": "Pangong Tso",
+      "note": "High-altitude lake on the eastern border",
+      "map_link": "https://maps.google.com/?q=Pangong+Tso"
+    },
+    {
+      "id": 16,
+      "state_id": 4,
+      "name": "Kargil",
+      "note": "Drass valley, Suru river, war memorial",
+      "map_link": "https://maps.google.com/?q=Kargil"
+    },
+    {
+      "id": 17,
+      "state_id": 5,
+      "name": "Chennai",
+      "note": "Marina Beach, Kapaleeshwarar Temple, Fort St George",
+      "map_link": "https://maps.google.com/?q=Chennai"
+    },
+    {
+      "id": 18,
+      "state_id": 5,
+      "name": "Madurai",
+      "note": "Meenakshi Temple, Thirumalai Nayak Palace",
+      "map_link": "https://maps.google.com/?q=Madurai"
+    },
+    {
+      "id": 19,
+      "state_id": 5,
+      "name": "Mahabalipuram",
+      "note": "Shore Temple, Five Rathas, rock carvings",
+      "map_link": "https://maps.google.com/?q=Mahabalipuram"
+    },
+    {
+      "id": 20,
+      "state_id": 5,
+      "name": "Ooty",
+      "note": "Nilgiri toy train, botanical gardens, lake",
+      "map_link": "https://maps.google.com/?q=Ooty"
+    },
+    {
+      "id": 21,
+      "state_id": 6,
+      "name": "Mumbai",
+      "note": "Gateway, Colaba Causeway, Elephanta Caves",
+      "map_link": "https://maps.google.com/?q=Mumbai"
+    },
+    {
+      "id": 22,
+      "state_id": 6,
+      "name": "Aurangabad",
+      "note": "Base for Ajanta and Ellora Cave complexes",
+      "map_link": "https://maps.google.com/?q=Aurangabad"
+    },
+    {
+      "id": 23,
+      "state_id": 6,
+      "name": "Pune",
+      "note": "Aga Khan Palace, Shaniwar Wada fort ruins",
+      "map_link": "https://maps.google.com/?q=Pune"
+    },
+    {
+      "id": 24,
+      "state_id": 6,
+      "name": "Lonavala",
+      "note": "Karla Caves, Bhushi Dam, monsoon viewpoints",
+      "map_link": "https://maps.google.com/?q=Lonavala"
+    },
+    {
+      "id": 25,
+      "state_id": 7,
+      "name": "Kolkata",
+      "note": "Victoria Memorial, Indian Museum, Howrah Bridge",
+      "map_link": "https://maps.google.com/?q=Kolkata"
+    },
+    {
+      "id": 26,
+      "state_id": 7,
+      "name": "Darjeeling",
+      "note": "Himalayan Railway, tea gardens, Tiger Hill",
+      "map_link": "https://maps.google.com/?q=Darjeeling"
+    },
+    {
+      "id": 27,
+      "state_id": 7,
+      "name": "Sundarbans",
+      "note": "Mangrove forests, tiger reserve, delta cruises",
+      "map_link": "https://maps.google.com/?q=Sundarbans+National+Park"
+    },
+    {
+      "id": 28,
+      "state_id": 7,
+      "name": "Shantiniketan",
+      "note": "Visva-Bharati, local Baul music, Kopai river",
+      "map_link": "https://maps.google.com/?q=Shantiniketan"
+    },
+    {
+      "id": 29,
+      "state_id": 8,
+      "name": "Shimla",
+      "note": "The Mall Road, Viceregal Lodge, Ridge",
+      "map_link": "https://maps.google.com/?q=Shimla"
+    },
+    {
+      "id": 30,
+      "state_id": 8,
+      "name": "Manali",
+      "note": "Hadimba Temple, Solang Valley, Rohtang Pass",
+      "map_link": "https://maps.google.com/?q=Manali"
+    },
+    {
+      "id": 31,
+      "state_id": 8,
+      "name": "Dharamshala",
+      "note": "McLeod Ganj, Bhagsunag Falls, cricket stadium",
+      "map_link": "https://maps.google.com/?q=Dharamshala"
+    },
+    {
+      "id": 32,
+      "state_id": 8,
+      "name": "Spiti",
+      "note": "Key Monastery, Kaza town, Pin Valley",
+      "map_link": "https://maps.google.com/?q=Spiti+Valley"
+    },
+    {
+      "id": 33,
+      "state_id": 9,
+      "name": "Bengaluru",
+      "note": "Cubbon Park, Vidhana Soudha, tech parks",
+      "map_link": "https://maps.google.com/?q=Bengaluru"
+    },
+    {
+      "id": 34,
+      "state_id": 9,
+      "name": "Mysuru",
+      "note": "Mysore Palace, Chamundi Hills, Zoo",
+      "map_link": "https://maps.google.com/?q=Mysuru"
+    },
+    {
+      "id": 35,
+      "state_id": 9,
+      "name": "Hampi",
+      "note": "Vijayanagara ruins, Virupaksha, Vittala temple",
+      "map_link": "https://maps.google.com/?q=Hampi"
+    },
+    {
+      "id": 36,
+      "state_id": 9,
+      "name": "Coorg",
+      "note": "Coffee plantations, Abbey Falls, Madikeri",
+      "map_link": "https://maps.google.com/?q=Coorg"
+    },
+    {
+      "id": 37,
+      "state_id": 10,
+      "name": "Panaji",
+      "note": "Fontainhas Latin quarter, Mandovi riverfront",
+      "map_link": "https://maps.google.com/?q=Panaji"
+    },
+    {
+      "id": 38,
+      "state_id": 10,
+      "name": "Old Goa",
+      "note": "Basilica of Bom Jesus, Sé Cathedral",
+      "map_link": "https://maps.google.com/?q=Old+Goa"
+    },
+    {
+      "id": 39,
+      "state_id": 10,
+      "name": "Calangute",
+      "note": "Central beach markets and dynamic coastline",
+      "map_link": "https://maps.google.com/?q=Calangute"
+    },
+    {
+      "id": 40,
+      "state_id": 10,
+      "name": "Palolem",
+      "note": "Crescent bay, kayaking, wooden beach huts",
+      "map_link": "https://maps.google.com/?q=Palolem"
+    },
+    {
+      "id": 41,
+      "state_id": 11,
+      "name": "Rishikesh",
+      "note": "Yoga centers, Laxman Jhula, Ganga aarti",
+      "map_link": "https://maps.google.com/?q=Rishikesh"
+    },
+    {
+      "id": 42,
+      "state_id": 11,
+      "name": "Haridwar",
+      "note": "Har Ki Pauri ghats, pilgrim markets",
+      "map_link": "https://maps.google.com/?q=Haridwar"
+    },
+    {
+      "id": 43,
+      "state_id": 11,
+      "name": "Nainital",
+      "note": "Naini Lake, Mall Road, high-altitude views",
+      "map_link": "https://maps.google.com/?q=Nainital"
+    },
+    {
+      "id": 44,
+      "state_id": 11,
+      "name": "Mussoorie",
+      "note": "Kempty Falls, Lal Tibba, colonial walks",
+      "map_link": "https://maps.google.com/?q=Mussoorie"
+    },
+    {
+      "id": 45,
+      "state_id": 12,
+      "name": "Ahmedabad",
+      "note": "Sabarmati Ashram, Adalaj stepwell, heritage city",
+      "map_link": "https://maps.google.com/?q=Ahmedabad"
+    },
+    {
+      "id": 46,
+      "state_id": 12,
+      "name": "Bhuj",
+      "note": "Base for Rann of Kutch, Aina Mahal palace",
+      "map_link": "https://maps.google.com/?q=Bhuj"
+    },
+    {
+      "id": 47,
+      "state_id": 12,
+      "name": "Somnath",
+      "note": "Somnath temple on the Arabian Sea shore",
+      "map_link": "https://maps.google.com/?q=Somnath"
+    },
+    {
+      "id": 48,
+      "state_id": 13,
+      "name": "Gangtok",
+      "note": "MG Marg, viewpoints, cable car rides",
+      "map_link": "https://maps.google.com/?q=Gangtok"
+    },
+    {
+      "id": 49,
+      "state_id": 13,
+      "name": "Pelling",
+      "note": "Pemayangtse Monastery, views of Kanchenjunga",
+      "map_link": "https://maps.google.com/?q=Pelling"
+    },
+    {
+      "id": 50,
+      "state_id": 13,
+      "name": "Lachung",
+      "note": "Base for Yumthang Valley, hot springs",
+      "map_link": "https://maps.google.com/?q=Lachung"
+    },
+    {
+      "id": 51,
+      "state_id": 14,
+      "name": "Tirupati",
+      "note": "Tirumala temple, Sri Govindaraja shrine",
+      "map_link": "https://maps.google.com/?q=Tirupati"
+    },
+    {
+      "id": 52,
+      "state_id": 14,
+      "name": "Visakhapatnam",
+      "note": "RK Beach, Kailasagiri, Araku Valley rail",
+      "map_link": "https://maps.google.com/?q=Visakhapatnam"
+    },
+    {
+      "id": 53,
+      "state_id": 14,
+      "name": "Vijayawada",
+      "note": "Kanaka Durga temple, Undavalli caves",
+      "map_link": "https://maps.google.com/?q=Vijayawada"
+    },
+    {
+      "id": 54,
+      "state_id": 15,
+      "name": "Tawang",
+      "note": "Tawang Monastery, Sela Pass, war memorial",
+      "map_link": "https://maps.google.com/?q=Tawang"
+    },
+    {
+      "id": 55,
+      "state_id": 15,
+      "name": "Ziro",
+      "note": "Apatani villages, pine valleys, music festival",
+      "map_link": "https://maps.google.com/?q=Ziro"
+    },
+    {
+      "id": 56,
+      "state_id": 15,
+      "name": "Bomdila",
+      "note": "Monastery views, craft centre, orchards",
+      "map_link": "https://maps.google.com/?q=Bomdila"
+    },
+    {
+      "id": 57,
+      "state_id": 16,
+      "name": "Guwahati",
+      "note": "Kamakhya temple, river cruises, museums",
+      "map_link": "https://maps.google.com/?q=Guwahati"
+    },
+    {
+      "id": 58,
+      "state_id": 16,
+      "name": "Kaziranga",
+      "note": "Rhino safaris, elephant rides",
+      "map_link": "https://maps.google.com/?q=Kaziranga+National+Park"
+    },
+    {
+      "id": 59,
+      "state_id": 16,
+      "name": "Jorhat",
+      "note": "Tea estates, gateway to Majuli island",
+      "map_link": "https://maps.google.com/?q=Jorhat"
+    },
+    {
+      "id": 60,
+      "state_id": 17,
+      "name": "Bodh Gaya",
+      "note": "Mahabodhi Temple, monasteries, Great Buddha statue",
+      "map_link": "https://maps.google.com/?q=Bodh+Gaya"
+    },
+    {
+      "id": 61,
+      "state_id": 17,
+      "name": "Patna",
+      "note": "Patna Sahib, Golghar, museum",
+      "map_link": "https://maps.google.com/?q=Patna"
+    },
+    {
+      "id": 62,
+      "state_id": 17,
+      "name": "Rajgir",
+      "note": "Nalanda ruins, ropeway, hot springs",
+      "map_link": "https://maps.google.com/?q=Rajgir"
+    },
+    {
+      "id": 63,
+      "state_id": 18,
+      "name": "Chandigarh",
+      "note": "Rock Garden, Sukhna Lake, Capitol Complex",
+      "map_link": "https://maps.google.com/?q=Chandigarh"
+    },
+    {
+      "id": 64,
+      "state_id": 19,
+      "name": "Jagdalpur",
+      "note": "Chitrakote falls, Kanger Valley park",
+      "map_link": "https://maps.google.com/?q=Jagdalpur"
+    },
+    {
+      "id": 65,
+      "state_id": 19,
+      "name": "Raipur",
+      "note": "Purkhouti Muktangan, museums",
+      "map_link": "https://maps.google.com/?q=Raipur"
+    },
+    {
+      "id": 66,
+      "state_id": 19,
+      "name": "Kawardha",
+      "note": "Bhoramdeo temple complex",
+      "map_link": "https://maps.google.com/?q=Kawardha"
+    },
+    {
+      "id": 67,
+      "state_id": 20,
+      "name": "Silvassa",
+      "note": "Tribal museum, gardens, vineyards",
+      "map_link": "https://maps.google.com/?q=Silvassa"
+    },
+    {
+      "id": 68,
+      "state_id": 20,
+      "name": "Dudhni",
+      "note": "Backwater boating, water sports",
+      "map_link": "https://maps.google.com/?q=Dudhni"
+    },
+    {
+      "id": 69,
+      "state_id": 21,
+      "name": "Daman",
+      "note": "Moti Daman Fort, Jampore beach",
+      "map_link": "https://maps.google.com/?q=Daman"
+    },
+    {
+      "id": 70,
+      "state_id": 21,
+      "name": "Diu",
+      "note": "Diu Fort, Nagoa beach, Naida caves",
+      "map_link": "https://maps.google.com/?q=Diu"
+    },
+    {
+      "id": 71,
+      "state_id": 22,
+      "name": "New Delhi",
+      "note": "India Gate, Humayun's Tomb, museums",
+      "map_link": "https://maps.google.com/?q=New+Delhi"
+    },
+    {
+      "id": 72,
+      "state_id": 22,
+      "name": "Old Delhi",
+      "note": "Red Fort, Jama Masjid, Chandni Chowk",
+      "map_link": "https://maps.google.com/?q=Old+Delhi"
+    },
+    {
+      "id": 73,
+      "state_id": 23,
+      "name": "Kurukshetra",
+      "note": "Brahma Sarovar, Jyotisar, museums",
+      "map_link": "https://maps.google.com/?q=Kurukshetra"
+    },
+    {
+      "id": 74,
+      "state_id": 23,
+      "name": "Gurugram",
+      "note": "Cyber Hub, Damdama Lake, Sultanpur park",
+      "map_link": "https://maps.google.com/?q=Gurugram"
+    },
+    {
+      "id": 75,
+      "state_id": 24,
+      "name": "Ranchi",
+      "note": "Hundru falls, Rock Garden, Tagore Hill",
+      "map_link": "https://maps.google.com/?q=Ranchi"
+    },
+    {
+      "id": 76,
+      "state_id": 24,
+      "name": "Deoghar",
+      "note": "Baidyanath temple, Trikut ropeway",
+      "map_link": "https://maps.google.com/?q=Deoghar"
+    },
+    {
+      "id": 77,
+      "state_id": 24,
+      "name": "Netarhat",
+      "note": "Sunrise point, pine forests",
+      "map_link": "https://maps.google.com/?q=Netarhat"
+    },
+    {
+      "id": 78,
+      "state_id": 25,
+      "name": "Agatti",
+      "note": "Airport island, lagoon snorkelling",
+      "map_link": "https://maps.google.com/?q=Agatti"
+    },
+    {
+      "id": 79,
+      "state_id": 25,
+      "name": "Kavaratti",
+      "note": "Marine aquarium, water sports",
+      "map_link": "https://maps.google.com/?q=Kavaratti"
+    },
+    {
+      "id": 80,
+      "state_id": 25,
+      "name": "Bangaram",
+      "note": "Uninhabited resort atoll",
+      "map_link": "https://maps.google.com/?q=Bangaram"
+    },
+    {
+      "id": 81,
+      "state_id": 26,
+      "name": "Khajuraho",
+      "note": "Western temple group, light show",
+      "map_link": "https://maps.google.com/?q=Khajuraho"
+    },
+    {
+      "id": 82,
+      "state_id": 26,
+      "name": "Bhopal",
+      "note": "Sanchi stupa, Bhimbetka caves, lakes",
+      "map_link": "https://maps.google.com/?q=Bhopal"
+    },
+    {
+      "id": 83,
+      "state_id": 26,
+      "name": "Jabalpur",
+      "note": "Bhedaghat marble rocks, Dhuandhar falls",
+      "map_link": "https://maps.google.com/?q=Jabalpur"
+    },
+    {
+      "id": 84,
+      "state_id": 27,
+      "name": "Imphal",
+      "note": "Kangla Fort, Ima Keithel market",
+      "map_link": "https://maps.google.com/?q=Imphal"
+    },
+    {
+      "id": 85,
+      "state_id": 27,
+      "name": "Moirang",
+      "note": "Loktak Lake, INA museum",
+      "map_link": "https://maps.google.com/?q=Moirang"
+    },
+    {
+      "id": 86,
+      "state_id": 28,
+      "name": "Shillong",
+      "note": "Ward's Lake, cafes, Elephant Falls",
+      "map_link": "https://maps.google.com/?q=Shillong"
+    },
+    {
+      "id": 87,
+      "state_id": 28,
+      "name": "Cherrapunji",
+      "note": "Nohkalikai falls, root bridges, caves",
+      "map_link": "https://maps.google.com/?q=Cherrapunji"
+    },
+    {
+      "id": 88,
+      "state_id": 28,
+      "name": "Dawki",
+      "note": "Umngot river boating, border town",
+      "map_link": "https://maps.google.com/?q=Dawki"
+    },
+    {
+      "id": 89,
+      "state_id": 29,
+      "name": "Aizawl",
+      "note": "Durtlang hills, museums, markets",
+      "map_link": "https://maps.google.com/?q=Aizawl"
+    },
+    {
+      "id": 90,
+      "state_id": 29,
+      "name": "Thenzawl",
+      "note": "Vantawng falls, handloom village",
+      "map_link": "https://maps.google.com/?q=Thenzawl"
+    },
+    {
+      "id": 91,
+      "state_id": 30,
+      "name": "Kohima",
+      "note": "War cemetery, Kisama village, markets",
+      "map_link": "https://maps.google.com/?q=Kohima"
+    },
+    {
+      "id": 92,
+      "state_id": 30,
+      "name": "Dimapur",
+      "note": "Kachari ruins, gateway city",
+      "map_link": "https://maps.google.com/?q=Dimapur"
+    },
+    {
+      "id": 93,
+      "state_id": 31,
+      "name": "Puri",
+      "note": "Jagannath temple, golden beach",
+      "map_link": "https://maps.google.com/?q=Puri"
+    },
+    {
+      "id": 94,
+      "state_id": 31,
+      "name": "Konark",
+      "note": "Sun Temple, Chandrabhaga beach",
+      "map_link": "https://maps.google.com/?q=Konark"
+    },
+    {
+      "id": 95,
+      "state_id": 31,
+      "name": "Bhubaneswar",
+      "note": "Lingaraj temple, Udayagiri caves",
+      "map_link": "https://maps.google.com/?q=Bhubaneswar"
+    },
+    {
+      "id": 96,
+      "state_id": 32,
+      "name": "Puducherry",
+      "note": "White Town, promenade, Aurobindo Ashram",
+      "map_link": "https://maps.google.com/?q=Puducherry"
+    },
+    {
+      "id": 97,
+      "state_id": 32,
+      "name": "Auroville",
+      "note": "Matrimandir, craft boutiques",
+      "map_link": "https://maps.google.com/?q=Auroville"
+    },
+    {
+      "id": 98,
+      "state_id": 33,
+      "name": "Amritsar",
+      "note": "Golden Temple, Wagah border, Jallianwala Bagh",
+      "map_link": "https://maps.google.com/?q=Amritsar"
+    },
+    {
+      "id": 99,
+      "state_id": 33,
+      "name": "Patiala",
+      "note": "Qila Mubarak, royal gardens",
+      "map_link": "https://maps.google.com/?q=Patiala"
+    },
+    {
+      "id": 100,
+      "state_id": 34,
+      "name": "Hyderabad",
+      "note": "Charminar, Golconda, Hussain Sagar",
+      "map_link": "https://maps.google.com/?q=Hyderabad"
+    },
+    {
+      "id": 101,
+      "state_id": 34,
+      "name": "Warangal",
+      "note": "Kakatiya temples, Ramappa (UNESCO)",
+      "map_link": "https://maps.google.com/?q=Warangal"
+    },
+    {
+      "id": 102,
+      "state_id": 35,
+      "name": "Agartala",
+      "note": "Ujjayanta Palace, Jagannath temple",
+      "map_link": "https://maps.google.com/?q=Agartala"
+    },
+    {
+      "id": 103,
+      "state_id": 35,
+      "name": "Melaghar",
+      "note": "Neermahal lake palace",
+      "map_link": "https://maps.google.com/?q=Melaghar"
+    },
+    {
+      "id": 104,
+      "state_id": 35,
+      "name": "Unakoti",
+      "note": "Rock-cut carvings, waterfalls",
+      "map_link": "https://maps.google.com/?q=Unakoti"
+    },
+    {
+      "id": 105,
+      "state_id": 36,
+      "name": "Port Blair",
+      "note": "Cellular Jail, Ross Island, museums",
+      "map_link": "https://maps.google.com/?q=Port+Blair"
+    },
+    {
+      "id": 106,
+      "state_id": 36,
+      "name": "Havelock",
+      "note": "Radhanagar beach, dive schools",
+      "map_link": "https://maps.google.com/?q=Havelock+Island"
+    },
+    {
+      "id": 107,
+      "state_id": 36,
+      "name": "Neil Island",
+      "note": "Natural bridge, quiet beaches",
+      "map_link": "https://maps.google.com/?q=Neil+Island"
+    }
+  ],
+  "places": [
+    {
+      "id": 1,
+      "slug": "taj-mahal",
+      "name": "Taj Mahal",
+      "state_id": 1,
+      "state_name": "Uttar Pradesh",
+      "city": "Agra",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A study in absolute Mughal symmetry, where translucent Makrana marble absorbs and mirrors the shifting pastel light of the Yamuna sky.",
+      "description": "Rising from the banks of the Yamuna River, the Taj Mahal is the apex of Mughal architectural genius. Completed in 1648 as a mausoleum for Mumtaz Mahal by Emperor Shah Jahan, it is a masterclass in geometric balance and architectural precision. The structure is constructed entirely of white Makrana marble, which is hand-carved and inlaid with intricate floral scrollwork composed of semi-precious stones—jasper, lapis lazuli, jade, and carnelian. Under the changing skies, the dome shifts dynamically in hue, glowing a soft amber-pink at dawn, gleaming white at midday, and reflecting a cool, silver-blue during full moons.",
+      "best_time": "October to March",
+      "timings": "Sunrise to sunset (closed Fridays)",
+      "entry_fee": "₹50 (Indian) · ₹1,100 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Taj+Mahal+Agra",
+      "nearby": [
+        "Agra Fort",
+        "Mehtab Bagh",
+        "Itmad-ud-Daulah's Tomb"
+      ],
+      "status": "published",
+      "trivia": "The Taj Mahal's marble shifts color depending on the time of day: it glows a soft pinkish-gold at dawn, shines bright white in the afternoon sun, and looks like a floating silver orb under a full moon.",
+      "travel_tip": "Arrive at the Eastern Gate by 5:30 AM to catch the first light. The morning mist over the Yamuna River makes for a surreal, crowd-free photography session.",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 2,
+      "slug": "golden-temple-amritsar",
+      "name": "Golden Temple",
+      "state_id": 33,
+      "state_name": "Punjab",
+      "city": "Amritsar",
+      "category": "Religious",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "The holiest Sikh shrine, its gold-leafed sanctum rising from the Amrit Sarovar pool.",
+      "description": "The Harmandir Sahib, known as the Golden Temple, is the spiritual centre of Sikhism. Its upper floors are covered in gold leaf, reflected in the surrounding sacred pool. The community kitchen (langar) serves free meals to over 100,000 visitors daily regardless of faith. The complex hums with kirtan hymns from before dawn until midnight.",
+      "best_time": "October to March",
+      "timings": "Open 24 hours",
+      "entry_fee": "Free",
+      "map_link": "https://maps.google.com/?q=Golden+Temple+Amritsar",
+      "nearby": [
+        "Jallianwala Bagh",
+        "Wagah Border",
+        "Partition Museum"
+      ],
+      "status": "published",
+      "trivia": "The Golden Temple's foundation stone was laid by the Muslim Sufi saint Mian Mir at Guru Arjan's invitation.",
+      "travel_tip": "Cover your head, remove shoes, and wash feet before entering; volunteer for langar service for a deeper experience.",
+      "created_at": "2026-06-12T06:50:39.710Z"
+    },
+    {
+      "id": 3,
+      "slug": "red-fort-delhi",
+      "name": "Red Fort",
+      "state_id": 22,
+      "state_name": "Delhi",
+      "city": "Old Delhi",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "Shah Jahan's sandstone citadel, from whose ramparts India's Independence Day flag is raised.",
+      "description": "The Red Fort (Lal Qila) was the main residence of Mughal emperors for nearly 200 years. Its massive red sandstone walls enclose palaces, audience halls, and gardens along the Yamuna. Each Independence Day, the Prime Minister hoists the national flag from its ramparts, continuing a tradition begun by Jawaharlal Nehru in 1947.",
+      "best_time": "October to March",
+      "timings": "9:30 AM – 4:30 PM (closed Mondays)",
+      "entry_fee": "₹35 (Indian) · ₹500 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Red+Fort+Delhi",
+      "nearby": [
+        "Jama Masjid",
+        "Chandni Chowk",
+        "Raj Ghat"
+      ],
+      "status": "published",
+      "trivia": "The fort was originally called Qila-e-Mubarak and was painted white before the British repainted it red.",
+      "travel_tip": "Attend the evening sound-and-light show for a narrated history walk through the palaces.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 4,
+      "slug": "gateway-of-india",
+      "name": "Gateway of India",
+      "state_id": 6,
+      "state_name": "Maharashtra",
+      "city": "Mumbai",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A monumental basalt arch combining Roman design with traditional Gujarati stonework along Mumbai's harbor.",
+      "description": "Completed in 1924 to commemorate the 1911 visit of King George V and Queen Mary, the Gateway of India stands along the waterfront at Apollo Bunder. This 26-meter-high archway is built of yellow basalt and features an Indo-Saracenic design that blends Roman triumphal arch architecture with local Gujarati stone-carving patterns. Facing the harbor, it has served historically as a welcoming point for ships arriving in Mumbai.",
+      "best_time": "November to February",
+      "timings": "Open 24 hours",
+      "entry_fee": "Free",
+      "map_link": "https://maps.google.com/?q=Gateway+of+India+Mumbai",
+      "nearby": [
+        "Taj Mahal Palace Hotel",
+        "Elephanta Caves (ferry)",
+        "Colaba Causeway"
+      ],
+      "status": "published",
+      "trivia": "The Gateway is historically significant as the point from which the last British troops departed India on February 28, 1948, marking the end of colonial rule.",
+      "travel_tip": "Take a morning ferry from the Gateway to the Elephanta Caves to get a spectacular view of the monument's arch from the water.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 5,
+      "slug": "hawa-mahal",
+      "name": "Hawa Mahal",
+      "state_id": 2,
+      "state_name": "Rajasthan",
+      "city": "Jaipur",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A five-story screen of pink and red sandstone, designed as a cooling honeycomb of wind for the royal court.",
+      "description": "Commissioned in 1799 by Maharaja Sawai Pratap Singh, the Hawa Mahal is a spectacular facade of pink-painted sandstone that resembles the crown of Krishna. Designed by Lal Chand Ustad, this architectural screen contains 953 intricate jharokhas (small latticed windows). It served a dual purpose: it allowed the women of the royal household to observe the busy street bazaars below without violating the strict rules of purdah, and it functioned as a natural air cooler, drawing air through its narrow vents to create a refreshing breeze throughout the palace chambers during Rajasthan's dry summers.",
+      "best_time": "October to March",
+      "timings": "9:00 AM – 4:30 PM",
+      "entry_fee": "₹50 (Indian) · ₹200 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Hawa+Mahal+Jaipur",
+      "nearby": [
+        "City Palace",
+        "Jantar Mantar",
+        "Amber Fort"
+      ],
+      "status": "published",
+      "trivia": "Hawa Mahal was built without a solid foundation. Because of its curved structure, it stands on its own, tilting slightly at a 87-degree angle.",
+      "travel_tip": "The best view of the facade is actually from the rooftop cafes directly across the street. Grab a cup of local cardamom tea there at sunset.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 6,
+      "slug": "charminar",
+      "name": "Charminar",
+      "state_id": 34,
+      "state_name": "Telangana",
+      "city": "Hyderabad",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "Hyderabad's four-minaret landmark, built in 1591 at the centre of the old city's bazaar quarter.",
+      "description": "The Charminar was erected by Sultan Muhammad Quli Qutb Shah to mark the founding of Hyderabad. Four grand arches face the cardinal directions, topped by minarets with spiral staircases offering city views. The Laad Bazaar stretching beside it sells lac bangles, pearls, and Hyderabadi spices in a centuries-old market lane.",
+      "best_time": "October to February",
+      "timings": "9:30 AM – 5:30 PM",
+      "entry_fee": "₹25 (Indian) · ₹300 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Charminar+Hyderabad",
+      "nearby": [
+        "Mecca Masjid",
+        "Chowmahalla Palace",
+        "Laad Bazaar"
+      ],
+      "status": "published",
+      "trivia": "A cat's head was carved into the Charminar's design because the Sultan's plague vow involved cats.",
+      "travel_tip": "Climb the southern minaret for the best view, then eat Hyderabadi biryani at the Nimrah Café beside Mecca Masjid.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 7,
+      "slug": "mysore-palace",
+      "name": "Mysore Palace",
+      "state_id": 9,
+      "state_name": "Karnataka",
+      "city": "Mysuru",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A grand royal palace blending Indo-Saracenic domes, stained glass, and rosewood carvings in Mysore.",
+      "description": "Completed in 1912 as the seat of the Kingdom of Mysore's Wodeyar dynasty, this palace is a premier example of Indo-Saracenic architecture. The building combines elements of Rajput, Mughal, and Gothic styles, featuring grand domes, tall archways, and detailed stone columns. Inside, the Durbar Hall is decorated with stained-glass ceilings, mosaic floors, and hand-carved rosewood doors, reflecting the craftsmanship of the early 20th century.",
+      "best_time": "October to March",
+      "timings": "10:00 AM – 5:30 PM",
+      "entry_fee": "₹70 (Indian) · ₹200 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Mysore+Palace",
+      "nearby": [
+        "Chamundi Hills",
+        "Brindavan Gardens",
+        "St. Philomena's Church"
+      ],
+      "status": "published",
+      "trivia": "Every Sunday evening and during the Dussehra festival, the palace is lit up by exactly 97,000 lightbulbs, drawing massive crowds to the lawns.",
+      "travel_tip": "Visit the palace around 6:45 PM on a Sunday to watch the illumination happen all at once. Entry to the courtyard is free during this time.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 8,
+      "slug": "victoria-memorial",
+      "name": "Victoria Memorial",
+      "state_id": 7,
+      "state_name": "West Bengal",
+      "city": "Kolkata",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A grand white Makrana marble monument set in landscaped gardens in Kolkata.",
+      "description": "Constructed between 1906 and 1921, the Victoria Memorial is a white Makrana marble building dedicated to the memory of Queen Victoria. The design blends British neoclassical structure with Mughal domes and Italian Renaissance details. Today, the monument houses a museum with galleries exhibiting historical paintings, manuscripts, and colonial artifacts, set within 64 acres of lawns, lakes, and gardens.",
+      "best_time": "October to March",
+      "timings": "10:00 AM – 5:00 PM (closed Mondays)",
+      "entry_fee": "₹30 (Indian) · ₹500 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Victoria+Memorial+Kolkata",
+      "nearby": [
+        "Indian Museum",
+        "St. Paul's Cathedral",
+        "Maidan"
+      ],
+      "status": "published",
+      "trivia": "The bronze angel of victory on top of the central dome is mounted on large ball bearings and rotates with the wind.",
+      "travel_tip": "Enjoy the light and sound show (\"Pride & Glory\") held in the gardens on winter evenings, which outlines the city's rich history.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 9,
+      "slug": "humayuns-tomb",
+      "name": "Humayun's Tomb",
+      "state_id": 22,
+      "state_name": "Delhi",
+      "city": "New Delhi",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "The garden tomb that inspired the Taj Mahal, set in a charbagh of sandstone arcades.",
+      "description": "Built in 1570, Humayun's Tomb was the first garden tomb on the Indian subcontinent and the architectural template for the Taj Mahal. Red sandstone and white marble create a double-domed mausoleum surrounded by square pools and shaded walkways. The UNESCO-listed complex includes tombs of Mughal princes and the Barber's Tomb.",
+      "best_time": "October to March",
+      "timings": "6:00 AM – 6:00 PM",
+      "entry_fee": "₹35 (Indian) · ₹500 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Humayun+Tomb+Delhi",
+      "nearby": [
+        "Nizamuddin Dargah",
+        "India Gate",
+        "Lodhi Gardens"
+      ],
+      "status": "published",
+      "trivia": "Over 100 graves of Mughal family members are scattered across the tomb's charbagh gardens.",
+      "travel_tip": "Visit at opening time when the morning light hits the marble inlay and the gardens are nearly empty.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 10,
+      "slug": "varanasi-ghats",
+      "name": "Varanasi Ghats",
+      "state_id": 1,
+      "state_name": "Uttar Pradesh",
+      "city": "Varanasi",
+      "category": "Religious",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A sacred waterfront of stone steps where life, death, and devotional fire converge along the sweeping curve of the Ganges.",
+      "description": "Varanasi, or Kashi, is a spiritual landscape carved out over millennia along the crescent curve of the Ganges River. Along its stone steps (ghats), the ancient rhythms of India play out in public: pilgrims perform dawn purifications, sadhus meditate beneath bamboo umbrellas, and smoke rises continuously from the burning steps of Manikarnika Ghat. Every evening at Dashashwamedh Ghat, the Ganga Aarti ritual fills the air with the scent of camphor and sandalwood, as priests wave massive brass lamps in synchronized movements to the accompaniment of bells and chants.",
+      "best_time": "November to February",
+      "timings": "Open all day · Aarti at sunrise & sunset",
+      "entry_fee": "Free",
+      "map_link": "https://maps.google.com/?q=Dashashwamedh+Ghat+Varanasi",
+      "nearby": [
+        "Kashi Vishwanath Temple",
+        "Sarnath",
+        "Manikarnika Ghat"
+      ],
+      "status": "published",
+      "trivia": "Mark Twain once wrote: \"Varanasi is older than history, older than tradition, older even than legend, and looks twice as old as all of them put together.\"",
+      "travel_tip": "Hire a wooden rowboat at dawn (5:30 AM) from Assi Ghat to watch the morning rituals unfold from the water. Agree on the price before boarding.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 11,
+      "slug": "meenakshi-temple",
+      "name": "Meenakshi Amman Temple",
+      "state_id": 5,
+      "state_name": "Tamil Nadu",
+      "city": "Madurai",
+      "category": "Religious",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A labyrinthine Dravidian temple complex topped by tall gateway towers covered in thousands of painted stone figures.",
+      "description": "Dating back to the 6th century, the Meenakshi Amman Temple is the cultural core of Madurai. This Dravidian complex is enclosed by thick stone walls and features 14 gopurams (gateway towers) rising above the city. The towers are covered in over 33,000 stone and stucco sculptures of deities, mythical beasts, and historic characters. The interior contains the Hall of Thousand Pillars, a stone chamber supported by carved granite columns arranged in a grid.",
+      "best_time": "October to March",
+      "timings": "5:00 AM – 12:30 PM · 4:00 PM – 10:00 PM",
+      "entry_fee": "Free · Camera ₹50",
+      "map_link": "https://maps.google.com/?q=Meenakshi+Amman+Temple+Madurai",
+      "nearby": [
+        "Thirumalai Nayakkar Palace",
+        "Gandhi Memorial Museum",
+        "Alagar Hills"
+      ],
+      "status": "published",
+      "trivia": "The temple's Hall of Thousand Pillars features 985 uniquely carved granite columns, arranged in a grid pattern where they form a perfect alignment from any angle.",
+      "travel_tip": "Dress conservatively (no shorts or sleeveless tops) and prepare to walk barefoot inside the temple. Non-Hindus are allowed in the courtyards but not the inner sanctums.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 12,
+      "slug": "tirumala-temple",
+      "name": "Tirumala Temple",
+      "state_id": 14,
+      "state_name": "Andhra Pradesh",
+      "city": "Tirupati",
+      "category": "Religious",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A hilltop shrine to Lord Venkateswara, drawing one of the largest daily pilgrim congregations in the world.",
+      "description": "Perched on the Tirumala hills of the Eastern Ghats, the Sri Venkateswara Temple is among the most visited religious sites on Earth. Devotees climb or drive the ghat road through forested ridges to reach the gold-vaulted sanctum, where rituals have continued unbroken for centuries. The temple complex includes ornate mandapams, prasadam counters, and viewing galleries overlooking the temple town below.",
+      "best_time": "September to February",
+      "timings": "Varies by darshan ticket",
+      "entry_fee": "Free (special darshan tickets extra)",
+      "map_link": "https://maps.google.com/?q=Tirumala+Temple",
+      "nearby": [
+        "Sri Govindaraja Temple",
+        "Silathoranam",
+        "Akasa Ganga"
+      ],
+      "status": "published",
+      "trivia": "The temple receives offerings of hair tonsuring from millions of devotees each year, a tradition believed to symbolise surrender.",
+      "travel_tip": "Book darshan slots online in advance; weekday early-morning visits have shorter queues than festival weekends.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 13,
+      "slug": "jagannath-temple-puri",
+      "name": "Jagannath Temple",
+      "state_id": 31,
+      "state_name": "Odisha",
+      "city": "Puri",
+      "category": "Religious",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "One of the Char Dham pilgrimage sites, famous for its annual Rath Yatra chariot procession.",
+      "description": "The Jagannath Temple in Puri enshrines Lord Jagannath, an avatar of Vishnu, alongside his siblings Balabhadra and Subhadra. The annual Rath Yatra draws millions as the deities are pulled on massive wooden chariots through the town streets. The temple kitchen feeds thousands daily with mahaprasad cooked in earthen pots.",
+      "best_time": "October to March (avoid Rath Yatra crowds in June–July)",
+      "timings": "5:00 AM – 11:00 PM",
+      "entry_fee": "Free (non-Hindus may view from rooftop platform)",
+      "map_link": "https://maps.google.com/?q=Jagannath+Temple+Puri",
+      "nearby": [
+        "Puri Beach",
+        "Konark Sun Temple",
+        "Chilika Lake"
+      ],
+      "status": "published",
+      "trivia": "The temple flag always flutters in the opposite direction of the wind, a phenomenon locals attribute to divine will.",
+      "travel_tip": "Try the temple mahaprasad from the Anand Bazaar counter — it is among the largest community kitchens in the world.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 14,
+      "slug": "mahabodhi-temple",
+      "name": "Mahabodhi Temple",
+      "state_id": 17,
+      "state_name": "Bihar",
+      "city": "Bodh Gaya",
+      "category": "Religious",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "The sacred Bodhi tree site where Siddhartha Gautama attained enlightenment beneath a peepal.",
+      "description": "The Mahabodhi Temple Complex is a UNESCO World Heritage site marking the exact spot of the Buddha's enlightenment. The pyramidal temple rises beside the descendant of the original Bodhi tree, where monks meditate at dawn. Monasteries from Thailand, Japan, Bhutan, and Tibet ring the complex, each built in their national architectural style.",
+      "best_time": "October to March",
+      "timings": "5:00 AM – 9:00 PM",
+      "entry_fee": "Free",
+      "map_link": "https://maps.google.com/?q=Mahabodhi+Temple+Bodh+Gaya",
+      "nearby": [
+        "Great Buddha Statue",
+        "Thai Monastery",
+        "Nalanda ruins"
+      ],
+      "status": "published",
+      "trivia": "Emperor Ashoka is believed to have erected the first temple here around 260 BCE to mark the enlightenment site.",
+      "travel_tip": "Arrive before sunrise for the calmest meditation atmosphere under the Bodhi tree.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 15,
+      "slug": "kamakhya-temple",
+      "name": "Kamakhya Temple",
+      "state_id": 16,
+      "state_name": "Assam",
+      "city": "Guwahati",
+      "category": "Religious",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "An ancient Shakti shrine on Nilachal Hill, centre of tantric worship in eastern India.",
+      "description": "Dedicated to the goddess Kamakhya, this hilltop temple is among the 51 Shakti Peethas and draws pilgrims during the Ambubachi Mela each June. The sanctum is a natural cave with a spring-fed yoni-shaped stone revered as the goddess herself. The complex includes smaller shrines to the ten Mahavidyas surrounding the main temple.",
+      "best_time": "October to March",
+      "timings": "5:30 AM – 10:00 PM",
+      "entry_fee": "Free",
+      "map_link": "https://maps.google.com/?q=Kamakhya+Temple+Guwahati",
+      "nearby": [
+        "Umananda Island",
+        "Assam State Museum",
+        "Brahmaputra river cruise"
+      ],
+      "status": "published",
+      "trivia": "During Ambubachi Mela, the temple closes for three days when the goddess is believed to menstruate, and the spring turns reddish.",
+      "travel_tip": "Visit on a weekday morning to avoid the heaviest crowds; dress modestly and remove shoes at the main gate.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 16,
+      "slug": "rishikesh",
+      "name": "Rishikesh",
+      "state_id": 11,
+      "state_name": "Uttarakhand",
+      "city": "Rishikesh",
+      "category": "Adventure",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A spiritual mountain sanctuary where the cold Ganges rushes past temple ashrams and high suspension bridges.",
+      "description": "Located in the foothills of the Himalayas, Rishikesh is where the Ganges River leaves the mountains and enters the plains. The town is a long-standing spiritual center, filled with ashrams, meditation centers, and temples along the riverbank. Crossed by the massive suspension bridges of Ram Jhula and Lakshman Jhula, Rishikesh is also a hub for adventure sports, drawing visitors for river rafting and mountain trekking.",
+      "best_time": "September to April",
+      "timings": "Open all day",
+      "entry_fee": "Free · activities priced separately",
+      "map_link": "https://maps.google.com/?q=Rishikesh",
+      "nearby": [
+        "Laxman Jhula",
+        "Triveni Ghat",
+        "Neelkanth Mahadev Temple"
+      ],
+      "status": "published",
+      "trivia": "Rishikesh gained global fame in 1968 when The Beatles visited the Maharishi Mahesh Yogi ashram to study Transcendental Meditation and wrote most of the White Album.",
+      "travel_tip": "Walk across the suspension bridge of Ram Jhula at sunset to watch the river spark under the evening lights, and visit the Beatles Ashram ruins.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 17,
+      "slug": "konark-sun-temple",
+      "name": "Konark Sun Temple",
+      "state_id": 31,
+      "state_name": "Odisha",
+      "city": "Konark",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A 13th-century chariot temple shaped as the sun god's stone carriage, drawn by seven horses.",
+      "description": "Built by King Narasimhadeva I in 1250 CE, the Konark Sun Temple is designed as a colossal stone chariot with twelve pairs of wheels and seven rearing horses. Intricate carvings cover every surface, depicting musicians, dancers, and daily life. Though partially ruined, the temple remains among the finest examples of Kalinga architecture.",
+      "best_time": "October to February",
+      "timings": "6:00 AM – 8:00 PM",
+      "entry_fee": "₹40 (Indian) · ₹600 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Konark+Sun+Temple",
+      "nearby": [
+        "Puri Jagannath Temple",
+        "Chandrabhaga Beach",
+        "Bhubaneswar temples"
+      ],
+      "status": "published",
+      "trivia": "The temple's wheels function as sundials, accurate enough to tell time to the minute.",
+      "travel_tip": "Attend the Konark Dance Festival in December when classical dancers perform on an open-air stage by the temple.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 18,
+      "slug": "khajuraho-temples",
+      "name": "Khajuraho Temples",
+      "state_id": 26,
+      "state_name": "Madhya Pradesh",
+      "city": "Khajuraho",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "UNESCO-listed sandstone temples famed for intricate sculptures of life, love, and devotion.",
+      "description": "Built by the Chandela dynasty between 950 and 1050 CE, the Khajuraho temple group features 85 original shrines of which 25 remain. The western group displays celebrated erotic panels alongside depictions of musicians, warriors, and daily life carved in honey-coloured sandstone. Evening light-and-sound shows narrate the Chandela history against the temple silhouettes.",
+      "best_time": "October to March",
+      "timings": "Sunrise to sunset",
+      "entry_fee": "₹40 (Indian) · ₹600 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Khajuraho+Temples",
+      "nearby": [
+        "Panna Tiger Reserve",
+        "Raneh Falls",
+        "Ajaigarh Fort"
+      ],
+      "status": "published",
+      "trivia": "Only about 10% of Khajuraho sculptures are erotic; the rest depict gods, animals, and ordinary life.",
+      "travel_tip": "See the western group at sunrise when the sandstone glows warm gold and tour groups are absent.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 19,
+      "slug": "darjeeling",
+      "name": "Darjeeling",
+      "state_id": 7,
+      "state_name": "West Bengal",
+      "city": "Darjeeling",
+      "category": "Nature",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A high Himalayan ridge town surrounded by steep green tea estates with views of Mt. Kanchenjunga.",
+      "description": "Sited at an elevation of 2,045 meters in the Lesser Himalayas, Darjeeling is known for its tea plantations and views of Mt. Kanchenjunga, the world's third-highest peak. The town grew as a sanatorium and hill station under British rule in the 19th century. It is home to the Darjeeling Himalayan Railway—a narrow-gauge steam line—and features a diverse population representing Tibetan, Nepali, and Bengali cultures, with a legacy of mountaineering.",
+      "best_time": "March to May · September to November",
+      "timings": "Open all day · Toy Train runs daily",
+      "entry_fee": "Free · Toy Train Joy Ride ₹1,500",
+      "map_link": "https://maps.google.com/?q=Darjeeling",
+      "nearby": [
+        "Tiger Hill",
+        "Batasia Loop",
+        "Ghum Monastery"
+      ],
+      "status": "published",
+      "trivia": "Darjeeling tea is often referred to as the \"Champagne of Teas\" due to its delicate muscatel flavor, which cannot be replicated anywhere else.",
+      "travel_tip": "Wake up at 4:00 AM and head to Tiger Hill to catch the sunrise. Watch the peak of Kanchenjunga light up in shades of orange and gold before the valleys do.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 20,
+      "slug": "manali",
+      "name": "Manali",
+      "state_id": 8,
+      "state_name": "Himachal Pradesh",
+      "city": "Manali",
+      "category": "Adventure",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "An alpine valley town on the Beas river, serving as a gateway to high-altitude Himalayan passes.",
+      "description": "Manali lies in the valley of the Beas River, surrounded by pine forests, orchards, and high mountain peaks. The town acts as a popular base for outdoor trekking, mountaineering, and paragliding in the Solang Valley. Historically a quiet trade route, it now serves as the southern starting point of the key highway crossing high passes into the cold desert regions of Lahaul, Spiti, and Ladakh.",
+      "best_time": "March to June · December to February",
+      "timings": "Open all day",
+      "entry_fee": "Free · activities priced separately",
+      "map_link": "https://maps.google.com/?q=Manali",
+      "nearby": [
+        "Solang Valley",
+        "Hadimba Temple",
+        "Rohtang Pass"
+      ],
+      "status": "published",
+      "trivia": "Old Manali is home to the wood-and-stone Hadimba Temple, built in 1553 around a natural cave where the goddess is said to have meditated.",
+      "travel_tip": "Rent a mountain bike to explore the quiet pine paths of Old Manali, or drive through the Atal Tunnel to visit the stark valley of Lahaul.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 21,
+      "slug": "shimla",
+      "name": "Shimla",
+      "state_id": 8,
+      "state_name": "Himachal Pradesh",
+      "city": "Shimla",
+      "category": "Nature",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A mountain ridge town in the Himalayas with colonial-era timber buildings and cedar forests.",
+      "description": "Shimla, located on the ridge of the foothills of the Himalayas, served as the summer capital of British India from 1864. The town's architecture includes prominent half-timbered Tudor-style buildings, such as the Viceregal Lodge and Christ Church. Today, the pedestrian Mall Road serves as the town center, surrounded by forests of Himalayan deodar cedars and pine trees.",
+      "best_time": "March to June · December to January (snow)",
+      "timings": "Open all day",
+      "entry_fee": "Free",
+      "map_link": "https://maps.google.com/?q=Shimla",
+      "nearby": [
+        "Jakhoo Temple",
+        "Kufri",
+        "Viceregal Lodge"
+      ],
+      "status": "published",
+      "trivia": "The Kalka-Shimla toy train route crosses exactly 102 active tunnels and over 864 bridges as it climbs the mountain slopes.",
+      "travel_tip": "Walk up the Jakhoo Temple trail (or take the ropeway) to the highest peak in Shimla to spot monkeys and enjoy panoramic mountain views.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 22,
+      "slug": "munnar-tea-hills",
+      "name": "Munnar Tea Hills",
+      "state_id": 3,
+      "state_name": "Kerala",
+      "city": "Munnar",
+      "category": "Nature",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "Manicured green tea bushes folding over the contours of the Western Ghats, wrapped in mountain mist.",
+      "description": "Located in the Western Ghats at an elevation of 1,600 meters, Munnar is defined by its sprawling, manicured tea plantations that cover the undulating mountain slopes like a thick green carpet. The cool, damp climate and frequent mountain mists create ideal conditions for growing tea, a tradition started by British planters in the late 19th century. Beyond the tea estates, the hills rise to meet the peaks of Anamudi, offering habitats for endangered mountain goats, deep waterfalls, and dense forests.",
+      "best_time": "September to May",
+      "timings": "Estates open daylight hours",
+      "entry_fee": "Tea Museum ₹150",
+      "map_link": "https://maps.google.com/?q=Munnar+Kerala",
+      "nearby": [
+        "Eravikulam National Park",
+        "Mattupetty Dam",
+        "Top Station"
+      ],
+      "status": "published",
+      "trivia": "The tea gardens of Munnar are home to the Neelakurinji flower, which blooms only once every twelve years, turning the hillsides a vibrant violet-blue.",
+      "travel_tip": "Visit Lockhart Tea Factory (one of the oldest in the region) to taste fresh tea and watch the orthodox leaf-processing method first-hand.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 23,
+      "slug": "pangong-lake",
+      "name": "Pangong Lake",
+      "state_id": 4,
+      "state_name": "Ladakh",
+      "city": "Leh",
+      "category": "Nature",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A deep, high-altitude saltwater basin reflecting vivid shades of cobalt and turquoise against dry mountain cliffs.",
+      "description": "Pangong Tso is a narrow, endorheic saltwater lake sitting at an altitude of 4,250 meters in the trans-Himalayan cold desert. Extending nearly 134 kilometers across the border from India into Tibet, the lake is surrounded by bare, multi-hued mountain ranges. Due to the high altitude and clean air, the water color shifts rapidly with the sun's position, transforming from a pale turquoise to deep cobalt. The stark landscape and clean alpine environment draw travelers to its desolate shores.",
+      "best_time": "May to September",
+      "timings": "Day visit recommended",
+      "entry_fee": "Inner Line Permit required",
+      "map_link": "https://maps.google.com/?q=Pangong+Tso+Lake",
+      "nearby": [
+        "Nubra Valley",
+        "Hemis Monastery",
+        "Khardung La"
+      ],
+      "status": "published",
+      "trivia": "Despite being a saltwater lake, Pangong Tso freezes completely during the winter, allowing cars to be driven across its thick ice crust.",
+      "travel_tip": "Due to the extreme altitude, spend at least 48 hours acclimatizing in Leh before traveling to Pangong to prevent acute mountain sickness.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 24,
+      "slug": "kaziranga-national-park",
+      "name": "Kaziranga National Park",
+      "state_id": 16,
+      "state_name": "Assam",
+      "city": "Kohora",
+      "category": "Nature",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "Floodplain grasslands sheltering two-thirds of the world's one-horned rhinoceros population.",
+      "description": "A UNESCO World Heritage site on the Brahmaputra floodplain, Kaziranga protects the largest population of Indian one-horned rhinos alongside elephants, wild buffalo, and swamp deer. Jeep and elephant-back safaris cross tall elephant grass and wetlands where rhinos graze at close range. The park closes during the monsoon when the Brahmaputra swells across the reserve.",
+      "best_time": "November to April",
+      "timings": "Safaris: 7:30 AM & 2:00 PM slots",
+      "entry_fee": "Safari from ₹1,500",
+      "map_link": "https://maps.google.com/?q=Kaziranga+National+Park",
+      "nearby": [
+        "Orchid Park",
+        "Tea estates of Jorhat",
+        "Majuli island"
+      ],
+      "status": "published",
+      "trivia": "Kaziranga's rhino population rebounded from fewer than 200 in the early 1900s to over 2,600 today.",
+      "travel_tip": "Book the central Kohora range for the highest rhino sighting probability; elephant safaris start earliest.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 25,
+      "slug": "hampi-ruins",
+      "name": "Hampi",
+      "state_id": 9,
+      "state_name": "Karnataka",
+      "city": "Hampi",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A vast valley of cracked granite boulders sheltering the stone ruins and columned temples of the Vijayanagara Empire.",
+      "description": "Stretched across a dramatic river valley of giant granite boulders, Hampi preserves the ruins of the Vijayanagara Empire, which peaked in the 14th century. This UNESCO World Heritage site includes fortified royal enclosures, structured step-wells, and massive columned temple complexes like the Virupaksha Temple. The landscape is a mix of natural rock piles and ancient stone engineering, where historic market lanes and structural monuments tell of a wealthy trading center that once hosted merchants from Persia and Europe.",
+      "best_time": "October to February",
+      "timings": "Sunrise to sunset",
+      "entry_fee": "₹40 (Indian) · ₹600 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Hampi+Karnataka",
+      "nearby": [
+        "Virupaksha Temple",
+        "Vittala Temple",
+        "Matanga Hill"
+      ],
+      "status": "published",
+      "trivia": "Hampi's Vittala Temple features 56 musical pillars. When gently tapped, these stone columns emit distinct musical notes of classical instruments.",
+      "travel_tip": "Rent a bicycle or a moped to explore the vast ruins. Cross the Tungabhadra River in a circular coracle boat to visit the quieter 'hippie island' side.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 26,
+      "slug": "golconda-fort",
+      "name": "Golconda Fort",
+      "state_id": 34,
+      "state_name": "Telangana",
+      "city": "Hyderabad",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A hilltop diamond-trading fortress with an acoustic clap system that once guarded the Koh-i-Noor.",
+      "description": "Golconda Fort was the capital of the Qutb Shahi dynasty and the market where diamonds like the Koh-i-Noor were traded. Its acoustic engineering allows a hand clap at the entrance dome to be heard at the highest pavilion, alerting royals to danger. The evening sound-and-light show narrates the fort's history against its ramparts.",
+      "best_time": "October to February",
+      "timings": "9:00 AM – 5:30 PM · Sound & light: 6:30 PM",
+      "entry_fee": "₹25 (Indian) · ₹300 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Golconda+Fort",
+      "nearby": [
+        "Qutb Shahi tombs",
+        "Taramati Baradari",
+        "Charminar"
+      ],
+      "status": "published",
+      "trivia": "The Koh-i-Noor and Hope diamonds were both mined from the Kollur mines near Golconda.",
+      "travel_tip": "Clap your hands under the entrance dome to test the acoustic relay up to the Bala Hissar pavilion.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 27,
+      "slug": "jaisalmer-fort",
+      "name": "Jaisalmer Fort",
+      "state_id": 2,
+      "state_name": "Rajasthan",
+      "city": "Jaisalmer",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A medieval yellow sandstone fortress rising from the sands of the Thar, where families still inhabit centuries-old bastions.",
+      "description": "Rising from the flat expanse of the Thar Desert, Jaisalmer Fort is a medieval citadel carved entirely from yellow sandstone. Established in 1156 by Rawal Jaisal, it is one of the last remaining 'living' forts in the world: a quarter of the city's population still resides within its double-walled stone bastions, navigating narrow alleys lined with Havelis, ancient Jain temples, and quiet residential courtyards. At sunset, the golden sandstone absorbs the warm desert light, earning the fortress its name, Sonar Qila.",
+      "best_time": "October to March",
+      "timings": "9:00 AM – 6:00 PM",
+      "entry_fee": "₹50 (Indian) · ₹250 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Jaisalmer+Fort",
+      "nearby": [
+        "Patwon ki Haveli",
+        "Sam Sand Dunes",
+        "Gadisar Lake"
+      ],
+      "status": "published",
+      "trivia": "The fort is built without any mortar. The heavy sandstone blocks are fitted together using interlocking tongue-and-groove joints.",
+      "travel_tip": "Wander deep into the fort's narrow lanes after 9:00 PM when the day-trippers leave. The illuminated sandstone walls look magical under the starry desert sky.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 28,
+      "slug": "ajanta-caves",
+      "name": "Ajanta Caves",
+      "state_id": 6,
+      "state_name": "Maharashtra",
+      "city": "Aurangabad",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A sequence of 30 rock-cut Buddhist caves containing ancient frescoes painted on plaster in Aurangabad.",
+      "description": "Carved into the basalt cliffs of a horseshoe-shaped gorge in Aurangabad, the Ajanta Caves comprise 30 rock-cut temples and monasteries dating from the 2nd century BCE to the 5th century CE. The caves are famous for preserving ancient Indian wall paintings, executed on mud plaster using natural earth pigments. These frescoes portray scenes from the Jataka tales, the life of the Buddha, and details of contemporary royal life, offering insights into early Indian art.",
+      "best_time": "November to March",
+      "timings": "9:00 AM – 5:00 PM (closed Mondays)",
+      "entry_fee": "₹40 (Indian) · ₹600 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Ajanta+Caves",
+      "nearby": [
+        "Ellora Caves",
+        "Daulatabad Fort",
+        "Bibi ka Maqbara"
+      ],
+      "status": "published",
+      "trivia": "The caves lay forgotten and swallowed by the jungle for over a thousand years until they were accidentally discovered in 1819 by a British officer, John Smith, during a tiger hunt.",
+      "travel_tip": "Bring a small pocket flashlight (flash photography is prohibited). The guards will allow you to inspect the dark inner sanctuaries to appreciate the mural details.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 29,
+      "slug": "sanchi-stupa",
+      "name": "Sanchi Stupa",
+      "state_id": 26,
+      "state_name": "Madhya Pradesh",
+      "city": "Sanchi",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "Ashoka's great Buddhist stupa, crowned by four carved gateways depicting the Buddha's life.",
+      "description": "The Great Stupa at Sanchi is the oldest stone structure in India, originally commissioned by Emperor Ashoka in the 3rd century BCE. Four elaborately carved toranas (gateways) depict Jataka tales and scenes from the Buddha's life without showing the Buddha in human form. The hilltop site overlooks the Betwa valley plains.",
+      "best_time": "October to March",
+      "timings": "Sunrise to sunset",
+      "entry_fee": "₹30 (Indian) · ₹500 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Sanchi+Stupa",
+      "nearby": [
+        "Bhopal lakes",
+        "Bhimbetka caves",
+        "Udayagiri caves"
+      ],
+      "status": "published",
+      "trivia": "The Buddha is represented at Sanchi only through symbols — footprints, wheels, and empty thrones.",
+      "travel_tip": "Hire the on-site ASI guide to read the Jataka stories carved on each torana panel.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 30,
+      "slug": "nalanda-university-ruins",
+      "name": "Nalanda University Ruins",
+      "state_id": 17,
+      "state_name": "Bihar",
+      "city": "Nalanda",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "Red-brick ruins of the world's first residential university, which flourished for 800 years.",
+      "description": "Nalanda was a vast monastic university that attracted scholars from China, Tibet, Korea, and Central Asia between the 5th and 12th centuries. Excavated red-brick cells, lecture halls, and stupas spread across 14 hectares, revealing a rigorous curriculum of philosophy, logic, and medicine. A modern Nalanda University has been revived nearby, echoing the ancient institution's global spirit.",
+      "best_time": "October to March",
+      "timings": "9:00 AM – 5:00 PM",
+      "entry_fee": "₹25 (Indian) · ₹300 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Nalanda+University+Ruins",
+      "nearby": [
+        "Rajgir hot springs",
+        "Pawapuri Jain temple",
+        "Hiuen Tsang Memorial"
+      ],
+      "status": "published",
+      "trivia": "The Chinese pilgrim Xuanzang studied at Nalanda for five years and documented over 10,000 monks living on the campus.",
+      "travel_tip": "Hire a guide at the entrance to interpret the layout of monasteries and the main stupa terrace.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 31,
+      "slug": "mahabalipuram",
+      "name": "Mamallapuram Shore Temple",
+      "state_id": 5,
+      "state_name": "Tamil Nadu",
+      "city": "Mamallapuram",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "An 8th-century granite temple built by the Pallava dynasty directly on the windswept shore of Mamallapuram.",
+      "description": "Constructed in the 8th century under the Pallava ruler Rajasimha, the Shore Temple stands on the edge of the Bay of Bengal in Mamallapuram. Built of dressed granite blocks rather than carved from solid rock, it is one of the oldest structural stone temples in Southern India. The temple consists of two shrines dedicated to Shiva and one to Vishnu, withstanding centuries of ocean wind and salt spray, surrounded by carvings of couchant bulls.",
+      "best_time": "November to February",
+      "timings": "6:00 AM – 6:00 PM",
+      "entry_fee": "₹40 (Indian) · ₹600 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Shore+Temple+Mamallapuram",
+      "nearby": [
+        "Arjuna's Penance",
+        "Pancha Rathas",
+        "Krishna's Butter Ball"
+      ],
+      "status": "published",
+      "trivia": "The temple survived the catastrophic 2004 Indian Ocean Tsunami. The receding water briefly exposed the ruins of the legendary \"Seven Pagodas\" offshore.",
+      "travel_tip": "Visit late in the afternoon (4:30 PM). The soft golden light highlights the worn details of the granite carvings, and the sea breeze is refreshing.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 32,
+      "slug": "alleppey-backwaters",
+      "name": "Alleppey Backwaters",
+      "state_id": 3,
+      "state_name": "Kerala",
+      "city": "Alappuzha",
+      "category": "Nature",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A tranquil network of palm-shaded canals and shallow lakes traversed by traditional thatched-roof houseboats.",
+      "description": "The backwaters of Alappuzha comprise a complex water network running parallel to the Malabar Coast. Here, village life revolves around narrow canals lined with coconut palms and low-lying paddy fields. Traveling through these waters on a kettuvallam—a traditional boat constructed from jackwood planks bound with coir rope without a single metal nail—reveals a slow-paced lifestyle of coir spinning, duck farming, and net fishing. The lake breezes and silent canals offer a quiet retreat from the coastal cities.",
+      "best_time": "September to March",
+      "timings": "Houseboats: 12:00 PM check-in",
+      "entry_fee": "Houseboats from ₹8,000 / night",
+      "map_link": "https://maps.google.com/?q=Alleppey+Backwaters",
+      "nearby": [
+        "Marari Beach",
+        "Kumarakom Bird Sanctuary",
+        "Vembanad Lake"
+      ],
+      "status": "published",
+      "trivia": "The houseboats are built using traditional techniques without a single nail. The jackwood planks are tied together with coir ropes and sealed with caustic black resin.",
+      "travel_tip": "Book a small country boat (shikhara) for a few hours in the afternoon to access the narrowest canals where the large houseboats cannot fit.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 33,
+      "slug": "radhanagar-beach",
+      "name": "Radhanagar Beach",
+      "state_id": 36,
+      "state_name": "Andaman and Nicobar Islands",
+      "city": "Havelock Island",
+      "category": "Beach",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A wide arc of white sand ranked among Asia's best beaches, on Havelock's western shore.",
+      "description": "Radhanagar Beach (Beach No. 7) on Havelock Island features fine white sand, turquoise water, and mahua tree shade along a wide curve. The beach has been rated among the best in Asia by travel publications. Sunset here turns the Andaman Sea shades of orange and violet as fishing boats return to shore.",
+      "best_time": "October to May",
+      "timings": "Open all day",
+      "entry_fee": "Free",
+      "map_link": "https://maps.google.com/?q=Radhanagar+Beach+Havelock",
+      "nearby": [
+        "Elephant Beach snorkelling",
+        "Kalapathar Beach",
+        "Neil Island"
+      ],
+      "status": "published",
+      "trivia": "Time magazine ranked Radhanagar among the top beaches in Asia in 2004, putting the Andamans on the global map.",
+      "travel_tip": "Stay on Havelock (Swaraj Dweep) overnight to enjoy the beach at sunset after day-trippers leave.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 34,
+      "slug": "palolem-beach",
+      "name": "Palolem Beach",
+      "state_id": 10,
+      "state_name": "Goa",
+      "city": "Canacona",
+      "category": "Beach",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A sheltered crescent bay of golden sand and calm waters, lined with slanting coconut palms in South Goa.",
+      "description": "Palolem Beach is a natural crescent bay situated in Canacona, South Goa. Protected by rocky headlands on both ends, the beach features calm, shallow waters suitable for swimming. Colorful wooden huts and local restaurants line the shore beneath coconut palms, offering a relaxed environment. The beach maintains a quieter atmosphere compared to the bustling, active resort areas of North Goa, making it popular for kayaking and coastal walks.",
+      "best_time": "November to February",
+      "timings": "Open all day",
+      "entry_fee": "Free",
+      "map_link": "https://maps.google.com/?q=Palolem+Beach+Goa",
+      "nearby": [
+        "Cabo de Rama Fort",
+        "Butterfly Beach",
+        "Cotigao Sanctuary"
+      ],
+      "status": "published",
+      "trivia": "Just off the shore of Palolem lies Monkey Island, which can be reached by a short swim or kayak during low tide, offering panoramic sunset views.",
+      "travel_tip": "Take a boat ride at 6:30 AM to spot wild dolphins playing in the bay, or enjoy a sunset paddleboard session when the waters are calm.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 35,
+      "slug": "rann-of-kutch",
+      "name": "Rann of Kutch",
+      "state_id": 12,
+      "state_name": "Gujarat",
+      "city": "Bhuj",
+      "category": "Nature",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "An endless expanse of pure white salt marsh reflecting the seasonal sky in the far west of India.",
+      "description": "The Great Rann of Kutch is one of the largest salt deserts in the world, spanning over 7,500 square kilometers. For most of the year, it remains submerged under shallow sea water, but as the water evaporates in the winter, it leaves behind a thick, crystalline crust of white salt. During full moon nights, the desert takes on a surreal, glowing blue appearance. It is also home to unique wildlife, including the Indian wild ass, and hosts the vibrant Rann Utsav cultural festival.",
+      "best_time": "November to February",
+      "timings": "Sunrise to 10:00 PM",
+      "entry_fee": "₹100 (permit required)",
+      "map_link": "https://maps.google.com/?q=Great+Rann+of+Kutch",
+      "nearby": [
+        "Kalo Dungar",
+        "Bhuj old town",
+        "Hodka village"
+      ],
+      "status": "published",
+      "trivia": "The Rann of Kutch is a seasonal wetland that transforms from a salty mudflat during the monsoon into a blindingly white salt desert during the dry winter months.",
+      "travel_tip": "Visit the salt flats at sunset (around 5:30 PM). The horizon disappears completely as the pink and orange sky mirrors directly off the crystalline white floor.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 36,
+      "slug": "wagah-border-ceremony",
+      "name": "Wagah Border Ceremony",
+      "state_id": 33,
+      "state_name": "Punjab",
+      "city": "Attari",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A daily military drill of marching, salutes, and flag-lowering on the India–Pakistan border.",
+      "description": "Each evening at the Wagah-Attari border crossing, border guards of India and Pakistan perform a choreographed ceremony of high kicks, salutes, and aggressive gate-closing before lowering their national flags. Crowds on both sides cheer and wave flags in a display of patriotic fervour. The event has become one of Punjab's most visited spectacles.",
+      "best_time": "October to March",
+      "timings": "Ceremony: 4:30 PM (winter) · 5:30 PM (summer)",
+      "entry_fee": "Free",
+      "map_link": "https://maps.google.com/?q=Wagah+Border+Attari",
+      "nearby": [
+        "Golden Temple",
+        "Amritsar city",
+        "Pul Kanjari"
+      ],
+      "status": "published",
+      "trivia": "The ceremony began in 1959 as a goodwill gesture and gradually evolved into the theatrical drill seen today.",
+      "travel_tip": "Arrive 90 minutes early to get front-row seats on the Indian side; carry minimal belongings through security.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 37,
+      "slug": "cellular-jail",
+      "name": "Cellular Jail",
+      "state_id": 36,
+      "state_name": "Andaman and Nicobar Islands",
+      "city": "Port Blair",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "The colonial prison where freedom fighters were exiled to solitary cells on a remote island.",
+      "description": "The Cellular Jail in Port Blair was built by the British in 1906 to imprison Indian independence activists in solitary confinement. The seven-wing star-shaped structure allowed a single guard to watch all corridors. The light-and-sound show recounts the suffering of prisoners like Veer Savarkar and Batukeshwar Dutt through narration and projection.",
+      "best_time": "October to May",
+      "timings": "9:00 AM – 5:00 PM · Light & sound: 5:30 PM & 6:45 PM",
+      "entry_fee": "₹30 (Indian) · ₹100 (Foreign)",
+      "map_link": "https://maps.google.com/?q=Cellular+Jail+Port+Blair",
+      "nearby": [
+        "Ross Island",
+        "Corbyn's Cove",
+        "Anthropological Museum"
+      ],
+      "status": "published",
+      "trivia": "Of the seven prison wings, only three survive; the others were demolished by the Japanese during WWII.",
+      "travel_tip": "Attend the evening light-and-sound show for a moving narration of the freedom fighters' stories.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 38,
+      "slug": "tawang-monastery",
+      "name": "Tawang Monastery",
+      "state_id": 15,
+      "state_name": "Arunachal Pradesh",
+      "city": "Tawang",
+      "category": "Religious",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A vast hilltop gompa overlooking the Tawang valley, seat of Mahayana Buddhism in the eastern Himalayas.",
+      "description": "Founded in 1680, Tawang Monastery is the largest Buddhist monastery in India and a centre of the Gelug school. Its assembly hall houses an 8-metre gilded Buddha statue, while monks chant beneath murals depicting the life of the Buddha. The monastery overlooks snow peaks and the town of Tawang spread across the valley floor.",
+      "best_time": "March to October",
+      "timings": "Sunrise to sunset",
+      "entry_fee": "Inner Line Permit required",
+      "map_link": "https://maps.google.com/?q=Tawang+Monastery",
+      "nearby": [
+        "Sela Pass",
+        "Madhuri Lake",
+        "Tawang War Memorial"
+      ],
+      "status": "published",
+      "trivia": "The monastery's library preserves ancient Buddhist manuscripts written on handmade paper.",
+      "travel_tip": "Carry warm layers even in summer; Tawang sits above 3,000 metres and evenings turn cold quickly.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    },
+    {
+      "id": 39,
+      "slug": "puducherry-promenade",
+      "name": "Puducherry Promenade",
+      "state_id": 32,
+      "state_name": "Puducherry",
+      "city": "Puducherry",
+      "category": "Heritage",
+      "image_url": "/assets/hero-india.jpg",
+      "tagline": "A seafront boulevard of mustard-yellow colonial villas, cafes, and the statue of Dupleix.",
+      "description": "The Puducherry Promenade (Beach Road) runs along the Bay of Bengal through the French Quarter, where colonial villas house boutique cafes and art galleries. Morning walkers, cyclists, and chess players fill the sea wall before the heat arrives. The Gandhi Memorial and French War Memorial anchor the boulevard's historic ends.",
+      "best_time": "October to March",
+      "timings": "Open all day · Best at dawn",
+      "entry_fee": "Free",
+      "map_link": "https://maps.google.com/?q=Puducherry+Promenade",
+      "nearby": [
+        "White Town",
+        "Aurobindo Ashram",
+        "Paradise Beach"
+      ],
+      "status": "published",
+      "trivia": "Puducherry was a French colony until 1954, and street names in the French Quarter still bear French signage.",
+      "travel_tip": "Rent a bicycle and explore the French Quarter lanes at sunrise before the cafes open.",
+      "created_at": "2026-06-12T06:50:39.711Z"
+    }
+  ],
+  "place_images": [],
+  "admin_users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password_hash": "$2a$10$zjjhS7WJ0ObWMqMwgYfI3uCe6TW83BDSf.Map1Wcg3ckD1FQ1eMcC"
+    }
+  ]
+}

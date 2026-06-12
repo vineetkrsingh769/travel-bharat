@@ -41,7 +41,10 @@ async function query(text, params) {
   try {
     return await pool.query(text, params);
   } catch (err) {
-    const isConnError = err.code === 'ECONNREFUSED' || 
+    const isConnError = err.code === 'ECONNREFUSED' ||
+                        err.code === 'ENOTFOUND' ||
+                        err.code === 'EAI_AGAIN' ||
+                        err.message.includes('getaddrinfo') ||
                         err.message.includes('connect') || 
                         err.message.includes('connection') ||
                         err.message.includes('timeout') ||

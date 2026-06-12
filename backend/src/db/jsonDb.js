@@ -5,8 +5,16 @@ const bcrypt = require('bcryptjs');
 const dbPath = path.join(__dirname, 'db_store.json');
 
 const { states: initialStates, places: initialPlaces } = require('./seedData');
+const { getPlaceRanking } = require('./placeMeta');
 
 // Helper to load/save JSON data
+function enrichPlace(place, allPlaces) {
+  if (place.featured !== undefined && place.sort_order !== undefined) return place;
+  const index = allPlaces.findIndex(p => p.id === place.id);
+  const { featured, sort_order } = getPlaceRanking(place.slug, index >= 0 ? index : place.id);
+  return { ...place, featured, sort_order };
+}
+
 function readData() {
   if (!fs.existsSync(dbPath)) {
     // Generate initial structure
@@ -51,8 +59,9 @@ function readData() {
       }
     });
 
-    initialPlaces.forEach(p => {
+    initialPlaces.forEach((p, index) => {
       const stateId = stateIdMap[p.state_slug];
+      const { featured, sort_order } = getPlaceRanking(p.slug, index);
       places.push({
         id: placeIdCounter++,
         slug: p.slug,
@@ -72,6 +81,8 @@ function readData() {
         status: 'published',
         trivia: p.trivia,
         travel_tip: p.travel_tip,
+        featured,
+        sort_order,
         created_at: new Date().toISOString()
       });
     });
@@ -284,10 +295,10 @@ async function query(sql, params = []) {
       .filter(p => !hasPublishedFilter || p.status === 'published')
       .map(p => {
         const stateObj = data.states.find(s => s.id === p.state_id);
-        return {
+        return enrichPlace({
           ...p,
-          state_slug: stateObj ? stateObj.slug : ''
-        };
+          state_slug: stateObj ? stateObj.slug : '',
+        }, data.places);
       });
 
     // Detect conditions from query text
@@ -325,8 +336,15 @@ async function query(sql, params = []) {
       filtered = filtered.filter(p => p.state_slug === stateVal);
     }
 
-    // Sort by id ASC
-    filtered.sort((a, b) => a.id - b.id);
+    filtered.sort((a, b) => {
+      const af = a.featured ? 1 : 0;
+      const bf = b.featured ? 1 : 0;
+      if (bf !== af) return bf - af;
+      const ao = a.sort_order ?? a.id;
+      const bo = b.sort_order ?? b.id;
+      if (ao !== bo) return ao - bo;
+      return a.id - b.id;
+    });
 
     const hasLimit = /limit\s+\$/i.test(normalized);
     if (hasLimit) {

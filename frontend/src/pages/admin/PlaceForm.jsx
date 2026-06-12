@@ -221,7 +221,7 @@ export default function PlaceForm() {
             <FormSection title="Media & Photos">
               <div className="grid sm:grid-cols-2 gap-5 items-start">
                 <Field label="Main Image URL">
-                  <input className={ADMIN_INPUT_CLASS} value={form.image_url} onChange={e => set('image_url', e.target.value)} placeholder="/assets/place-taj.jpg" />
+                  <input className={ADMIN_INPUT_CLASS} value={form.image_url} onChange={e => set('image_url', e.target.value)} placeholder="/assets/hero-india.jpg" />
                   {form.image_url && (
                     <div className="flex items-center gap-3 p-3 bg-[#FAF5EC]/50 dark:bg-white/2 border border-[#DDD0B8]/40 dark:border-white/5 rounded-xl mt-3 animate-fadeIn">
                       <img src={form.image_url} alt="preview" className="h-16 w-24 object-cover rounded-xl shadow-sm" onError={e => e.target.style.display='none'} />
@@ -242,7 +242,7 @@ export default function PlaceForm() {
                             copy[idx] = e.target.value;
                             set('images', copy);
                           }}
-                          placeholder="/assets/place-taj.jpg"
+                          placeholder="/assets/hero-india.jpg"
                         />
                         <button
                           type="button"

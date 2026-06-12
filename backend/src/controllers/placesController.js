@@ -25,11 +25,12 @@ async function listPlaces(req, res, next) {
 
     const { rows } = await db.query(
       `SELECT p.id, p.slug, p.name, p.state_name, p.city, p.category,
-              p.image_url, p.tagline, p.best_time, p.entry_fee, s.slug AS state_slug
+              p.image_url, p.tagline, p.best_time, p.entry_fee, p.featured, p.sort_order,
+              s.slug AS state_slug
        FROM places p
        LEFT JOIN states s ON p.state_id = s.id
        ${where}
-       ORDER BY p.id ASC
+       ORDER BY p.featured DESC, p.sort_order ASC, p.id ASC
        LIMIT $${params.length - 1} OFFSET $${params.length}`,
       params
     );

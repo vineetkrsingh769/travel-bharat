@@ -6,8 +6,13 @@ export default function SiteFooter() {
     <footer className="mt-32 border-t border-border bg-muted/40">
       <div className="container-prose py-14 grid gap-10 md:grid-cols-3">
         <div>
-          <div className="font-serif text-2xl text-ink">
-            Travel<span className="italic text-terracotta">Bharat</span>
+          <div className="flex items-center gap-2.5">
+            <div className="h-9 w-9 rounded-full overflow-hidden shadow-sm">
+              <img src="/assets/logo.png" alt="TravelBharat logo" className="h-full w-full object-cover scale-125" />
+            </div>
+            <div className="font-serif text-2xl text-ink">
+              Travel<span className="italic text-terracotta">Bharat</span>
+            </div>
           </div>
           <p className="mt-3 text-sm text-muted-foreground max-w-xs leading-relaxed">
             A digital encyclopedia of Indian travel — state by state, story by story.

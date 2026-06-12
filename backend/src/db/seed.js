@@ -8,6 +8,7 @@ require('dotenv').config();
 const { Pool } = require('pg');
 const bcrypt = require('bcryptjs');
 const { states, places } = require('./seedData');
+const { getPlaceRanking } = require('./placeMeta');
 
 const dbUrl = process.env.DATABASE_URL || '';
 const isLocal = dbUrl.includes('localhost') || dbUrl.includes('127.0.0.1');
@@ -51,24 +52,21 @@ async function seed() {
     console.log(`✓ Seeded ${states.length} states`);
 
     // Insert places
-    for (const p of places) {
+    for (let i = 0; i < places.length; i++) {
+      const p = places[i];
+      const { featured, sort_order } = getPlaceRanking(p.slug, i);
       const stateId = stateIdMap[p.state_slug];
       const res = await client.query(
         `INSERT INTO places
           (slug, name, state_id, state_name, city, category, image_url, tagline, description,
-           best_time, timings, entry_fee, map_link, nearby, status, trivia, travel_tip)
-         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING id`,
+           best_time, timings, entry_fee, map_link, nearby, status, trivia, travel_tip, featured, sort_order)
+         VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19) RETURNING id`,
         [p.slug, p.name, stateId, p.state_name, p.city, p.category, p.image_url,
-         p.tagline, p.description, p.best_time, p.timings, p.entry_fee, p.map_link, p.nearby, 'published', p.trivia, p.travel_tip]
+         p.tagline, p.description, p.best_time, p.timings, p.entry_fee, p.map_link, p.nearby, 'published', p.trivia, p.travel_tip, featured, sort_order]
       );
       const placeId = res.rows[0].id;
 
-      // Seed 3 mock gallery images for testing
-      const gallery = [
-        p.image_url,
-        '/assets/place-gateway.jpg',
-        '/assets/place-taj.jpg'
-      ];
+      const gallery = ['/assets/hero-india.jpg'];
       for (const imgUrl of gallery) {
         await client.query(
           `INSERT INTO place_images (place_id, image_url) VALUES ($1, $2)`,
@@ -76,7 +74,7 @@ async function seed() {
         );
       }
     }
-    console.log(`✓ Seeded ${places.length} places (with 3 gallery images each)`);
+    console.log(`✓ Seeded ${places.length} places`);
 
     // Create default admin (admin / admin123)
     const hash = await bcrypt.hash('admin123', 10);

@@ -91,7 +91,7 @@ export default function StateForm() {
           </Field>
 
           <Field label="Cover image URL">
-            <input className={ADMIN_INPUT_CLASS} value={form.cover_url} onChange={e => set('cover_url', e.target.value)} placeholder="/assets/place-hawamahal.jpg" />
+            <input className={ADMIN_INPUT_CLASS} value={form.cover_url} onChange={e => set('cover_url', e.target.value)} placeholder="/assets/hero-india.jpg" />
           </Field>
 
           {form.cover_url && (
