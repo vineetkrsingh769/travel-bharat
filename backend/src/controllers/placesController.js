@@ -1,4 +1,5 @@
 const db = require('../db');
+const { isAdminRequest } = require('../utils/requestAuth');
 
 // GET /api/places  — supports ?q=&category=&state=&limit=&offset=
 async function listPlaces(req, res, next) {
@@ -43,10 +44,11 @@ async function listAllPlaces(req, res, next) {
   try {
     const { rows } = await db.query(
       `SELECT p.id, p.slug, p.name, p.state_name, p.city, p.category,
-              p.image_url, p.tagline, p.best_time, p.entry_fee, p.status, s.slug AS state_slug
+              p.image_url, p.tagline, p.best_time, p.entry_fee, p.status, p.featured, p.sort_order,
+              s.slug AS state_slug
        FROM places p
        LEFT JOIN states s ON p.state_id = s.id
-       ORDER BY p.id ASC`
+       ORDER BY p.featured DESC, p.sort_order ASC, p.id ASC`
     );
     res.json(rows);
   } catch (err) { next(err); }
@@ -64,6 +66,9 @@ async function getPlace(req, res, next) {
     if (!rows.length) return res.status(404).json({ error: 'Place not found' });
 
     const place = rows[0];
+    if (place.status !== 'published' && !isAdminRequest(req)) {
+      return res.status(404).json({ error: 'Place not found' });
+    }
 
     // Fetch gallery images
     const imagesRes = await db.query(
@@ -87,15 +92,16 @@ async function getPlace(req, res, next) {
 async function createPlace(req, res, next) {
   try {
     const { slug, name, state_id, state_name, city, category, image_url, tagline,
-            description, best_time, timings, entry_fee, map_link, nearby, status = 'draft', images, trivia, travel_tip } = req.body;
+            description, best_time, timings, entry_fee, map_link, nearby, status = 'draft',
+            images, trivia, travel_tip, featured = false, sort_order = 0 } = req.body;
     const { rows } = await db.query(
       `INSERT INTO places (slug, name, state_id, state_name, city, category, image_url,
-        tagline, description, best_time, timings, entry_fee, map_link, nearby, status, trivia, travel_tip)
-       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17) RETURNING *`,
+        tagline, description, best_time, timings, entry_fee, map_link, nearby, status, trivia, travel_tip, featured, sort_order)
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19) RETURNING *`,
       [slug, name, state_id, state_name, city, category, image_url,
        tagline, description, best_time, timings, entry_fee, map_link,
        Array.isArray(nearby) ? nearby : (nearby || '').split(',').map(n => n.trim()).filter(Boolean),
-       status, trivia, travel_tip]
+       status, trivia, travel_tip, Boolean(featured), Number(sort_order) || 0]
     );
     const place = rows[0];
 
@@ -120,19 +126,18 @@ async function updatePlace(req, res, next) {
   try {
     const { id } = req.params;
     const { slug, name, state_id, state_name, city, category, image_url, tagline,
-            description, best_time, timings, entry_fee, map_link, nearby, status, images, trivia, travel_tip } = req.body;
+            description, best_time, timings, entry_fee, map_link, nearby, status, images,
+            trivia, travel_tip, featured = false, sort_order = 0 } = req.body;
     const { rows } = await db.query(
       `UPDATE places SET slug=$1, name=$2, state_id=$3, state_name=$4, city=$5,
         category=$6, image_url=$7, tagline=$8, description=$9, best_time=$10,
-        timings=$11, entry_fee=$12, map_link=$13, nearby=$14, status=$15, trivia=$16, travel_tip=$17
-       WHERE id=$18 RETURNING *`,
+        timings=$11, entry_fee=$12, map_link=$13, nearby=$14, status=$15, trivia=$16, travel_tip=$17,
+        featured=$18, sort_order=$19
+       WHERE id=$20 RETURNING *`,
       [slug, name, state_id, state_name, city, category, image_url, tagline,
        description, best_time, timings, entry_fee, map_link,
        Array.isArray(nearby) ? nearby : (nearby || '').split(',').map(n => n.trim()).filter(Boolean),
-       status,
-       trivia,
-       travel_tip,
-       id]
+       status, trivia, travel_tip, Boolean(featured), Number(sort_order) || 0, id]
     );
     if (!rows.length) return res.status(404).json({ error: 'Place not found' });
     const place = rows[0];

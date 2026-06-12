@@ -1,12 +1,17 @@
 import { useState, useCallback } from 'react';
 
-export default function useToast(durationMs = 3000) {
+export default function useToast(durationMs = 3500) {
   const [toast, setToast] = useState('');
+  const [toastHref, setToastHref] = useState(null);
 
-  const showToast = useCallback((msg) => {
+  const showToast = useCallback((msg, href = null) => {
     setToast(msg);
-    setTimeout(() => setToast(''), durationMs);
+    setToastHref(href);
+    setTimeout(() => {
+      setToast('');
+      setToastHref(null);
+    }, durationMs);
   }, [durationMs]);
 
-  return { toast, showToast };
+  return { toast, toastHref, showToast };
 }

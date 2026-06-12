@@ -5,7 +5,8 @@ const errorHandler = require('./src/middleware/errorHandler');
 
 const statesRouter = require('./src/routes/states');
 const placesRouter = require('./src/routes/places');
-const authRouter  = require('./src/routes/auth');
+const authRouter   = require('./src/routes/auth');
+const uploadRouter = require('./src/routes/upload');
 
 const app = express();
 
@@ -39,6 +40,7 @@ app.get('/health', (_req, res) => res.json({ status: 'ok' }));
 
 // ── Routes ────────────────────────────────────────────────────────────────────
 app.use('/api/auth',   authRouter);
+app.use('/api/upload', uploadRouter);
 app.use('/api/states', statesRouter);
 app.use('/api/places', placesRouter);
 

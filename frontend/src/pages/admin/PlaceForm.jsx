@@ -4,6 +4,16 @@ import { placesService } from '../../services/places';
 import { statesService } from '../../services/states';
 import { PLACE_CATEGORIES } from '../../constants/tourism';
 import { Field, FormSection, ADMIN_INPUT_CLASS } from './components/AdminForm';
+import AssetPicker from './components/AssetPicker';
+import AdminPreviewPane from './components/AdminPreviewPane';
+import ViewOnSiteLink from './components/ViewOnSiteLink';
+import { PLACE_IMAGE_ASSETS, HERO_IMAGE } from '../../constants/assets';
+import {
+  ADMIN_BTN_GHOST,
+  ADMIN_BTN_PRIMARY,
+  ADMIN_CARD,
+  ADMIN_PAGE_TITLE,
+} from './constants';
 
 const TABS = [
   { id: 'basic',     label: '1. Basic Info' },
@@ -18,6 +28,8 @@ const EMPTY = {
   images: [],
   trivia: '',
   travel_tip: '',
+  featured: false,
+  sort_order: 0,
 };
 
 export default function PlaceForm() {
@@ -46,6 +58,8 @@ export default function PlaceForm() {
               images: full.images || [],
               trivia: full.trivia || '',
               travel_tip: full.travel_tip || '',
+              featured: Boolean(full.featured),
+              sort_order: full.sort_order ?? 0,
             });
             setLoading(false);
           }).catch(() => setLoading(false));
@@ -83,32 +97,37 @@ export default function PlaceForm() {
     }
   }
 
-  if (loading) return <div className="animate-pulse h-96 bg-[#FAF5EC] dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 rounded-xl" />;
+  if (loading) return <div className="animate-pulse h-96 bg-adm-surface border border-adm-border rounded-2xl" />;
+
+  const previewPath = form.slug ? `/places/${form.slug}` : null;
 
   return (
-    <div className="max-w-3xl animate-fadeIn">
-      <div className="mb-6 flex justify-between items-center">
+    <div className="max-w-6xl">
+      <div className="mb-6 flex justify-between items-center flex-wrap gap-3">
         <div>
-          <h1 className="font-serif text-3xl text-ink dark:text-cream">{isEdit ? 'Edit place' : 'Add new place'}</h1>
+          <h1 className={ADMIN_PAGE_TITLE}>{isEdit ? 'Edit place' : 'Add new place'}</h1>
+          {form.slug && (
+            <ViewOnSiteLink href={previewPath} status={form.status} label="View on public site" />
+          )}
         </div>
-        <div className="text-xs bg-[#FAF5EC] dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 text-ink/50 dark:text-cream/50 px-3 py-1.5 rounded-xl font-bold">
+        <div className="text-xs bg-adm-raised border border-adm-border text-adm-faint px-3 py-1.5 rounded-xl font-semibold">
           {activeTab === 'basic' ? 'Step 1 of 3' : activeTab === 'narrative' ? 'Step 2 of 3' : 'Step 3 of 3'}
         </div>
       </div>
 
-      {error && <div className="mb-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-500/30 text-red-650 dark:text-red-350 text-sm px-4 py-3 rounded-md">{error}</div>}
+      {error && <div className="mb-4 bg-adm-danger/10 border border-adm-danger/30 text-adm-danger text-sm px-4 py-3 rounded-xl">{error}</div>}
 
       {/* Tabs selector */}
-      <div className="flex border border-[#DDD0B8]/80 dark:border-white/10 p-1.5 bg-white/50 dark:bg-[#121316] rounded-xl mb-6 shadow-sm gap-1.5">
+      <div className="flex border border-adm-border p-1.5 bg-adm-raised rounded-xl mb-6 gap-1.5">
         {TABS.map(t => (
           <button
             key={t.id}
             type="button"
             onClick={() => setActiveTab(t.id)}
-            className={`flex-1 text-center py-2 px-3 text-xs sm:text-sm font-bold rounded-xl transition-all duration-200 hover:scale-[1.01] active:scale-[0.98] ${
+            className={`flex-1 text-center py-2 px-3 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 ${
               activeTab === t.id
-                ? 'bg-saffron text-white dark:text-ink shadow-md shadow-saffron/10'
-                : 'text-ink/60 dark:text-cream/60 hover:text-ink dark:hover:text-cream hover:bg-[#EDE5D4]/40 dark:hover:bg-white/5'
+                ? 'bg-adm-accent text-adm-void shadow-sm'
+                : 'text-adm-muted hover:text-adm-ink hover:bg-adm-hover'
             }`}
           >
             {t.label}
@@ -116,7 +135,8 @@ export default function PlaceForm() {
         ))}
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-white dark:bg-[#121316] border border-[#DDD0B8]/80 dark:border-white/10 rounded-xl p-6 sm:p-8 shadow-sm space-y-6">
+      <div className="grid gap-8 lg:grid-cols-[1fr_minmax(280px,400px)] items-start">
+      <form onSubmit={handleSubmit} className={`${ADMIN_CARD} p-6 sm:p-8 space-y-6`}>
         {activeTab === 'basic' && (
           <div className="space-y-6 animate-fadeIn">
             <FormSection title="Identity & Location">
@@ -132,8 +152,8 @@ export default function PlaceForm() {
               <div className="grid sm:grid-cols-2 gap-5">
                 <Field label="State *">
                   <select className={ADMIN_INPUT_CLASS} value={form.state_id} onChange={e => set('state_id', e.target.value)} required>
-                    <option value="" className="text-ink/50 dark:text-cream/50 bg-white dark:bg-[#0B0C0E]">Select a state…</option>
-                    {states.map(s => <option key={s.id} value={s.id} className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">{s.name}</option>)}
+                    <option value="">Select a state…</option>
+                    {states.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
                   </select>
                 </Field>
                 <Field label="City *">
@@ -144,16 +164,39 @@ export default function PlaceForm() {
               <div className="grid sm:grid-cols-2 gap-5">
                 <Field label="Category *">
                   <select className={ADMIN_INPUT_CLASS} value={form.category} onChange={e => set('category', e.target.value)} required>
-                    <option value="" className="text-ink/50 dark:text-cream/50 bg-white dark:bg-[#0B0C0E]">Select category…</option>
-                    {PLACE_CATEGORIES.map(c => <option key={c} value={c} className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">{c}</option>)}
+                    <option value="">Select category…</option>
+                    {PLACE_CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
                   </select>
                 </Field>
                 <Field label="Status *">
                   <select className={ADMIN_INPUT_CLASS} value={form.status} onChange={e => set('status', e.target.value)} required>
-                    <option value="draft" className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">Draft</option>
-                    <option value="pending" className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">Pending Review</option>
-                    <option value="published" className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">Published</option>
+                    <option value="draft">Draft</option>
+                    <option value="pending">Pending Review</option>
+                    <option value="published">Published</option>
                   </select>
+                </Field>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-5 pt-2 border-t border-adm-border">
+                <Field label="Home spotlight">
+                  <label className="flex items-center gap-2 text-sm text-adm-muted cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={form.featured}
+                      onChange={e => set('featured', e.target.checked)}
+                      className="rounded border-adm-border text-adm-accent focus:ring-adm-accent"
+                    />
+                    Featured on home page
+                  </label>
+                </Field>
+                <Field label="Spotlight order (lower = first)">
+                  <input
+                    type="number"
+                    min={0}
+                    className={ADMIN_INPUT_CLASS}
+                    value={form.sort_order}
+                    onChange={e => set('sort_order', Number(e.target.value) || 0)}
+                  />
                 </Field>
               </div>
             </FormSection>
@@ -220,12 +263,18 @@ export default function PlaceForm() {
 
             <FormSection title="Media & Photos">
               <div className="grid sm:grid-cols-2 gap-5 items-start">
-                <Field label="Main Image URL">
-                  <input className={ADMIN_INPUT_CLASS} value={form.image_url} onChange={e => set('image_url', e.target.value)} placeholder="/assets/hero-india.jpg" />
+                <Field label="Main image">
+                  <input className={ADMIN_INPUT_CLASS} value={form.image_url} onChange={e => set('image_url', e.target.value)} placeholder={HERO_IMAGE} />
+                  <AssetPicker
+                    value={form.image_url}
+                    onChange={url => set('image_url', url)}
+                    assets={PLACE_IMAGE_ASSETS}
+                    subfolder="uploads"
+                  />
                   {form.image_url && (
-                    <div className="flex items-center gap-3 p-3 bg-[#FAF5EC]/50 dark:bg-white/2 border border-[#DDD0B8]/40 dark:border-white/5 rounded-xl mt-3 animate-fadeIn">
-                      <img src={form.image_url} alt="preview" className="h-16 w-24 object-cover rounded-xl shadow-sm" onError={e => e.target.style.display='none'} />
-                      <span className="text-xs text-ink/50 dark:text-cream/45">Image preview</span>
+                    <div className="flex items-center gap-3 p-3 bg-adm-raised border border-adm-border rounded-xl mt-3">
+                      <img src={form.image_url} alt="preview" className="h-16 w-24 object-cover rounded-xl" onError={e => e.target.style.display='none'} />
+                      <span className="text-xs text-adm-faint">Image preview</span>
                     </div>
                   )}
                 </Field>
@@ -251,7 +300,7 @@ export default function PlaceForm() {
                             copy.splice(idx, 1);
                             set('images', copy);
                           }}
-                          className="bg-red-50 dark:bg-red-900/20 hover:bg-red-100 dark:hover:bg-red-900/40 border border-red-200 dark:border-red-500/30 text-red-655 dark:text-red-350 px-3.5 py-2.5 rounded-xl text-xs font-semibold hover:scale-[1.01] active:scale-[0.98] transition-all duration-100"
+                          className="bg-adm-danger/10 hover:bg-adm-danger/20 border border-adm-danger/30 text-adm-danger px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all"
                         >
                           Remove
                         </button>
@@ -262,16 +311,16 @@ export default function PlaceForm() {
                       onClick={() => {
                         set('images', [...(form.images || []), '']);
                       }}
-                      className="bg-[#FAF5EC] dark:bg-white/5 hover:bg-[#EDE5D4]/60 dark:hover:bg-white/10 text-ink/75 dark:text-cream/75 border border-[#DDD0B8] dark:border-white/10 px-4 py-2.5 rounded-xl text-xs font-semibold hover:scale-[1.01] active:scale-[0.98] transition-all duration-100 animate-fade-in"
+                      className={`${ADMIN_BTN_GHOST} text-xs px-4 py-2.5`}
                     >
                       + Add Gallery Image
                     </button>
                   </div>
 
                   {(form.images || []).filter(Boolean).length > 0 && (
-                    <div className="grid grid-cols-4 gap-3 p-3 bg-[#FAF5EC]/50 dark:bg-white/2 border border-[#DDD0B8]/40 dark:border-white/5 rounded-xl mt-3">
+                    <div className="grid grid-cols-4 gap-3 p-3 bg-adm-raised border border-adm-border rounded-xl mt-3">
                       {form.images.filter(Boolean).map((img, idx) => (
-                        <div key={idx} className="relative aspect-[16/10] bg-black/10 rounded-xl overflow-hidden shadow-sm border border-[#DDD0B8]/30 dark:border-white/5">
+                        <div key={idx} className="relative aspect-[16/10] bg-adm-void rounded-xl overflow-hidden border border-adm-border">
                           <img
                             src={img}
                             alt="gallery preview"
@@ -289,7 +338,7 @@ export default function PlaceForm() {
         )}
 
         {/* Form Footer Action Row */}
-        <div className="flex items-center justify-between pt-5 border-t border-[#DDD0B8]/60 dark:border-white/10">
+        <div className="flex items-center justify-between pt-5 border-t border-adm-border">
           <div className="flex gap-2">
             {activeTab !== 'basic' && (
               <button
@@ -298,7 +347,7 @@ export default function PlaceForm() {
                   if (activeTab === 'narrative') setActiveTab('basic');
                   if (activeTab === 'logistics') setActiveTab('narrative');
                 }}
-                className="bg-[#FAF8F5] dark:bg-white/5 hover:bg-[#EDE5D4]/60 dark:hover:bg-white/10 border border-[#DDD0B8] dark:border-white/10 text-ink/70 dark:text-cream/75 px-4 py-2.5 rounded-xl text-sm hover:scale-[1.01] active:scale-[0.98] transition-all duration-100 font-bold"
+                className={ADMIN_BTN_GHOST}
               >
                 ← Back
               </button>
@@ -310,7 +359,7 @@ export default function PlaceForm() {
                   if (activeTab === 'basic') setActiveTab('narrative');
                   if (activeTab === 'narrative') setActiveTab('logistics');
                 }}
-                className="bg-saffron/10 hover:bg-saffron/20 border border-saffron/20 text-saffron px-5 py-2.5 rounded-xl text-sm hover:scale-[1.01] active:scale-[0.98] transition-all duration-100 font-bold"
+                className="bg-adm-accent/10 hover:bg-adm-accent/20 border border-adm-accent/25 text-adm-accent px-5 py-2.5 rounded-xl text-sm font-semibold transition-all"
               >
                 Next →
               </button>
@@ -321,20 +370,30 @@ export default function PlaceForm() {
             <button
               type="submit"
               disabled={saving}
-              className="bg-saffron hover:bg-saffron/90 disabled:opacity-50 text-white dark:text-ink font-semibold px-6 py-2.5 rounded-xl text-sm shadow-sm hover:scale-[1.01] active:scale-[0.98] transition-all duration-100"
+              className={ADMIN_BTN_PRIMARY}
             >
               {saving ? 'Saving…' : isEdit ? 'Update place' : 'Create place'}
             </button>
             <button
               type="button"
               onClick={() => navigate('/admin/places')}
-              className="bg-[#FAF5EC] dark:bg-white/5 hover:bg-[#EDE5D4]/60 dark:hover:bg-white/10 border border-[#DDD0B8] dark:border-white/10 text-ink/70 dark:text-cream/75 px-6 py-2.5 rounded-xl text-sm font-semibold hover:scale-[1.01] active:scale-[0.98] transition-all duration-100"
+              className={ADMIN_BTN_GHOST}
             >
               Cancel
             </button>
           </div>
         </div>
       </form>
+
+      {previewPath && (
+        <div className="lg:sticky lg:top-6">
+          <AdminPreviewPane path={previewPath} title="Public page preview" />
+          <p className="mt-2 text-[0.65rem] text-adm-faint leading-relaxed">
+            Drafts are visible here while you are logged in. Visitors only see published content.
+          </p>
+        </div>
+      )}
+      </div>
     </div>
   );
 }

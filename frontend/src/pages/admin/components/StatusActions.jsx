@@ -1,16 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const actionBtn = 'text-xs font-semibold transition-all duration-100 hover:scale-[1.05] active:scale-[0.95]';
+const actionBtn = 'text-xs font-semibold transition-colors';
 
-export default function StatusActions({ status, editTo, isDeleting, onStatusChange, onDelete }) {
+export default function StatusActions({
+  status,
+  editTo,
+  isDeleting,
+  onStatusChange,
+  onDelete,
+}) {
   return (
     <div className="flex items-center justify-end gap-3 flex-wrap">
       {status !== 'published' && (
         <button
           type="button"
           onClick={() => onStatusChange('published')}
-          className={`${actionBtn} text-emerald-600 dark:text-emerald-450 hover:text-emerald-500`}
+          className={`${actionBtn} text-adm-success hover:text-emerald-300`}
         >
           Publish
         </button>
@@ -19,7 +25,7 @@ export default function StatusActions({ status, editTo, isDeleting, onStatusChan
         <button
           type="button"
           onClick={() => onStatusChange('draft')}
-          className={`${actionBtn} text-ink/50 dark:text-cream/60 hover:text-ink dark:hover:text-cream font-medium`}
+          className={`${actionBtn} text-adm-muted hover:text-adm-ink`}
         >
           Unpublish
         </button>
@@ -28,17 +34,17 @@ export default function StatusActions({ status, editTo, isDeleting, onStatusChan
         <button
           type="button"
           onClick={() => onStatusChange('pending')}
-          className={`${actionBtn} text-orange-600 dark:text-orange-400 hover:text-orange-500`}
+          className={`${actionBtn} text-adm-warning hover:text-orange-300`}
         >
           Submit
         </button>
       )}
-      <Link to={editTo} className={`${actionBtn} text-saffron hover:text-saffron/80`}>Edit</Link>
+      <Link to={editTo} className={`${actionBtn} text-adm-accent hover:text-adm-accent-hover`}>Edit</Link>
       <button
         type="button"
         onClick={onDelete}
         disabled={isDeleting}
-        className={`${actionBtn} text-red-600 dark:text-red-400 hover:text-red-500 disabled:opacity-50`}
+        className={`${actionBtn} text-adm-danger hover:text-red-300 disabled:opacity-50`}
       >
         Delete
       </button>

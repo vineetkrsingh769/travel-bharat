@@ -1,0 +1,47 @@
+/* TravelBharat Admin — scoped design system */
+.admin-shell {
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: 'ss01', 'cv01';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility sans only in admin UI — serif reserved for brand lockup */
+.admin-shell h1,
+.admin-shell h2,
+.admin-shell h3,
+.admin-shell h4 {
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.admin-shell .adm-brand {
+  font-family: 'Instrument Serif', ui-serif, Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+.admin-shell ::selection {
+  background: rgba(240, 180, 41, 0.35);
+  color: #f8fafc;
+}
+
+.adm-canvas-bg {
+  background-color: #0f1219;
+  background-image:
+    radial-gradient(rgba(240, 180, 41, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.admin-shell ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.admin-shell ::-webkit-scrollbar-track {
+  background: #0f1219;
+}
+.admin-shell ::-webkit-scrollbar-thumb {
+  background: #2a3344;
+  border-radius: 4px;
+}
+.admin-shell ::-webkit-scrollbar-thumb:hover {
+  background: #3d4d66;
+}

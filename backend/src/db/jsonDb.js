@@ -388,7 +388,33 @@ async function query(sql, params = []) {
     const hasTriviaCol = /trivia/i.test(normalized);
     const newId = data.places.reduce((max, p) => Math.max(max, p.id), 0) + 1;
     let newPlace;
-    if (hasTriviaCol) {
+    const hasFeaturedCol = /featured/i.test(normalized);
+    if (hasTriviaCol && hasFeaturedCol) {
+      const [slug, name, state_id, state_name, city, category, image_url, tagline, description, best_time, timings, entry_fee, map_link, nearby, status, trivia, travel_tip, featured, sort_order] = params;
+      newPlace = {
+        id: newId,
+        slug,
+        name,
+        state_id: Number(state_id),
+        state_name,
+        city,
+        category,
+        image_url,
+        tagline,
+        description,
+        best_time,
+        timings,
+        entry_fee,
+        map_link,
+        nearby: Array.isArray(nearby) ? nearby : [],
+        status: status || 'draft',
+        trivia,
+        travel_tip,
+        featured: Boolean(featured),
+        sort_order: Number(sort_order) || 0,
+        created_at: new Date().toISOString()
+      };
+    } else if (hasTriviaCol) {
       const [slug, name, state_id, state_name, city, category, image_url, tagline, description, best_time, timings, entry_fee, map_link, nearby, status, trivia, travel_tip] = params;
       newPlace = {
         id: newId,
@@ -479,7 +505,32 @@ async function query(sql, params = []) {
     const index = data.places.findIndex(p => p.id === placeId);
     if (index === -1) return { rows: [] };
 
-    if (hasTriviaCol) {
+    const hasFeaturedCol = /featured\s*=/i.test(normalized);
+    if (hasTriviaCol && hasFeaturedCol) {
+      const [slug, name, state_id, state_name, city, category, image_url, tagline, description, best_time, timings, entry_fee, map_link, nearby, status, trivia, travel_tip, featured, sort_order] = params;
+      data.places[index] = {
+        ...data.places[index],
+        slug,
+        name,
+        state_id: Number(state_id),
+        state_name,
+        city,
+        category,
+        image_url,
+        tagline,
+        description,
+        best_time,
+        timings,
+        entry_fee,
+        map_link,
+        nearby: Array.isArray(nearby) ? nearby : [],
+        status: status || 'draft',
+        trivia,
+        travel_tip,
+        featured: Boolean(featured),
+        sort_order: Number(sort_order) || 0
+      };
+    } else if (hasTriviaCol) {
       const [slug, name, state_id, state_name, city, category, image_url, tagline, description, best_time, timings, entry_fee, map_link, nearby, status, trivia, travel_tip] = params;
       data.places[index] = {
         ...data.places[index],

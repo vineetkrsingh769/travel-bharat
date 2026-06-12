@@ -1,4 +1,5 @@
 const db = require('../db');
+const { isAdminRequest } = require('../utils/requestAuth');
 
 // GET /api/states
 async function listStates(req, res, next) {
@@ -32,6 +33,9 @@ async function getState(req, res, next) {
     if (!stateRes.rows.length) return res.status(404).json({ error: 'State not found' });
 
     const state = stateRes.rows[0];
+    if (state.status !== 'published' && !isAdminRequest(req)) {
+      return res.status(404).json({ error: 'State not found' });
+    }
     const citiesRes = await db.query(
       `SELECT name, note, map_link FROM popular_cities WHERE state_id = $1 ORDER BY id`, [state.id]
     );

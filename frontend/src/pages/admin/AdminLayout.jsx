@@ -1,35 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import '../../admin/admin-theme.css';
 
 const NAV_ITEMS = [
-  { 
-    to: '/admin/dashboard', 
-    label: 'Dashboard',    
+  {
+    to: '/admin/dashboard',
+    label: 'Dashboard',
     icon: (
-      <svg className="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+      <svg className="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z" />
       </svg>
-    )
+    ),
   },
-  { 
-    to: '/admin/places',    
-    label: 'Places',       
+  {
+    to: '/admin/places',
+    label: 'Places',
     icon: (
-      <svg className="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+      <svg className="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
-    )
+    ),
   },
-  { 
-    to: '/admin/states',    
-    label: 'States',       
+  {
+    to: '/admin/states',
+    label: 'States',
     icon: (
-      <svg className="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+      <svg className="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
       </svg>
-    )
+    ),
   },
 ];
 
@@ -37,115 +38,93 @@ export default function AdminLayout({ children }) {
   const { admin, logout } = useAuth();
   const navigate = useNavigate();
 
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('tb_admin_theme') || 'dark';
-  });
-
-  useEffect(() => {
-    localStorage.setItem('tb_admin_theme', theme);
-  }, [theme]);
-
   function handleLogout() {
     logout();
     navigate('/admin/login');
   }
 
-  const isLight = theme === 'light';
-
   return (
-    <div className={theme}>
-      <div className="flex flex-col md:flex-row min-h-screen bg-[#FAF5EC] dark:bg-[#0B0C0E] text-ink dark:text-cream font-sans transition-colors duration-300">
-        {/* Sidebar / Top Nav Banner */}
-        <aside className="w-full md:w-60 shrink-0 flex flex-col bg-forest dark:bg-[#0F1E15] text-[#FAF5EC] dark:text-cream border-b border-[#3B5A44]/30 md:border-b-0 md:border-r md:border-[#3B5A44]/30 dark:border-white/5 transition-colors duration-300">
-          {/* Header containing Logo & Quick Logout on Mobile */}
-          <div className="px-6 py-4 md:py-6 border-b border-[#3B5A44]/30 dark:border-white/5 flex items-center justify-between md:block">
-            <div className="flex flex-col">
-              <span className="font-serif text-2xl font-bold tracking-tight text-[#FAF5EC] dark:text-cream">
-                Travel<span className="italic text-saffron bg-gradient-to-r from-saffron to-terracotta bg-clip-text text-transparent">Bharat</span>
-              </span>
-              <span className="inline-flex items-center mt-1.5 px-2 py-0.5 rounded text-[9px] font-bold bg-saffron/20 text-[#FAF5EC] border border-saffron/30 uppercase tracking-widest w-fit">
-                Admin Panel
-              </span>
-            </div>
-
-            {/* Quick Controls for Mobile */}
-            <div className="md:hidden flex items-center gap-3">
-              <button
-                onClick={() => setTheme(isLight ? 'dark' : 'light')}
-                className="p-2 rounded-xl border border-white/20 text-[#FAF5EC] hover:bg-white/10 transition-colors"
-                title="Toggle Theme"
-              >
-                {isLight ? '🌙' : '☀️'}
-              </button>
-              <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-saffron to-terracotta text-white flex items-center justify-center text-[10px] font-bold">
-                {admin ? admin.charAt(0).toUpperCase() : 'A'}
+    <div className="admin-shell h-screen overflow-hidden bg-adm-void text-adm-ink font-admin-sans">
+      <div className="flex h-full flex-col md:flex-row">
+        <aside className="w-full md:w-[260px] shrink-0 flex flex-col bg-adm-void border-b md:border-b-0 md:border-r border-adm-border md:h-full md:overflow-y-auto">
+          <div className="px-5 py-5 md:py-6 border-b border-adm-border">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-3 min-w-0">
+                <div className="w-10 h-10 rounded-xl overflow-hidden ring-1 ring-adm-border shrink-0">
+                  <img src="/assets/logo.png" alt="" className="w-full h-full object-cover scale-110" />
+                </div>
+                <div className="min-w-0">
+                  <div className="adm-brand text-xl text-adm-ink leading-tight truncate">
+                    Travel<span className="text-adm-accent italic">Bharat</span>
+                  </div>
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-adm-faint">
+                    Admin
+                  </span>
+                </div>
               </div>
               <button
                 onClick={handleLogout}
-                className="text-xs text-saffron hover:text-white transition-colors font-semibold"
+                className="md:hidden text-xs font-semibold text-adm-muted hover:text-adm-accent transition-colors shrink-0"
               >
                 Sign out
               </button>
             </div>
           </div>
 
-          {/* Navigation - horizontal list on mobile, vertical stack on desktop */}
-          <nav className="flex md:flex-col overflow-x-auto px-4 py-3 md:py-6 gap-1.5">
+          <nav className="flex md:flex-col overflow-x-auto px-3 py-4 gap-1">
             {NAV_ITEMS.map(({ to, label, icon }) => (
               <NavLink
                 key={to}
                 to={to}
                 className={({ isActive }) =>
-                  `relative flex items-center gap-2.5 md:gap-3 px-4 py-2.5 rounded-xl text-sm transition-all duration-200 whitespace-nowrap overflow-hidden group ${
+                  `flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium whitespace-nowrap transition-all duration-200 ${
                     isActive
-                      ? 'bg-saffron/20 text-saffron font-bold border-l-4 border-saffron shadow-sm'
-                      : 'text-[#FAF5EC]/85 hover:bg-white/8 hover:text-[#FAF5EC] border-l-4 border-transparent'
+                      ? 'bg-adm-accent/12 text-adm-accent border border-adm-accent/25 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]'
+                      : 'text-adm-muted hover:text-adm-ink hover:bg-adm-raised border border-transparent'
                   }`
                 }
               >
-                <span className="shrink-0 transition-transform duration-200 group-hover:scale-110">{icon}</span>
+                <span className="shrink-0 opacity-90">{icon}</span>
                 {label}
               </NavLink>
             ))}
           </nav>
 
-          {/* Desktop Footer (hidden on mobile) */}
-          <div className="hidden md:block px-6 py-5 border-t border-[#3B5A44]/30 dark:border-white/5 mt-auto space-y-4">
-            {/* Theme Toggle Switch */}
-            <button
-              onClick={() => setTheme(isLight ? 'dark' : 'light')}
-              className="flex items-center justify-between w-full px-3.5 py-2.5 rounded-xl text-xs border border-white/10 text-[#FAF5EC]/80 hover:bg-white/8 transition-all group active:scale-[0.98] transition-transform duration-100"
+          <div className="px-4 py-4 border-t border-adm-border mt-auto space-y-3">
+            <p className="text-xs text-adm-faint leading-relaxed hidden md:block">
+              Manage destinations, states, and published content
+            </p>
+            <a
+              href="/"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center gap-2 w-full bg-adm-raised hover:bg-adm-hover border border-adm-border text-adm-muted hover:text-adm-ink px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-colors"
             >
-              <div className="flex items-center gap-2.5">
-                <span className="text-sm transition-transform duration-300 group-hover:rotate-12">{isLight ? '🌙' : '☀️'}</span>
-                <span className="font-semibold">{isLight ? 'Dark Mode' : 'Light Mode'}</span>
-              </div>
-              <div className={`w-8 h-4.5 rounded-full p-0.5 transition-colors duration-200 shrink-0 ${isLight ? 'bg-white/15' : 'bg-saffron/30'}`}>
-                <div className={`w-3.5 h-3.5 rounded-full bg-saffron transition-transform duration-200 transform ${isLight ? 'translate-x-0' : 'translate-x-3.5'}`} />
-              </div>
-            </button>
+              <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              View guest site
+            </a>
 
-            <div className="flex items-center justify-between pt-3.5 border-t border-[#3B5A44]/30 dark:border-white/5">
-              <div className="flex items-center gap-2 truncate">
-                <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-saffron to-terracotta text-white font-serif flex items-center justify-center text-xs font-bold shrink-0 shadow-sm">
+            <div className="hidden md:flex items-center justify-between pt-3 border-t border-adm-border">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <div className="w-8 h-8 rounded-lg bg-adm-accent/15 text-adm-accent flex items-center justify-center text-xs font-bold shrink-0">
                   {admin ? admin.charAt(0).toUpperCase() : 'A'}
                 </div>
-                <div className="text-xs text-[#FAF5EC]/85 font-semibold truncate">{admin}</div>
+                <span className="text-sm text-adm-muted truncate">{admin}</span>
               </div>
               <button
                 onClick={handleLogout}
-                className="text-[11px] font-bold text-saffron hover:text-white transition-colors"
-                title="Sign out"
+                className="text-xs font-semibold text-adm-faint hover:text-adm-danger transition-colors shrink-0"
               >
-                Exit
+                Sign out
               </button>
             </div>
           </div>
         </aside>
 
-        {/* Main content */}
-        <main className="flex-1 overflow-auto bg-[#FAF5EC] dark:bg-[#0B0C0E] transition-colors duration-300">
-          <div className="p-5 sm:p-8 animate-fadeIn">
+        <main className="flex-1 min-h-0 overflow-y-auto adm-canvas-bg">
+          <div className="p-5 sm:p-8 max-w-6xl">
             {children}
           </div>
         </main>
