@@ -576,6 +576,4 @@ async function query(sql, params = []) {
 
 module.exports = {
   query,
-  readData,
-  writeData
 };

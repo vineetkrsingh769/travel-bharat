@@ -3,9 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { placesService } from '../services/places';
 import { statesService } from '../services/states';
 import IndiaMap from '../components/IndiaMap';
+import { PLACE_CATEGORIES } from '../constants/tourism';
 import useScrollReveal from '../hooks/useScrollReveal';
-
-const QUICK_CATEGORIES = ['Heritage', 'Nature', 'Religious', 'Adventure', 'Beach'];
 
 export default function Home() {
   const [places, setPlaces]   = useState([]);
@@ -141,7 +140,7 @@ export default function Home() {
                   {/* Categories */}
                   <div className="pt-2 flex flex-wrap items-center gap-2.5">
                     <span className="text-[0.62rem] uppercase tracking-widest text-cream/60 mr-1.5">Quick Filters:</span>
-                    {QUICK_CATEGORIES.map(cat => (
+                    {PLACE_CATEGORIES.map(cat => (
                       <Link
                         key={cat}
                         to={`/places?category=${cat}`}

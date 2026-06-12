@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { placesService } from '../../services/places';
 import { statesService } from '../../services/states';
+import { CATEGORY_BAR_COLORS } from './constants';
 
 function StatCard({ label, value, to, color, icon, detail, borderAccent }) {
   return (
@@ -26,14 +27,6 @@ function StatCard({ label, value, to, color, icon, detail, borderAccent }) {
     </Link>
   );
 }
-
-const CATEGORY_COLORS = {
-  Heritage:  { bar: 'bg-gradient-to-r from-amber-500 to-saffron',         bg: 'bg-amber-500/10' },
-  Nature:    { bar: 'bg-gradient-to-r from-green-400 to-forest',          bg: 'bg-green-500/10' },
-  Religious: { bar: 'bg-gradient-to-r from-purple-500 to-indigo-500',     bg: 'bg-purple-500/10' },
-  Adventure: { bar: 'bg-gradient-to-r from-blue-400 to-blue-600',         bg: 'bg-blue-500/10' },
-  Beach:     { bar: 'bg-gradient-to-r from-cyan-400 to-teal-500',         bg: 'bg-cyan-500/10' },
-};
 
 export default function Dashboard() {
   const [places, setPlaces] = useState([]);
@@ -128,7 +121,7 @@ export default function Dashboard() {
             <div className="grid md:grid-cols-2 gap-5">
               {Object.entries(byCat).map(([cat, count]) => {
                 const percentage = places.length ? Math.round((count / places.length) * 100) : 0;
-                const colors = CATEGORY_COLORS[cat] || { bar: 'bg-gradient-to-r from-saffron to-terracotta' };
+                const colors = CATEGORY_BAR_COLORS[cat] || { bar: 'bg-gradient-to-r from-saffron to-terracotta' };
                 return (
                   <Link
                     key={cat}

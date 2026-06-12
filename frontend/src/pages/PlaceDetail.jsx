@@ -132,7 +132,7 @@ export default function PlaceDetail() {
           <span className="float-left font-serif text-7xl leading-[0.85] mr-3 mt-1.5 text-terracotta font-bold">
             {place.description.charAt(0)}
           </span>
-          <p className="text-lg md:text-xl leading-[1.8] text-ink/90 font-serif font-medium drop-cap">{place.description.slice(1)}</p>
+          <p className="text-lg md:text-xl leading-[1.8] text-ink/90 font-serif font-medium">{place.description.slice(1)}</p>
 
           {/* Did You Know? callout card */}
           {place.trivia && (

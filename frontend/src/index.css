@@ -81,28 +81,6 @@
     @apply border-terracotta/60 -translate-y-1;
     box-shadow: 0 12px 30px -4px rgba(155, 74, 40, 0.12);
   }
-
-  .journal-border {
-    border: 1px solid #DDD0B8;
-    background-color: #FAF5EC;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: inset 0 0 20px rgba(211, 199, 179, 0.2);
-  }
-
-  .editorial-title {
-    font-family: 'Cormorant Garamond', 'Lora', serif;
-    font-style: italic;
-    font-weight: 500;
-  }
-
-  .drop-cap::first-letter {
-    @apply float-left text-6xl font-serif font-bold text-terracotta leading-none mr-2.5 mt-1.5;
-  }
-
-  .meta-tag {
-    @apply text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded bg-[#FAF5EC] border border-border/50 text-[#4E3E2F];
-  }
 }
 
 /* ── Scrollbar ─────────────────────────────────────────────────────────────── */

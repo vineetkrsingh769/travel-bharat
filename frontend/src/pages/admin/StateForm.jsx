@@ -2,22 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { statesService } from '../../services/states';
 
-const REGIONS = ['North', 'South', 'East', 'West', 'Central', 'Northeast'];
+import { REGIONS } from '../../constants/tourism';
+import { Field, FormSection, ADMIN_INPUT_CLASS } from './components/AdminForm';
+
 const EMPTY = { slug: '', name: '', region: '', capital: '', blurb: '', cover_url: '', highlights: '', best_time: '', status: 'draft' };
-const inp = 'w-full bg-white dark:bg-white/5 border border-[#DDD0B8] dark:border-white/10 text-ink dark:text-cream placeholder-ink/20 dark:placeholder-cream/20 px-3.5 py-2.5 text-sm rounded-xl focus:outline-none focus:border-saffron focus:ring-2 focus:ring-saffron/15 shadow-sm dark:shadow-none hover:border-[#C4B79F] dark:hover:border-white/20 transition-all duration-150';
-
-function Field({ label, children }) {
-  return <div><label className="block text-xs uppercase tracking-widest font-semibold text-ink/50 dark:text-cream/45 mb-1.5">{label}</label>{children}</div>;
-}
-
-function FormSection({ title, children }) {
-  return (
-    <div className="space-y-4 pt-6 border-t border-[#DDD0B8]/50 dark:border-white/10 first:border-t-0 first:pt-0">
-      <h3 className="font-serif text-base font-bold text-saffron tracking-wide">{title}</h3>
-      <div className="space-y-4">{children}</div>
-    </div>
-  );
-}
 
 export default function StateForm() {
   const { id }   = useParams();
@@ -75,20 +63,20 @@ export default function StateForm() {
       <form onSubmit={handleSubmit} className="bg-white dark:bg-[#121316] border border-[#DDD0B8]/80 dark:border-white/10 rounded-xl p-6 sm:p-8 shadow-sm space-y-6">
         <FormSection title="State Identity">
           <div className="grid sm:grid-cols-2 gap-5">
-            <Field label="Name *"><input className={inp} value={form.name} onChange={e => set('name', e.target.value)} required placeholder="Rajasthan" /></Field>
-            <Field label="Slug *"><input className={inp} value={form.slug} onChange={e => set('slug', e.target.value)} required placeholder="rajasthan" /></Field>
+            <Field label="Name *"><input className={ADMIN_INPUT_CLASS} value={form.name} onChange={e => set('name', e.target.value)} required placeholder="Rajasthan" /></Field>
+            <Field label="Slug *"><input className={ADMIN_INPUT_CLASS} value={form.slug} onChange={e => set('slug', e.target.value)} required placeholder="rajasthan" /></Field>
           </div>
 
           <div className="grid sm:grid-cols-3 gap-5">
             <Field label="Region *">
-              <select className={inp} value={form.region} onChange={e => set('region', e.target.value)} required>
+              <select className={ADMIN_INPUT_CLASS} value={form.region} onChange={e => set('region', e.target.value)} required>
                 <option value="" className="text-ink/50 dark:text-cream/50 bg-white dark:bg-[#0B0C0E]">Select region…</option>
                 {REGIONS.map(r => <option key={r} value={r} className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">{r}</option>)}
               </select>
             </Field>
-            <Field label="Capital *"><input className={inp} value={form.capital} onChange={e => set('capital', e.target.value)} required placeholder="Jaipur" /></Field>
+            <Field label="Capital *"><input className={ADMIN_INPUT_CLASS} value={form.capital} onChange={e => set('capital', e.target.value)} required placeholder="Jaipur" /></Field>
             <Field label="Status *">
-              <select className={inp} value={form.status} onChange={e => set('status', e.target.value)} required>
+              <select className={ADMIN_INPUT_CLASS} value={form.status} onChange={e => set('status', e.target.value)} required>
                 <option value="draft" className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">Draft</option>
                 <option value="pending" className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">Pending Review</option>
                 <option value="published" className="text-ink dark:text-cream bg-white dark:bg-[#0B0C0E]">Published</option>
@@ -99,11 +87,11 @@ export default function StateForm() {
 
         <FormSection title="Media & Branding">
           <Field label="Blurb (one-sentence editorial)">
-            <input className={inp} value={form.blurb} onChange={e => set('blurb', e.target.value)} placeholder="Forts of pink sandstone, golden deserts and royal courtyards." />
+            <input className={ADMIN_INPUT_CLASS} value={form.blurb} onChange={e => set('blurb', e.target.value)} placeholder="Forts of pink sandstone, golden deserts and royal courtyards." />
           </Field>
 
           <Field label="Cover image URL">
-            <input className={inp} value={form.cover_url} onChange={e => set('cover_url', e.target.value)} placeholder="/assets/place-hawamahal.jpg" />
+            <input className={ADMIN_INPUT_CLASS} value={form.cover_url} onChange={e => set('cover_url', e.target.value)} placeholder="/assets/place-hawamahal.jpg" />
           </Field>
 
           {form.cover_url && (
@@ -117,7 +105,7 @@ export default function StateForm() {
         <FormSection title="Editorial Insights">
           <Field label="Highlights (one per line)">
             <textarea
-              className={`${inp} min-h-[100px] resize-y`}
+              className={`${ADMIN_INPUT_CLASS} min-h-[100px] resize-y`}
               value={form.highlights}
               onChange={e => set('highlights', e.target.value)}
               placeholder={"Hill forts of Amber and Mehrangarh\nCamel safaris in the Thar desert"}
@@ -125,7 +113,7 @@ export default function StateForm() {
           </Field>
 
           <Field label="Best time to visit">
-            <input className={inp} value={form.best_time} onChange={e => set('best_time', e.target.value)} placeholder="October to March (avoid the desert summer)" />
+            <input className={ADMIN_INPUT_CLASS} value={form.best_time} onChange={e => set('best_time', e.target.value)} placeholder="October to March (avoid the desert summer)" />
           </Field>
         </FormSection>
 

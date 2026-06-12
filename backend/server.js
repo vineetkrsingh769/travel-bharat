@@ -10,11 +10,7 @@ const authRouter  = require('./src/routes/auth');
 const app = express();
 
 // ── CORS ──────────────────────────────────────────────────────────────────────
-const allowedOrigins = [
-  process.env.FRONTEND_URL,
-  'https://travelbharat.vercel.app',
-  'https://travel-bharat-three.vercel.app',
-].filter(Boolean);
+const allowedOrigins = [process.env.FRONTEND_URL].filter(Boolean);
 
 app.use(cors({
   origin: (origin, cb) => {
@@ -37,7 +33,6 @@ app.use(cors({
 
 // ── Body parsing ──────────────────────────────────────────────────────────────
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
 // ── Health check ──────────────────────────────────────────────────────────────
 app.get('/health', (_req, res) => res.json({ status: 'ok' }));
@@ -58,5 +53,3 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`TravelBharat API running on http://localhost:${PORT}`);
 });
-
-module.exports = app;

@@ -269,7 +269,7 @@ const REGION_COLORS = {
   },
 };
 
-export default function IndiaMap({ activeStateSlug, hoveredStateSlug, onHoverState }) {
+export default function IndiaMap({ hoveredStateSlug, onHoverState }) {
   const navigate = useNavigate();
   const [hovered, setHovered] = useState(null);
 
@@ -283,7 +283,6 @@ export default function IndiaMap({ activeStateSlug, hoveredStateSlug, onHoverSta
       >
         {PATHS.map((path) => {
           const isInteractive = !!path.slug;
-          const isActive = activeStateSlug === path.slug;
           const isHovered = (hovered && hovered.slug === path.slug) || (hoveredStateSlug === path.slug);
 
           let fill = 'rgba(237, 229, 212, 0.2)'; // fill-muted/20
@@ -297,12 +296,7 @@ export default function IndiaMap({ activeStateSlug, hoveredStateSlug, onHoverSta
             fill = colors.fill;
             stroke = colors.stroke;
 
-            if (isActive) {
-              fill = '#D08B2A'; // Brand Saffron
-              stroke = '#1A1511'; // Brand Ink
-              strokeWidth = '1.8';
-              transform = 'scale(1.025)';
-            } else if (isHovered) {
+            if (isHovered) {
               fill = colors.hoverFill;
               stroke = '#2C4A34'; // Forest Green stroke on hover
               strokeWidth = '1.5';

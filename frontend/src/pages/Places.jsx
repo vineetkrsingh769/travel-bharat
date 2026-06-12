@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { placesService } from '../services/places';
+import { PLACE_CATEGORIES } from '../constants/tourism';
 import useScrollReveal from '../hooks/useScrollReveal';
-
-const CATEGORIES = ['Heritage', 'Nature', 'Religious', 'Adventure', 'Beach'];
 
 export default function Places() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -58,7 +57,7 @@ export default function Places() {
             className="flex-1 min-w-[14rem] bg-white border border-border px-4 py-2.5 text-sm rounded-sm focus:outline-none focus:border-terracotta"
           />
           <div className="flex flex-wrap gap-2">
-            {['All', ...CATEGORIES].map(c => (
+            {['All', ...PLACE_CATEGORIES].map(c => (
               <button
                 key={c}
                 onClick={() => setCat(c)}

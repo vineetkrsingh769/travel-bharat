@@ -15,14 +15,6 @@ export default {
           foreground: '#4E3E2F',
         },
         border: '#DDD0B8',
-        primary: {
-          DEFAULT: '#9B4A28',
-          foreground: '#FAF5EC',
-        },
-        secondary: {
-          DEFAULT: '#2C4A34',
-          foreground: '#FAF5EC',
-        },
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Lora', 'ui-serif', 'Georgia', 'serif'],
