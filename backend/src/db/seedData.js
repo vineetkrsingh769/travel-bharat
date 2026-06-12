@@ -2,7 +2,7 @@ const states = [
   {
     slug: 'uttar-pradesh', name: 'Uttar Pradesh', region: 'North', capital: 'Lucknow',
     blurb: 'A sweep of northern plains shaped by the sacred basins of the Ganges and Yamuna, home to colossal Mughal stone structures, centuries of Awadhi culinary arts, and the ancient riverside steps of Varanasi.',
-    cover_url: '/assets/hero-india.jpg',
+    cover_url: '/assets/states/uttar-pradesh.png',
     highlights: [
       'Observing the precise architectural symmetry of the Taj Mahal at dawn',
       'Witnessing the evening Ganga Aarti fire ceremony at Varanasi\'s waterfront',
@@ -20,7 +20,7 @@ const states = [
   {
     slug: 'rajasthan', name: 'Rajasthan', region: 'West', capital: 'Jaipur',
     blurb: 'A western desert region defined by yellow and pink sandstone fortresses, palaces built on lakes, and historic trading settlements along the Thar.',
-    cover_url: '/assets/hero-india.jpg',
+    cover_url: '/assets/states/rajasthan.png',
     highlights: [
       'Exploring the double-walled stone battlements of Amber and Mehrangarh Forts',
       'Riding camel trails across the dunes of the Thar Desert in Jaisalmer',
@@ -38,7 +38,7 @@ const states = [
   {
     slug: 'kerala', name: 'Kerala', region: 'South', capital: 'Thiruvananthapuram',
     blurb: 'A coastal strip in the south flanked by the Western Ghats, featuring palm-lined canals, spice gardens, and kathakali performance traditions.',
-    cover_url: '/assets/hero-india.jpg',
+    cover_url: '/assets/states/kerala.png',
     highlights: [
       'Cruising the waterways of Alappuzha on a traditional thatched house boat',
       'Trekking through the misty spice gardens and tea estates of Munnar',
@@ -56,7 +56,7 @@ const states = [
   {
     slug: 'ladakh', name: 'Ladakh', region: 'North', capital: 'Leh',
     blurb: 'A trans-Himalayan desert region of high-altitude gravel valleys, rocky passes, and stone monasteries situated along blue lakes.',
-    cover_url: '/assets/hero-india.jpg',
+    cover_url: '/assets/states/ladakh.png',
     highlights: [
       'Watching the water colors shift under the sun at Pangong Lake',
       'Listening to morning chants at Thiksey and Hemis monasteries',
@@ -74,7 +74,7 @@ const states = [
   {
     slug: 'tamil-nadu', name: 'Tamil Nadu', region: 'South', capital: 'Chennai',
     blurb: 'A southern coastal cradle of Dravidian history, marked by soaring temple gateway towers, granite carvings, and bronze-casting workshops.',
-    cover_url: '/assets/hero-india.jpg',
+    cover_url: '/assets/states/tamil-nadu.png',
     highlights: [
       'Climbing the gateway towers of Madurai\'s Meenakshi Amman Temple',
       'Tracing ancient Pallava rock carvings by the sea in Mamallapuram',
@@ -92,7 +92,7 @@ const states = [
   {
     slug: 'maharashtra', name: 'Maharashtra', region: 'West', capital: 'Mumbai',
     blurb: 'A western state spanning Deccan plateaus and coastal ports, containing ancient rock-cut Buddhist caves and stone fortresses.',
-    cover_url: '/assets/hero-india.jpg',
+    cover_url: '/assets/states/maharashtra.png',
     highlights: [
       'Walking past the Art Deco facades of Mumbai\'s Marine Drive',
       'Viewing the ancient Buddhist mural paintings inside the Ajanta Caves',
@@ -128,7 +128,7 @@ const states = [
   {
     slug: 'himachal-pradesh', name: 'Himachal Pradesh', region: 'North', capital: 'Shimla',
     blurb: 'A northern mountain state of pine forests, snowy valleys, and towns that host the Tibetan government-in-exile.',
-    cover_url: '/assets/hero-india.jpg',
+    cover_url: '/assets/states/himachal-pradesh.png',
     highlights: [
       'Riding the narrow-gauge Kalka-Shimla toy train through the hills',
       'Visiting Tibetan temples and libraries in McLeod Ganj',
@@ -164,7 +164,7 @@ const states = [
   {
     slug: 'goa', name: 'Goa', region: 'West', capital: 'Panaji',
     blurb: 'A small western coastal state featuring historic Portuguese churches, spice plantations, and crescent-shaped sandy bays.',
-    cover_url: '/assets/hero-india.jpg',
+    cover_url: '/assets/states/goa.png',
     highlights: [
       'Walking past the pastel-colored villas of Panaji\'s Latin Quarter',
       'Visiting 16th-century churches and structural ruins in Old Goa',
@@ -217,7 +217,7 @@ const states = [
   {
     slug: 'sikkim', name: 'Sikkim', region: 'Northeast', capital: 'Gangtok',
     blurb: 'A mountainous Himalayan state bordering Tibet, containing glacial lakes, alpine rhododendron valleys, and Buddhist monasteries.',
-    cover_url: '/assets/hero-india.jpg',
+    cover_url: '/assets/states/sikkim.png',
     highlights: [
       'Observing the dawn reflection on Tsomgo Lake\'s high-altitude waters',
       'Hearing the deep hum of prayer horns at Rumtek Monastery',
@@ -366,7 +366,7 @@ const states = [
   {
     slug: 'delhi', name: 'Delhi', region: 'North', capital: 'New Delhi',
     blurb: 'Seven historic cities layered into one capital — Mughal tombs, colonial avenues, and chaotic bazaars folded around the seat of modern India.',
-    cover_url: '/assets/hero-india.jpg',
+    cover_url: '/assets/states/delhi.png',
     highlights: [
       'Climbing through the sandstone arcades of Humayun\'s Tomb and Qutub Minar',
       'Eating through the lanes of Chandni Chowk in Old Delhi',
